@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Seminar in Greek Rhetoric, Law, and Society
+
+Static website for the **Seminar in Greek Rhetoric, Law, and Society** — Fall 2026, University of Florida.
+
+Generously sponsored by Harvard University and the Institute for Strategy, Politics & Security (ISHR).
+
+## Pages
+
+| Route | Description |
+|-------|-------------|
+| `/` | Homepage with background image and floating menu |
+| `/registration` | Zoom meeting registration link |
+| `/seminars` | Seminar schedule table (Presenter, Topic, Date, Video) |
+| `/poster` | Downloadable seminar poster |
+| `/news` | News and updates (coming soon) |
+
+## Tech Stack
+
+- [Next.js 16](https://nextjs.org) (App Router, static export)
+- [React 19](https://react.dev) + [TypeScript](https://www.typescriptlang.org)
+- [Tailwind CSS v4](https://tailwindcss.com)
+- [Bun](https://bun.sh) package manager
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+bun install
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+bun run build
+```
 
-## Learn More
+Produces a static export in the `out/` directory. Serve locally with:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+bunx serve out
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+app/
+  page.tsx                Homepage
+  registration/page.tsx   Registration page
+  seminars/page.tsx       Seminars listing
+  poster/page.tsx         Poster display & download
+  news/page.tsx           News (placeholder)
+  components/
+    Navigation.tsx        Shared navigation bar
+    Footer.tsx            Sponsor logos footer
+  layout.tsx              Root layout
+  globals.css             Global styles & theme
+public/                   Static assets (images)
+```
