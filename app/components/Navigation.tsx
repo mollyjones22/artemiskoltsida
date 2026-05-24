@@ -21,30 +21,59 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
   const [open, setOpen] = useState(false);
 
   const isDark = variant === "dark";
-  const textColor = isDark ? "text-white" : "text-black";
-  const accentColor = isDark ? "text-white" : "text-[#231e59]";
+  const textColor = isDark ? "text-white" : "text-[#021263]";
+  const accentColor = isDark ? "text-white" : "text-[#021263]";
   const borderColor = isDark ? "border-white/20" : "border-gray-200";
-  const burgerBg = isDark ? "bg-white" : "bg-black";
-  const containerBg = isDark ? "" : "bg-white";
+  const burgerBg = isDark ? "bg-white" : "bg-[#021263]";
   const panelBg = isDark ? "bg-[#231e59]" : "bg-white";
-  const hoverBg = isDark ? "hover:bg-white/10" : "hover:bg-gray-50";
-  const activeBg = isDark ? "bg-white/10" : "bg-gray-50";
+  const hoverBg = isDark ? "hover:bg-white/10" : "hover:bg-[#021263]/5";
+  const activeBg = isDark ? "bg-white/10" : "bg-[#021263]/5";
+  const underlineColor = isDark ? "bg-white" : "bg-[#021263]";
 
   return (
-    <div className={`relative ${containerBg} border-b ${borderColor}`}>
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 sm:py-4">
+    <div
+      className={`sticky top-0 z-40 ${
+        isDark ? "bg-[#231e59]/85 backdrop-blur-md" : "bg-white/90 backdrop-blur-md"
+      } border-b ${borderColor}`}
+    >
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-3 py-3 sm:px-4 sm:py-4">
         {/* Left: site title */}
         <Link
           href="/"
           className={`text-sm font-semibold leading-tight no-underline ${textColor} hover:opacity-80 sm:text-base md:text-lg`}
         >
-          Seminar series in Greek rhetoric, law and society
+          Seminar Series
         </Link>
 
-        {/* Right: hamburger button (all screen sizes) */}
+        {/* Right: inline links on desktop */}
+        <nav className="hidden md:flex md:items-center md:gap-1 lg:gap-2">
+          {links.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`relative rounded-md px-3 py-2 text-base no-underline transition-colors duration-200 lg:text-lg ${
+                  isActive
+                    ? `font-semibold ${accentColor} ${activeBg}`
+                    : `${textColor} ${hoverBg}`
+                }`}
+              >
+                {link.label}
+                {isActive && (
+                  <span
+                    className={`absolute inset-x-3 -bottom-0.5 h-[2px] ${underlineColor}`}
+                  />
+                )}
+              </Link>
+            );
+          })}
+        </nav>
+
+        {/* Right: burger button (mobile only) */}
         <button
           onClick={() => setOpen(!open)}
-          className="flex shrink-0 flex-col items-center justify-center gap-[5px] p-2"
+          className="flex shrink-0 flex-col items-center justify-center gap-[5px] p-2 md:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
         >
@@ -66,12 +95,12 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
         </button>
       </div>
 
-      {/* Dropdown menu (right-aligned, all screen sizes) */}
+      {/* Mobile dropdown menu (right-aligned) */}
       {open && (
         <div
-          className={`absolute right-0 top-full z-50 w-full ${panelBg} border-t ${borderColor} shadow-lg sm:w-72 sm:rounded-bl-lg sm:border-l ${borderColor}`}
+          className={`absolute right-0 top-full z-50 w-full ${panelBg} border-t ${borderColor} shadow-lg md:hidden`}
         >
-          <div className="flex flex-col items-end gap-1 px-4 py-3 sm:px-6 sm:py-4">
+          <div className="flex flex-col items-end gap-1 px-3 py-3 sm:px-4 sm:py-4">
             {links.map((link) => (
               <Link
                 key={link.href}

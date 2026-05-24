@@ -12,7 +12,7 @@ export default function Home() {
         backgroundPosition: "top center",
       }}
     >
-      <Navigation variant="dark" />
+      <Navigation />
       <div className="h-screen sm:h-[150vh]" />
     </div>
   );
