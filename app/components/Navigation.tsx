@@ -119,6 +119,7 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
           </div>
         </div>
       )}
+
     </div>
   );
 }
