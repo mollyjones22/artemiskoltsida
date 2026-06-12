@@ -15,7 +15,7 @@ export default function NewsPage() {
   return (
     <>
       <Navigation />
-      <main className="mx-auto max-w-6xl px-6 py-10 text-base leading-relaxed sm:px-16 sm:text-lg">
+      <main className="px-6 py-10 text-base leading-relaxed sm:px-16 sm:text-lg">
         <h1 className="mb-8 text-xl font-bold sm:text-2xl">
           Public engagement and impact
         </h1>
