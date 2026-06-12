@@ -13,15 +13,19 @@ export default function RegistrationPage() {
         <h2 className="mb-4 text-xl font-bold sm:text-2xl">
           Seminar in Greek Rhetoric, Law, and Society (Fall&nbsp;2026)
         </h2>
-        <p className="mb-4">Zoom Registration link:</p>
-        <a
-          href="https://ufl.zoom.us/meeting/register/D1C4_TXyTKysAg6F07O3jg#/registration"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-bold text-[#231e59] underline break-words hover:text-black"
-        >
-          https://ufl.zoom.us/meeting/register/D1C4_TXyTKysAg6F07O3jg#/registration
-        </a>
+        <p className="mb-4">
+          Register{" "}
+          <a
+            href="https://ufl.zoom.us/meeting/register/yEKkh4B5Qw2oOP51ByiaTg"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold text-[#231e59] underline hover:text-black"
+          >
+            here
+          </a>{" "}
+          in advance for these meetings: the same link will be used for the
+          entire series.
+        </p>
       </main>
     </>
   );
