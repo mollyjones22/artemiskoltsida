@@ -10,7 +10,7 @@ Generously sponsored by Harvard University and the Institute for Strategy, Polit
 |-------|-------------|
 | `/` | Homepage with background image and floating menu |
 | `/registration` | Zoom meeting registration link |
-| `/seminars` | Seminar schedule table (Presenter, Topic, Date, Video) |
+| `/talks` | Talks schedule table (Presenter, Topic, Date, Video) |
 | `/poster` | Downloadable seminar poster |
 | `/news` | News and updates (coming soon) |
 
@@ -48,7 +48,7 @@ bunx serve out
 app/
   page.tsx                Homepage
   registration/page.tsx   Registration page
-  seminars/page.tsx       Seminars listing
+  talks/page.tsx          Talks listing
   poster/page.tsx         Poster display & download
   news/page.tsx           News (placeholder)
   components/

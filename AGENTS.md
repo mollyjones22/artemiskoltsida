@@ -23,7 +23,7 @@ app/
   page.tsx                Homepage: bgsite.png background, centered floating white menu panel
   globals.css             Tailwind theme tokens, body defaults
   registration/page.tsx   Zoom registration link
-  seminars/page.tsx       Seminar table (desktop grid / mobile cards)
+  talks/page.tsx          Talks table (desktop grid / mobile cards)
   poster/page.tsx         Poster image + download button
   news/page.tsx           Placeholder page
   components/

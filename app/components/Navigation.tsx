@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 const links = [
   { href: "/", label: "Home" },
   { href: "/registration", label: "Registration" },
-  { href: "/seminars", label: "Seminars" },
+  { href: "/talks", label: "Talks" },
   { href: "/poster", label: "Poster" },
   { href: "/news", label: "News" },
 ];
@@ -42,7 +42,7 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
           href="/"
           className={`text-sm font-semibold leading-tight no-underline ${textColor} hover:opacity-80 sm:text-base md:text-lg`}
         >
-          Seminar Series
+          Talks
         </Link>
 
         {/* Right: inline links on desktop */}

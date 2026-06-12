@@ -5,14 +5,14 @@ export const metadata: Metadata = {
   title: "Talks",
 };
 
-interface Talks {
+interface Talk {
   presenter: string;
   topic: string;
   date: string;
   videoUrl: string;
 }
 
-const talks: Talks[] = [
+const talks: Talk[] = [
   {
     presenter: "Adele Scafuro (Brown University)",
     topic:
@@ -96,12 +96,12 @@ export default function TalksPage() {
         {/* Mobile cards */}
         <div className="mt-8 flex flex-col gap-4 sm:hidden">
           {talks.map((talk, i) => (
-            <div key={i} className="rounded-lg border border-gray-200 p-4">
+            <div
+              key={i}
+              className="rounded-lg border border-gray-200 p-4"
+            >
               {columns.map((col) => (
-                <div
-                  key={col.key}
-                  className="flex justify-between border-b border-gray-200 py-2 last:border-b-0"
-                >
+                <div key={col.key} className="flex justify-between border-b border-gray-200 py-2 last:border-b-0">
                   <span className="font-bold">{col.label}</span>
                   <span className="text-right">
                     {col.key === "videoUrl" ? (
