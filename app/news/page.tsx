@@ -57,16 +57,6 @@ export default function NewsPage() {
             </a>
             .
           </p>
-          <p className="mt-4">
-            Poster:{" "}
-            <a
-              href="/spring2025poster.pdf"
-              className="text-[#021263] underline hover:text-black"
-              download
-            >
-              PDF available in the link above
-            </a>
-          </p>
         </section>
 
         <section className="mt-12 max-w-4xl">
