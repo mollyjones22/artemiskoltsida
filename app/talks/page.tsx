@@ -25,7 +25,7 @@ const talks: Talk[] = [
   },
   {
     presenter: "Marios Mammatas (University of Crete)",
-    topic: "᾽Constructing moral character in Against Macartatus᾽",
+    topic: "Constructing moral character in Against Macartatus",
     date: "October 20, 12 noon ET",
   },
   {
@@ -76,16 +76,14 @@ export default function TalksPage() {
         {/* Mobile cards */}
         <div className="mt-8 flex flex-col gap-4 sm:hidden">
           {talks.map((talk, i) => (
-            <div
-              key={i}
-              className="rounded-lg border border-gray-200 p-4"
-            >
+            <div key={i} className="rounded-lg border border-gray-200 p-4">
               {columns.map((col) => (
-                <div key={col.key} className="flex justify-between border-b border-gray-200 py-2 last:border-b-0">
+                <div
+                  key={col.key}
+                  className="flex justify-between border-b border-gray-200 py-2 last:border-b-0"
+                >
                   <span className="font-bold">{col.label}</span>
-                  <span className="text-right">
-                    {talk[col.key] || "\u00A0"}
-                  </span>
+                  <span className="text-right">{talk[col.key] || "\u00A0"}</span>
                 </div>
               ))}
             </div>
