@@ -23,7 +23,7 @@ export default function Home() {
             }}
           >
             <img
-              src="/icon.png"
+              src="/iconbig.png"
               alt=""
               aria-hidden="true"
               className="h-14 w-14 shrink-0 object-contain sm:h-24 sm:w-24"
