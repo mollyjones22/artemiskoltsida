@@ -17,16 +17,16 @@ export default function Home() {
         <div className="pointer-events-none sticky top-0 z-10 h-screen">
           <section
             aria-label="Seminar title"
-            className="absolute top-[50%] z-20 flex max-w-[calc(100vw-1.5rem)] -translate-y-1/2 items-center gap-3 font-sans leading-tight text-[#021263] sm:max-w-[calc(100vw-2rem)] sm:gap-5"
+            className="absolute top-[50%] z-20 flex max-w-[calc(100vw-1.5rem)] -translate-x-1/2 -translate-y-1/2 items-center gap-3 font-sans leading-tight text-[#021263] sm:max-w-[calc(100vw-2rem)] sm:gap-5"
             style={{
-              left: "max(1.5rem, calc((100vw - 72rem) / 2 + 6.5rem))",
+              left: "calc(50% + clamp(1.5rem, 6vw, 5rem))",
             }}
           >
             <img
               src="/iconbig.png"
               alt=""
               aria-hidden="true"
-              className="h-14 w-14 shrink-0 object-contain sm:h-24 sm:w-24"
+              className="h-10 w-10 shrink-0 object-contain sm:h-16 sm:w-16"
             />
             <div className="rounded-sm bg-white px-3 py-2 shadow-[0_0_18px_rgba(255,255,255,0.65)] sm:px-5 sm:py-4">
               <h1 className="text-[11.2px] font-bold sm:text-[1.4rem] lg:whitespace-nowrap">
