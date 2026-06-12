@@ -36,17 +36,18 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
         isDark ? "bg-[#231e59]/85 backdrop-blur-md" : "bg-white/90 backdrop-blur-md"
       } border-b ${borderColor}`}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-3 py-3 sm:px-4 sm:py-4">
+      <div className="mx-auto flex max-w-6xl items-end justify-between gap-4 px-3 py-3 sm:px-4 sm:py-4">
         {/* Left: site title */}
         <Link
           href="/"
-          className={`text-sm font-semibold leading-tight no-underline ${textColor} hover:opacity-80 sm:text-base md:text-lg`}
+          className={`shrink-0 text-sm font-semibold leading-tight no-underline ${textColor} hover:opacity-80 sm:text-base md:text-lg`}
         >
-          Talks
+          <span className="block">Seminar Series in</span>
+          <span className="block">Greek Rhetoric, Law, and Society</span>
         </Link>
 
         {/* Right: inline links on desktop */}
-        <nav className="hidden md:flex md:items-center md:gap-1 lg:gap-2">
+        <nav className="hidden md:flex md:items-end md:gap-1 lg:gap-2">
           {links.map((link) => {
             const isActive = pathname === link.href;
             return (
