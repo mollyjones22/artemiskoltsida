@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
 import Navigation from "../components/Navigation";
+import { createPageMetadata } from "../seo";
 
 export const metadata: Metadata = {
-  title: "Talks",
+  ...createPageMetadata({
+    title: "Fall 2026 Talks and Schedule",
+    description:
+      "Explore the Fall 2026 virtual talk schedule for the Greek Rhetoric, Law, and Society seminar.",
+    path: "/talks",
+    noIndex: true,
+  }),
 };
 
 interface Talks {

@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import Navigation from "../components/Navigation";
+import { createPageMetadata } from "../seo";
 
-export const metadata: Metadata = {
-  title: "Talks",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "Fall 2026 Talks and Schedule",
+  description:
+    "Explore the Fall 2026 virtual talk schedule, speakers, topics, dates, and calendar links for the Greek Rhetoric, Law, and Society seminar.",
+  path: "/talks",
+});
 
 interface Talk {
   presenter: string;
@@ -93,7 +97,9 @@ export default function TalksPage() {
     <>
       <Navigation />
       <main className="px-6 py-10 text-base sm:px-16 sm:text-lg">
-        <h2 className="mb-8 text-xl font-bold sm:text-2xl">Talks</h2>
+        <h1 className="mb-8 text-xl font-bold sm:text-2xl">
+          Fall 2026 Talks and Schedule
+        </h1>
 
         {/* Desktop table */}
         <div className="mt-8 hidden w-full sm:block">

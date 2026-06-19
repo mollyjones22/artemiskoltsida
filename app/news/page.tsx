@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import Navigation from "../components/Navigation";
+import { createPageMetadata } from "../seo";
 
-export const metadata: Metadata = {
-  title: "News",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "News and Public Engagement",
+  description:
+    "Read about the international reach and public impact of the Greek Rhetoric, Law, and Society seminar, and download posters from past series.",
+  path: "/news",
+});
 
 const posters = [
   { title: "Spring 2025", href: "/spring2025poster.pdf" },
