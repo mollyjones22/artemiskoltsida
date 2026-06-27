@@ -69,6 +69,120 @@ export const digitalPhotographyProjects: AnalogProject[] = [
   },
 ];
 
+export const filmEditingProjects: AnalogProject[] = [
+  {
+    number: "D.04.05",
+    slug: "bearcave",
+    title: "BearCave",
+    year: "Short 2023",
+    gallery: "1/2",
+    galleryReferences: ["BearCave Αρκουδότρυπα", "BearCave Αρκουδότρυπα"],
+    details: [
+      "BearCave/Αρκουδότρυπα by Krysianna Papadakis, Stergios Dinopoulos",
+      "Queer, women-led teen drama set in the mountains of rural Greece.",
+      "Casting Department, Production assistant",
+      "Golden Dionysus - Best Film Awaed and",
+      "Best Female Performance Award",
+      "at 46th Drama International Short Film Festival",
+    ],
+    links: [
+      {
+        label: "　 ҉ 　imdb.com/title/tt29063820/",
+        href: "https://www.imdb.com/title/tt29063820/",
+      },
+    ],
+  },
+  {
+    number: "D.04.04",
+    slug: "how-to-be-curious",
+    title: "How to be curious",
+    year: "2022-Today",
+    gallery: "1/1",
+    galleryReferences: ["Ep03: How to make a spot", "Ep03: How to make a spot"],
+    details: [
+      "How to Be Curious is a video series created by Molly. The show aims to make the viewer see the world through Molly’s gaze, using a huge archive of details, lists, and instructions.",
+      "A video series shot with a handheld Panasonic SDR-T70 camera, featuring text by Molly and original music in some episodes.",
+    ],
+    links: [
+      {
+        label:
+          "▹youtube.com/watch?v=hBLB95lwpfQ&list=PLVHLus1cvQkCsF_H_XR0QJJZOHcOYf8sX",
+        href: "https://www.youtube.com/watch?v=hBLB95lwpfQ&list=PLVHLus1cvQkCsF_H_XR0QJJZOHcOYf8sX",
+      },
+    ],
+  },
+  {
+    number: "D.04.03",
+    slug: "ta-nea-tis-alexandras-reclaim",
+    title: "Τα νέα της Αλεξάνδρας| reclaim",
+    year: "2022",
+    gallery: "1/9",
+    galleryReferences: [
+      "01_Τα νέα της Αλεξάνδρας",
+      "01_Τα νέα της Αλεξάνδρας",
+    ],
+    details: [
+      'Traditional Light-Folk song "Ta nea tis Alexandras-Perpiniadis" reclaimed.',
+      "by Ladie's Fingers Directing Duo",
+      "Production Assistant",
+    ],
+    links: [
+      {
+        label: "⚛youtube.com/watch?v=yqC_iUOFo8c",
+        href: "https://www.youtube.com/watch?v=yqC_iUOFo8c",
+      },
+    ],
+  },
+  {
+    number: "D.04.02",
+    slug: "promitheas",
+    title: "Σύλλογος Ασθενών Ήπατος Ελλάδος “ΠΡΟΜΗΘΕΑΣ”",
+    year: "2020, 2021",
+    gallery: "1/1",
+    galleryReferences: ["01", "01"],
+    details: [
+      "Production Assistant at Ladies Fingers Directing Duo",
+      "Streetwork Project: Προσέχουμε ο Ένας τον Άλλο​",
+    ],
+    links: [
+      {
+        label: "♥youtube.com/watch?v=p_rh4ijVTAQ",
+        href: "https://www.youtube.com/watch?v=p_rh4ijVTAQ",
+      },
+      {
+        label: "Δουλεύει για σένα!​",
+        href: "https://www.youtube.com/watch?v=Q5UZ_67OOUQ",
+      },
+      {
+        label: "✼youtube.com/watch?v=Q5UZ_67OOUQ",
+        href: "https://www.youtube.com/watch?v=Q5UZ_67OOUQ",
+      },
+    ],
+  },
+  {
+    number: "D.04.01",
+    slug: "start-create-cultural-change",
+    title: "Promo video spots of candiadates START – Create Cultural Change",
+    year: "2019",
+    gallery: "photo gallery",
+    galleryReferences: [
+      "START – Create Cultural Change",
+      "START – Create Cultural Change",
+    ],
+    details: [
+      "by Ladies Fingers Directing Duo",
+      "Post production assistant",
+      "Video Editor assistant",
+    ],
+    links: [
+      {
+        label: "✦youtube.com/watch?v=vMRRnSe5Ko4",
+        href: "https://www.youtube.com/watch?v=vMRRnSe5Ko4",
+      },
+    ],
+  },
+];
+
 export const digitalProjectGroups = {
   "diploma-thesis-architecture": {
     title: "Diploma Thesis (Architecture)",
@@ -79,5 +193,10 @@ export const digitalProjectGroups = {
     title: "Digital Photography",
     basePath: "/digital/digital-photography",
     projects: digitalPhotographyProjects,
+  },
+  "film-editing": {
+    title: "Film & Editing",
+    basePath: "/digital/film-editing",
+    projects: filmEditingProjects,
   },
 };
