@@ -41,6 +41,7 @@ interface NavigationProps {
 export default function Navigation({ variant = "light" }: NavigationProps) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const nisosAftiLabel = "\u039d\u03ae\u03c3\u03bf\u03c2 \u0391\u03c5\u03c4\u03af";
 
   const isDark = variant === "dark";
   const borderColor = isDark ? "border-white/20" : "border-gray-200";
@@ -67,9 +68,9 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
         <Link
           href="/nisos-afti"
           className="nisos-afti-tab absolute left-[calc(50%+9rem)] top-3 hidden h-20 w-20 items-center justify-center border border-[#0000ee] bg-white p-2 text-center text-xs leading-tight no-underline sm:flex md:left-[calc(50%+11rem)] md:top-4"
-          aria-label={"Νήσος Αυτί"}
+          aria-label={nisosAftiLabel}
         >
-          {"Νήσος Αυτί"}
+          {nisosAftiLabel}
         </Link>
 
         {/* Inline links on desktop */}
@@ -156,6 +157,14 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
             }`}
           />
         </button>
+
+        <Link
+          href="/nisos-afti"
+          className="nisos-afti-tab flex h-20 w-20 items-center justify-center border border-[#0000ee] bg-white p-2 text-center text-xs leading-tight no-underline sm:hidden"
+          aria-label={nisosAftiLabel}
+        >
+          {nisosAftiLabel}
+        </Link>
       </div>
 
       {/* Mobile dropdown menu */}
