@@ -10,7 +10,7 @@ export const metadata: Metadata = createPageMetadata({
 });
 
 const infoLines = [
-  { text: "An Analog to Digital Journey", bold: true },
+  { text: "An Analog to Digital Journey", bold: true, underline: true },
   { text: "Digital Portfolio", bold: true },
   { text: "Artemis Koltsida" },
   { text: "Alias: Molly, MJ22, Tipomata, StudioAltw.\u200b" },
@@ -29,7 +29,12 @@ export default function InfoPage() {
       <main className="flex min-h-[60vh] items-center justify-center px-6 py-8 text-center text-black sm:px-16">
         <div className="flex max-w-3xl flex-col gap-1 text-base leading-normal">
           {infoLines.map((line) => (
-            <p key={line.text} className={line.bold ? "font-bold" : undefined}>
+            <p
+              key={line.text}
+              className={`${line.bold ? "font-bold" : ""} ${
+                line.underline ? "underline underline-offset-2" : ""
+              }`}
+            >
               {line.text}
             </p>
           ))}
