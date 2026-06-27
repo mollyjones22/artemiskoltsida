@@ -66,7 +66,7 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
 
         <Link
           href="/nisos-afti"
-          className="nisos-afti-tab absolute right-3 top-3 hidden h-14 w-14 items-center justify-center border border-black bg-white p-1 text-center text-[11px] leading-tight no-underline sm:flex md:right-4 md:top-4"
+          className="nisos-afti-tab absolute left-[calc(50%+9rem)] top-3 hidden h-14 w-14 items-center justify-center border border-black bg-white p-1 text-center text-[11px] leading-tight no-underline sm:flex md:left-[calc(50%+11rem)] md:top-4"
           aria-label={"Νήσος Αυτί"}
         >
           {"Νήσος Αυτί"}
