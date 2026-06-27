@@ -24,8 +24,8 @@ export default function DigitalPage() {
   return (
     <>
       <Navigation />
-      <main className="flex min-h-screen items-center justify-center bg-white px-6 py-16 text-center text-black sm:px-16">
-        <div className="flex max-w-3xl flex-col gap-4 text-base leading-relaxed sm:text-lg">
+      <main className="flex min-h-[60vh] items-center justify-center bg-white px-6 py-8 text-center text-black sm:px-16">
+        <div className="flex max-w-3xl flex-col gap-1 text-sm leading-normal">
           {lines.map((line, index) => (
             <p
               key={`${line}-${index}`}

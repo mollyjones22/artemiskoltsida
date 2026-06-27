@@ -26,8 +26,8 @@ export default function InfoPage() {
   return (
     <>
       <Navigation />
-      <main className="flex min-h-screen items-center justify-center px-6 py-16 text-center text-black sm:px-16">
-        <div className="flex max-w-3xl flex-col gap-4 text-base leading-relaxed sm:text-lg">
+      <main className="flex min-h-[60vh] items-center justify-center px-6 py-8 text-center text-black sm:px-16">
+        <div className="flex max-w-3xl flex-col gap-1 text-sm leading-normal">
           {infoLines.map((line) => (
             <p key={line.text} className={line.bold ? "font-bold" : undefined}>
               {line.text}
