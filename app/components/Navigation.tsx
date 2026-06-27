@@ -54,7 +54,7 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
     <div
       className={`sticky top-0 z-40 ${
         isDark ? "bg-[#231e59]/85 backdrop-blur-md" : "bg-white/90 backdrop-blur-md"
-      } border-b ${borderColor}`}
+      }`}
     >
       <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-3 px-3 py-3 sm:px-4 sm:py-4">
         <Link
@@ -66,7 +66,7 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
 
         <Link
           href="/nisos-afti"
-          className="nisos-afti-tab absolute left-[calc(50%+9rem)] top-3 hidden h-14 w-14 items-center justify-center border border-black bg-white p-1 text-center text-[11px] leading-tight no-underline sm:flex md:left-[calc(50%+11rem)] md:top-4"
+          className="nisos-afti-tab absolute left-[calc(50%+9rem)] top-3 hidden h-20 w-20 items-center justify-center border border-[#0000ee] bg-[#0000ee] p-2 text-center text-xs leading-tight text-white no-underline hover:text-white hover:no-underline sm:flex md:left-[calc(50%+11rem)] md:top-4"
           aria-label={"Νήσος Αυτί"}
         >
           {"Νήσος Αυτί"}
