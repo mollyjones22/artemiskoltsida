@@ -6,10 +6,8 @@ import { usePathname } from "next/navigation";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/registration", label: "Registration" },
   { href: "/talks", label: "Talks" },
   { href: "/poster", label: "Poster" },
-  { href: "/news", label: "News" },
 ];
 
 interface NavigationProps {
@@ -36,18 +34,16 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
         isDark ? "bg-[#231e59]/85 backdrop-blur-md" : "bg-white/90 backdrop-blur-md"
       } border-b ${borderColor}`}
     >
-      <div className="mx-auto flex max-w-6xl items-end justify-between gap-4 px-3 py-3 sm:px-4 sm:py-4">
-        {/* Left: site title */}
+      <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-3 px-3 py-3 sm:px-4 sm:py-4">
         <Link
           href="/"
-          className={`shrink-0 text-sm font-semibold leading-tight no-underline ${textColor} hover:opacity-80 sm:text-base md:text-lg`}
+          className="text-center text-base font-semibold uppercase tracking-[0.18em] text-[#021263] no-underline hover:opacity-80 sm:text-lg md:text-xl"
         >
-          <span className="block">Seminar Series in</span>
-          <span className="block">Greek Rhetoric, Law, and Society</span>
+          ☼ ARTEMIS KOLTSIDA ☾
         </Link>
 
-        {/* Right: inline links on desktop */}
-        <nav className="hidden md:flex md:items-end md:gap-1 lg:gap-2">
+        {/* Inline links on desktop */}
+        <nav className="hidden md:flex md:items-center md:justify-center md:gap-1 lg:gap-2">
           {links.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -71,7 +67,7 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
           })}
         </nav>
 
-        {/* Right: burger button (mobile only) */}
+        {/* Mobile menu button */}
         <button
           onClick={() => setOpen(!open)}
           className="flex shrink-0 flex-col items-center justify-center gap-[5px] p-2 md:hidden"
@@ -96,18 +92,18 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
         </button>
       </div>
 
-      {/* Mobile dropdown menu (right-aligned) */}
+      {/* Mobile dropdown menu */}
       {open && (
         <div
           className={`absolute right-0 top-full z-50 w-full ${panelBg} border-t ${borderColor} shadow-lg md:hidden`}
         >
-          <div className="flex flex-col items-end gap-1 px-3 py-3 sm:px-4 sm:py-4">
+          <div className="flex flex-col items-center gap-1 px-3 py-3 sm:px-4 sm:py-4">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className={`w-full rounded px-3 py-2 text-right text-base no-underline transition-colors duration-200 sm:text-lg ${
+                className={`w-full rounded px-3 py-2 text-center text-base no-underline transition-colors duration-200 sm:text-lg ${
                   pathname === link.href
                     ? `font-semibold ${accentColor} ${activeBg}`
                     : `${textColor} ${hoverBg}`

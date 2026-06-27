@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Footer from "./components/Footer";
-import IconBand from "./components/IconBand";
 import {
   DEFAULT_DESCRIPTION,
   SITE_NAME,
@@ -79,7 +78,6 @@ export default function RootLayout({
       <body className="flex min-h-screen flex-col bg-white text-black">
         <div className="relative flex-1">
           {children}
-          <IconBand />
         </div>
         <Footer />
       </body>
