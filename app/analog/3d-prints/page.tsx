@@ -19,6 +19,7 @@ export default function ThreeDPrintsPage() {
       <ProjectList
         basePath={group.basePath}
         projects={group.projects}
+        showProjectTiles
         title={group.title}
       />
     </>

@@ -40,6 +40,7 @@ export default function ProjectPage({
           </div>
 
           <div
+            id="photo-gallery"
             className="mb-6 flex min-h-40 items-center justify-center border border-dashed border-black px-4 py-8 text-center text-sm leading-normal"
             aria-label={`${project.title} photo gallery placeholder`}
           >
