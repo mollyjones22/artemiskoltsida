@@ -8,7 +8,7 @@ const analogLinks = [
   { href: "/analog/3d-prints", label: "3D Prints" },
   { href: "/analog/analog-photography", label: "Analog Photography" },
   {
-    href: "/analog#constructions-installations",
+    href: "/analog/constructions-installations",
     label: "Constructions - Installations",
   },
   { href: "/analog#drawings", label: "Drawings" },

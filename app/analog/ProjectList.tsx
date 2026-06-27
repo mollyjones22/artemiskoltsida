@@ -82,6 +82,12 @@ export default function ProjectList({
                     <p>
                       Photo gallery placeholder
                       <br />
+                      {project.galleryReferences?.map((reference) => (
+                        <span key={reference}>
+                          {reference}
+                          <br />
+                        </span>
+                      ))}
                       {project.gallery}
                     </p>
                   </div>

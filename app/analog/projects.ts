@@ -4,6 +4,7 @@ export type AnalogProject = {
   title: string;
   year: string;
   gallery: string;
+  galleryReferences?: string[];
   details: string[];
   links?: {
     label: string;
@@ -136,6 +137,62 @@ export const analogPhotographyProjects: AnalogProject[] = [
   },
 ];
 
+export const constructionInstallationProjects: AnalogProject[] = [
+  {
+    number: "A.03.03",
+    slug: "tom",
+    title: "Tom",
+    year: "2022, 2023",
+    gallery: "1/14",
+    galleryReferences: ["001_Thom", "001_Thom"],
+    details: [
+      "PVC Zip Tie Geodesic Dome",
+      "Used for the djbooth at diy festival",
+      "Design: Extended Kavlona Arch Team",
+      "Construction: Extended Kavlona Arch Team",
+      "Tent: D.Tzatzarakis and Kavlona Arch Team",
+    ],
+    links: [
+      {
+        label: "✮www.facebook.com/tzatzarakis.tentes",
+        href: "https://www.facebook.com/tzatzarakis.tentes/?locale=el_GR",
+      },
+    ],
+  },
+  {
+    number: "A.03.02",
+    slug: "athens-conservatorium-megaron",
+    title:
+      "6 7/6 Δραματική Σχολή Ωδείου Αθηνών στο Μέγαρο / Athens Conservatorium Megaron & The Athens Concert Hall",
+    year: "2018",
+    gallery: "1/4",
+    galleryReferences: ["Victor_01", "Victor_01"],
+    details: [
+      "Design and production of Set and Costumes",
+      "for the play “All the Theatre (in Five Scenes and Ten Variations),",
+      "Victor or Power to the Children”",
+      "as part of the course Transformations of the Theatrical Space",
+      "with the Drama School of the Athens Conservatoire",
+      "at the Athens Concert Hall.",
+    ],
+  },
+  {
+    number: "A.03.01",
+    slug: "distorted-desk",
+    title: "Distorted Desk",
+    year: "2017",
+    gallery: "photo gallery",
+    galleryReferences: ["001_Distorted Desk"],
+    details: [
+      "LabNTUA Arch School Project (5th Semester)",
+      "Reworked school equipment with aerial yoga fabrics, transformed into a hammock.",
+      "Design: Koltsida A., Mitsikostas D., Papadopoulou E.",
+      "Supervisors: Grigoriadis I., Gyparakis G., Ntaflos K.",
+      "Created at ArchNTUA Lab",
+    ],
+  },
+];
+
 export const analogProjectGroups = {
   "3d-prints": {
     title: "3D Prints",
@@ -146,5 +203,10 @@ export const analogProjectGroups = {
     title: "Analog Photography",
     basePath: "/analog/analog-photography",
     projects: analogPhotographyProjects,
+  },
+  "constructions-installations": {
+    title: "Constructions - Installations",
+    basePath: "/analog/constructions-installations",
+    projects: constructionInstallationProjects,
   },
 };
