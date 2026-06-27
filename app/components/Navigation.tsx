@@ -13,7 +13,7 @@ const analogLinks = [
   },
   { href: "/analog/drawings", label: "Drawings" },
   { href: "/analog/silkscreen-prints", label: "Silkscreen Prints" },
-  { href: "/analog#zines", label: "Zines" },
+  { href: "/analog/zines", label: "Zines" },
 ];
 
 const digitalLinks = [

@@ -365,6 +365,75 @@ export const silkscreenPrintProjects: AnalogProject[] = [
   },
 ];
 
+export const zineProjects: AnalogProject[] = [
+  {
+    number: "A.06.05",
+    slug: "softathens",
+    title: "SOFTATHENS, BY CARHARTT WIP x LATRAAC x TIPOMATA",
+    year: "2023",
+    gallery: "1/2",
+    galleryReferences: ["softathens01", "softathens01"],
+    details: [
+      "SOFTATHENS",
+      "Unbound zine, made from series of stand-alone risoprints.",
+      "Two stories by Giannis Galiatsos",
+      "Printed at DolcePub",
+    ],
+  },
+  {
+    number: "A.06.04",
+    slug: "adelfes-spiti",
+    title: "Αδελφές/Σπίτι",
+    year: "2019",
+    gallery: "1/5",
+    galleryReferences: ["001_SistersHome", "001_SistersHome"],
+    details: [
+      "Self-published zine with a poem and photos",
+      "Cover: Ipad sketch",
+    ],
+  },
+  {
+    number: "A.06.03",
+    slug: "cd-booklet-desert-blues",
+    title: "CD BOOKLET Desert Blues",
+    year: "2020",
+    gallery: "1/7",
+    galleryReferences: ["001_CD", "001_CD"],
+    details: [
+      "A zine in a CD hard case showcasing analog photos from my Morocco trip in 2020.",
+      "Mixtape:",
+    ],
+    links: [
+      {
+        label:
+          "♬ www.youtube.com/playlist?list=PLVHLus1cvQkD6fFY_VWW3l_RNTFEysujJ",
+        href: "https://www.youtube.com/playlist?list=PLVHLus1cvQkD6fFY_VWW3l_RNTFEysujJ",
+      },
+    ],
+  },
+  {
+    number: "A.06.02",
+    slug: "fotografies-me-poihmata",
+    title: "Φωτογραφίες με ποιήματα",
+    year: "2018",
+    gallery: "1/5",
+    galleryReferences: ["photoanalogpoems00", "photoanalogpoems00"],
+    details: [
+      "A hand-sewn zine featuring photos with poems handwritten on transparent paper.",
+    ],
+  },
+  {
+    number: "A.06.01",
+    slug: "the-ballad-of-buster-scruggs",
+    title: "The Ballad of Buster Scruggs",
+    year: "2018",
+    gallery: "photo gallery",
+    details: [
+      "The Coen Brothers’ film The Ballad of Buster Scruggs, reimagined as a children’s storybook with illustrations",
+    ],
+  },
+];
+
 export const analogProjectGroups = {
   "3d-prints": {
     title: "3D Prints",
@@ -390,5 +459,10 @@ export const analogProjectGroups = {
     title: "Silkscreen Prints",
     basePath: "/analog/silkscreen-prints",
     projects: silkscreenPrintProjects,
+  },
+  zines: {
+    title: "Zines",
+    basePath: "/analog/zines",
+    projects: zineProjects,
   },
 };
