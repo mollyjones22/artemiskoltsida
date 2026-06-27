@@ -64,6 +64,14 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
           {"\u263c artemis koltsida \u263e"}
         </Link>
 
+        <Link
+          href="/nisos-afti"
+          className="nisos-afti-tab absolute right-3 top-3 hidden h-12 w-12 items-center justify-center border border-black bg-white p-1 text-center text-[10px] leading-tight no-underline sm:flex md:right-4 md:top-4"
+          aria-label="Νήσος Αυτί"
+        >
+          Νήσος Αυτί
+        </Link>
+
         {/* Inline links on desktop */}
         <nav className="hidden items-center justify-center gap-4 md:flex">
           <div className="group relative">
