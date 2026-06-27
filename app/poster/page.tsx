@@ -27,6 +27,8 @@ export default function PosterPage() {
           <div className="mt-8 text-center">
             <a
               href="/poster2026.png"
+              target="_blank"
+              rel="noopener noreferrer"
               download
               className="inline-block rounded-lg bg-[#231e59] px-6 py-3 text-base font-bold text-white no-underline transition-colors duration-300 hover:bg-black"
             >

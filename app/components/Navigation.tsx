@@ -19,14 +19,12 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
   const [open, setOpen] = useState(false);
 
   const isDark = variant === "dark";
-  const textColor = isDark ? "text-white" : "text-[#021263]";
-  const accentColor = isDark ? "text-white" : "text-[#021263]";
   const borderColor = isDark ? "border-white/20" : "border-gray-200";
-  const burgerBg = isDark ? "bg-white" : "bg-[#021263]";
+  const burgerBg = isDark ? "bg-white" : "bg-black";
   const panelBg = isDark ? "bg-[#231e59]" : "bg-white";
-  const hoverBg = isDark ? "hover:bg-white/10" : "hover:bg-[#021263]/5";
-  const activeBg = isDark ? "bg-white/10" : "bg-[#021263]/5";
-  const underlineColor = isDark ? "bg-white" : "bg-[#021263]";
+  const hoverBg = isDark ? "hover:bg-white/10" : "hover:bg-blue-50";
+  const activeBg = isDark ? "bg-white/10" : "bg-transparent";
+  const underlineColor = isDark ? "bg-white" : "bg-[#800080]";
 
   return (
     <div
@@ -37,29 +35,25 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
       <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-3 px-3 py-3 sm:px-4 sm:py-4">
         <Link
           href="/"
-          className="text-center text-base font-semibold tracking-[0.18em] text-[#800080] no-underline hover:opacity-80 sm:text-lg md:text-xl"
+          className="site-title text-center text-base font-semibold tracking-[0.18em] no-underline hover:no-underline hover:opacity-80 sm:text-lg md:text-xl"
         >
           {"\u263c artemis koltsida \u263e"}
         </Link>
 
         {/* Inline links on desktop */}
-        <nav className="hidden w-full grid-cols-3 items-center md:grid">
-          {links.map((link, index) => {
+        <nav className="hidden items-center justify-center gap-4 md:flex">
+          {links.map((link) => {
             const isActive = pathname === link.href;
-            const alignment =
-              index === 0
-                ? "justify-self-start"
-                : index === 1
-                  ? "justify-self-center"
-                  : "justify-self-end";
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative rounded-md px-3 py-2 text-base no-underline underline-offset-4 transition-colors duration-200 hover:underline lg:text-lg ${alignment} ${
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`relative rounded-md px-1 py-2 text-base no-underline underline-offset-4 transition-colors duration-200 hover:underline lg:text-lg ${
                   isActive
-                    ? `font-semibold ${accentColor} ${activeBg}`
-                    : `${textColor} ${hoverBg}`
+                    ? `font-semibold ${activeBg}`
+                    : hoverBg
                 }`}
               >
                 {link.label}
@@ -108,11 +102,13 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
               <Link
                 key={link.href}
                 href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
                 className={`w-full rounded px-3 py-2 text-center text-base no-underline underline-offset-4 transition-colors duration-200 hover:underline sm:text-lg ${
                   pathname === link.href
-                    ? `font-semibold ${accentColor} ${activeBg}`
-                    : `${textColor} ${hoverBg}`
+                    ? `font-semibold ${activeBg}`
+                    : hoverBg
                 }`}
               >
                 {link.label}
