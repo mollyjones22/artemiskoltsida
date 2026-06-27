@@ -37,10 +37,6 @@ export default function Home() {
       className="relative min-h-screen text-white"
       style={{
         backgroundColor: "#231e59",
-        backgroundImage: "url('/bgsite.png')",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "top center",
       }}
     >
       <script

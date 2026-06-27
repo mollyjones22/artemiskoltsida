@@ -5,9 +5,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const links = [
-  { href: "/", label: "Home" },
-  { href: "/talks", label: "Talks" },
-  { href: "/poster", label: "Poster" },
+  { href: "/", label: "Analog ▾" },
+  { href: "/talks", label: "info" },
+  {
+    href: "/poster",
+    label: "Digital ▾",
+  },
 ];
 
 interface NavigationProps {
@@ -37,9 +40,9 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
       <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-3 px-3 py-3 sm:px-4 sm:py-4">
         <Link
           href="/"
-          className="text-center text-base font-semibold uppercase tracking-[0.18em] text-[#021263] no-underline hover:opacity-80 sm:text-lg md:text-xl"
+          className="text-center text-base font-semibold tracking-[0.18em] text-[#800080] no-underline hover:opacity-80 sm:text-lg md:text-xl"
         >
-          ☼ ARTEMIS KOLTSIDA ☾
+          ☼ artemis koltsida ☾
         </Link>
 
         {/* Inline links on desktop */}
@@ -50,7 +53,7 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative rounded-md px-3 py-2 text-base no-underline transition-colors duration-200 lg:text-lg ${
+                className={`relative rounded-md px-3 py-2 text-base no-underline underline-offset-4 transition-colors duration-200 hover:underline lg:text-lg ${
                   isActive
                     ? `font-semibold ${accentColor} ${activeBg}`
                     : `${textColor} ${hoverBg}`
@@ -103,7 +106,7 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className={`w-full rounded px-3 py-2 text-center text-base no-underline transition-colors duration-200 sm:text-lg ${
+                className={`w-full rounded px-3 py-2 text-center text-base no-underline underline-offset-4 transition-colors duration-200 hover:underline sm:text-lg ${
                   pathname === link.href
                     ? `font-semibold ${accentColor} ${activeBg}`
                     : `${textColor} ${hoverBg}`
