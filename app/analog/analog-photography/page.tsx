@@ -19,6 +19,8 @@ export default function AnalogPhotographyPage() {
       <ProjectList
         basePath={group.basePath}
         projects={group.projects}
+        showInlineProjects
+        showProjectTiles
         title={group.title}
       />
     </>
