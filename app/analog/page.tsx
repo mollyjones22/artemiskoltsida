@@ -108,16 +108,14 @@ export default function AnalogPage() {
       <Navigation />
       <main className="bg-white px-6 py-6 text-left text-black sm:px-16">
         <div className="mx-auto max-w-4xl">
-          <h1 className="mb-4 text-base font-normal leading-normal">Analog</h1>
-
           <section
             id="3d-prints"
-            className="border-t border-black pt-4"
+            className="pt-4"
             aria-labelledby="three-d-prints-title"
           >
             <h2
               id="three-d-prints-title"
-              className="mb-8 text-base font-normal leading-normal"
+              className="sr-only"
             >
               3D Prints
             </h2>
