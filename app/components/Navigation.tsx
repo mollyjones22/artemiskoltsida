@@ -16,6 +16,24 @@ const analogLinks = [
   { href: "/analog#zines", label: "Zines" },
 ];
 
+const digitalLinks = [
+  {
+    href: "/digital#3d-visualization-architectural-projects",
+    label: "3D Visualization / Architectural Projects",
+  },
+  {
+    href: "/digital#postgraduate-research-digital-storytelling",
+    label: "Postgraduate Research: Digital Storytelling",
+  },
+  {
+    href: "/digital#diploma-thesis-architecture",
+    label: "Diploma Thesis (Architecture)",
+  },
+  { href: "/digital#film-editing", label: "Film & Editing" },
+  { href: "/digital#web-design", label: "Web Design" },
+  { href: "/digital#digital-photography", label: "Digital Photography" },
+];
+
 interface NavigationProps {
   variant?: "light" | "dark";
 }
@@ -84,21 +102,27 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
             )}
           </Link>
 
-          <Link
-            href="/poster"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`relative rounded-md px-1 py-2 text-base no-underline underline-offset-4 transition-colors duration-200 hover:underline lg:text-lg ${
-              pathname === "/poster" ? `font-semibold ${activeBg}` : hoverBg
-            }`}
-          >
-            Digital {"\u25be"}
-            {pathname === "/poster" && (
-              <span
-                className={`absolute inset-x-3 -bottom-0.5 h-[2px] ${underlineColor}`}
-              />
-            )}
-          </Link>
+          <div className="group relative">
+            <Link
+              href="/digital"
+              className={`block rounded-md px-1 py-2 text-base no-underline underline-offset-4 transition-colors duration-200 hover:underline lg:text-lg ${
+                pathname === "/digital" ? `font-semibold ${activeBg}` : hoverBg
+              }`}
+            >
+              Digital {"\u25be"}
+            </Link>
+            <div className="absolute left-1/2 top-full z-50 hidden w-72 -translate-x-1/2 flex-col items-center bg-white py-2 shadow-sm group-hover:flex group-focus-within:flex">
+              {digitalLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="w-full px-3 py-1 text-center text-base no-underline underline-offset-4 hover:underline"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
         </nav>
 
         {/* Mobile menu button */}
@@ -159,16 +183,24 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
               info
             </Link>
             <Link
-              href="/poster"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/digital"
               onClick={() => setOpen(false)}
               className={`w-full rounded px-3 py-2 text-center text-base no-underline underline-offset-4 transition-colors duration-200 hover:underline sm:text-lg ${
-                pathname === "/poster" ? `font-semibold ${activeBg}` : hoverBg
+                pathname === "/digital" ? `font-semibold ${activeBg}` : hoverBg
               }`}
             >
               Digital {"\u25be"}
             </Link>
+            {digitalLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className={`w-full rounded px-3 py-1 text-center text-sm no-underline underline-offset-4 transition-colors duration-200 hover:underline sm:text-base ${hoverBg}`}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       )}
