@@ -5,8 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const analogLinks = [
-  { href: "/analog#3d-prints", label: "3D Prints" },
-  { href: "/analog#analog-photography", label: "Analog Photography" },
+  { href: "/analog/3d-prints", label: "3D Prints" },
+  { href: "/analog/analog-photography", label: "Analog Photography" },
   {
     href: "/analog#constructions-installations",
     label: "Constructions - Installations",
