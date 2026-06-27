@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 
-export const SITE_NAME = "Seminar in Greek Rhetoric, Law, and Society";
-export const SITE_SHORT_NAME = "Greek Rhetoric Seminar";
+export const SITE_NAME = "Artemis Koltsida";
+export const SITE_SHORT_NAME = "Artemis Koltsida";
 export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL ??
-  "https://mollyjones22.github.io/rhetoricseminar"
+  "https://mollyjones22.github.io/artemiskoltsida"
 ).replace(/\/$/, "");
 
 export const DEFAULT_DESCRIPTION =
-  "Fall 2026 University of Florida seminar series exploring Greek rhetoric, law, and society through free virtual talks by international scholars.";
+  "Portfolio of Artemis Koltsida, an architect and creative practitioner working across analog and digital media.";
 
 const SOCIAL_IMAGE = {
   url: "/social-card.png",
   width: 1200,
   height: 630,
-  alt: "Seminar Series in Greek Rhetoric, Law, and Society — Fall 2026, University of Florida",
+  alt: "Artemis Koltsida portfolio",
 };
 
 type PageMetadataOptions = {
