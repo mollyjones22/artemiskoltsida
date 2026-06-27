@@ -24,7 +24,7 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
   const panelBg = isDark ? "bg-[#231e59]" : "bg-white";
   const hoverBg = isDark ? "hover:bg-white/10" : "hover:bg-blue-50";
   const activeBg = isDark ? "bg-white/10" : "bg-transparent";
-  const underlineColor = isDark ? "bg-white" : "bg-[#800080]";
+  const underlineColor = isDark ? "bg-white" : "bg-[#0000ee]";
 
   return (
     <div
@@ -35,7 +35,7 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
       <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-3 px-3 py-3 sm:px-4 sm:py-4">
         <Link
           href="/"
-          className="site-title text-center text-base font-semibold tracking-[0.18em] no-underline hover:no-underline hover:opacity-80 sm:text-lg md:text-xl"
+          className="text-center text-base font-semibold tracking-[0.18em] no-underline underline-offset-4 hover:underline sm:text-lg md:text-xl"
         >
           {"\u263c artemis koltsida \u263e"}
         </Link>
