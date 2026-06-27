@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-export const SITE_NAME = "Artemis Koltsida";
-export const SITE_SHORT_NAME = "Artemis Koltsida";
+export const SITE_NAME = "☼diy!!artemiskoltsida☾";
+export const SITE_SHORT_NAME = "☼diy!!artemiskoltsida☾";
 export const SITE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL ??
   "https://mollyjones22.github.io/artemiskoltsida"
@@ -14,7 +14,7 @@ const SOCIAL_IMAGE = {
   url: "/social-card.png",
   width: 1200,
   height: 630,
-  alt: "Artemis Koltsida portfolio",
+  alt: "☼diy!!artemiskoltsida☾",
 };
 
 type PageMetadataOptions = {

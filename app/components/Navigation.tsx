@@ -5,12 +5,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const links = [
-  { href: "/", label: "Analog ▾" },
-  { href: "/talks", label: "info" },
-  {
-    href: "/poster",
-    label: "Digital ▾",
-  },
+  { href: "#analog", label: "Analog \u25BE" },
+  { href: "/", label: "info" },
+  { href: "/poster", label: "Digital \u25BE" },
 ];
 
 interface NavigationProps {
@@ -42,18 +39,24 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
           href="/"
           className="text-center text-base font-semibold tracking-[0.18em] text-[#800080] no-underline hover:opacity-80 sm:text-lg md:text-xl"
         >
-          ☼ artemis koltsida ☾
+          {"\u263c artemis koltsida \u263e"}
         </Link>
 
         {/* Inline links on desktop */}
-        <nav className="hidden md:flex md:items-center md:justify-center md:gap-1 lg:gap-2">
-          {links.map((link) => {
+        <nav className="hidden w-full grid-cols-3 items-center md:grid">
+          {links.map((link, index) => {
             const isActive = pathname === link.href;
+            const alignment =
+              index === 0
+                ? "justify-self-start"
+                : index === 1
+                  ? "justify-self-center"
+                  : "justify-self-end";
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative rounded-md px-3 py-2 text-base no-underline underline-offset-4 transition-colors duration-200 hover:underline lg:text-lg ${
+                className={`relative rounded-md px-3 py-2 text-base no-underline underline-offset-4 transition-colors duration-200 hover:underline lg:text-lg ${alignment} ${
                   isActive
                     ? `font-semibold ${accentColor} ${activeBg}`
                     : `${textColor} ${hoverBg}`
