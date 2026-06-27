@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <div className="relative min-h-screen bg-white text-black">
       <Navigation />
-      <main className="flex min-h-screen items-center justify-center px-6 py-16 text-center text-[#800080] sm:px-16">
+      <main className="flex min-h-screen items-center justify-center px-6 py-16 text-center text-black sm:px-16">
         <div className="flex max-w-3xl flex-col gap-4 text-base leading-relaxed sm:text-lg">
           {infoLines.map((line) => (
             <p key={line}>{line}</p>
