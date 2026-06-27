@@ -24,13 +24,13 @@ export default function ProjectList({
         {showProjectTiles ? (
           <nav
             aria-label={`${title} project gallery links`}
-            className="mb-10 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-6"
+            className="mb-10 grid grid-cols-3 gap-2 sm:grid-cols-6"
           >
             {projects.map((project) => (
               <Link
                 key={`${project.number}-tile`}
                 href={`${basePath}/${project.slug}#photo-gallery`}
-                className="flex aspect-square items-center justify-center border border-[#0000ee] p-3 text-center text-base leading-none text-black no-underline hover:text-[#0000ee] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0000ee]"
+                className="flex aspect-square w-full max-w-[4.5rem] items-center justify-center border border-[#0000ee] p-2 text-center text-sm leading-none text-black no-underline hover:text-[#0000ee] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0000ee]"
                 aria-label={`Open ${project.number} photo gallery`}
               >
                 {project.number}
