@@ -9,7 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/analog", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/digital", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/nisos-afti", priority: 0.6, changeFrequency: "monthly" as const },
-    { path: "/talks", priority: 0.9, changeFrequency: "monthly" as const },
   ];
 
   return routes.map(({ path, priority, changeFrequency }) => ({

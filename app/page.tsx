@@ -24,9 +24,9 @@ const infoLines = [
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-white text-black">
+    <div className="relative bg-white text-black">
       <Navigation />
-      <main className="flex min-h-[60vh] items-center justify-center px-6 py-8 text-center text-black sm:px-16">
+      <main className="flex min-h-[42vh] items-center justify-center px-6 py-4 text-center text-black sm:px-16">
         <div className="flex max-w-3xl flex-col gap-1 text-base leading-normal">
           {infoLines.map((line) => (
             <p
