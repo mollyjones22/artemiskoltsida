@@ -27,14 +27,19 @@ a:visited {
   color: #0000ee;
 }
 
-@keyframes nisos-afti-spin {
-  to {
-    transform: rotate(360deg);
+@keyframes nisos-afti-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
   }
 }
 
 .nisos-afti-tab {
-  animation: nisos-afti-spin 12s linear infinite;
+  animation: nisos-afti-breathe 3.5s ease-in-out infinite;
 }
 
 .nisos-afti-tab:hover {
