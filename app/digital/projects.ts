@@ -27,10 +27,57 @@ export const diplomaThesisProjects: AnalogProject[] = [
   },
 ];
 
+export const digitalPhotographyProjects: AnalogProject[] = [
+  {
+    number: "D.06.03",
+    slug: "music-marble-2022",
+    title: "Music Marble",
+    year: "2022",
+    gallery: "1/7",
+    galleryReferences: ["001_Music Marble 2", "001_Music Marble 2"],
+    details: [
+      "Live Performance by sculptor Nikos Benos and musician Tsev at Syllogos Archeologon, Athens.",
+      "Audiovisual Team: Artemis Koltsida & Anastasia Magganiari",
+    ],
+  },
+  {
+    number: "D.06.02",
+    slug: "music-marble-2021",
+    title: "Music Marble",
+    year: "2021",
+    gallery: "1/6",
+    galleryReferences: ["001_Music Marble", "001_Music Marble"],
+    details: [
+      "Live Performance by sculptor Nikos Benos and musician Tsev at Kapandriti.",
+      "Audiovisual Team: Artemis Koltsida & Anastasia Magganiari",
+    ],
+  },
+  {
+    number: "D.06.01",
+    slug: "walk",
+    title: "Walk",
+    year: "2017",
+    gallery: "photo gallery",
+    details: ["Social performance by Martha Kotsia"],
+    links: [
+      {
+        label:
+          "⛧marthakotsia.wixsite.com/kartha/work?pgid=ksg5tk4a-885a9305-0dbd-416d-bb66-a639fd1c0f71",
+        href: "https://marthakotsia.wixsite.com/kartha/work?pgid=ksg5tk4a-885a9305-0dbd-416d-bb66-a639fd1c0f71",
+      },
+    ],
+  },
+];
+
 export const digitalProjectGroups = {
   "diploma-thesis-architecture": {
     title: "Diploma Thesis (Architecture)",
     basePath: "/digital/diploma-thesis-architecture",
     projects: diplomaThesisProjects,
+  },
+  "digital-photography": {
+    title: "Digital Photography",
+    basePath: "/digital/digital-photography",
+    projects: digitalPhotographyProjects,
   },
 };

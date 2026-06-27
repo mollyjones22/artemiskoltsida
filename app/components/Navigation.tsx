@@ -31,7 +31,7 @@ const digitalLinks = [
   },
   { href: "/digital#film-editing", label: "Film & Editing" },
   { href: "/digital#web-design", label: "Web Design" },
-  { href: "/digital#digital-photography", label: "Digital Photography" },
+  { href: "/digital/digital-photography", label: "Digital Photography" },
 ];
 
 interface NavigationProps {
