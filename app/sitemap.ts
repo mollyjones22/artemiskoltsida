@@ -30,6 +30,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     { path: "/digital", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/nisos-afti", priority: 0.6, changeFrequency: "monthly" as const },
+    {
+      path: "/nisos-afti/letter-a",
+      priority: 0.5,
+      changeFrequency: "monthly" as const,
+    },
   ];
 
   return routes.map(({ path, priority, changeFrequency }) => ({

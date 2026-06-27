@@ -67,6 +67,8 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
 
         <Link
           href="/nisos-afti"
+          target="_blank"
+          rel="noreferrer"
           className="nisos-afti-tab absolute left-[calc(50%+9rem)] top-3 hidden h-20 w-20 items-center justify-center border border-[#0000ee] bg-white p-2 text-center text-xs leading-tight no-underline sm:flex md:left-[calc(50%+11rem)] md:top-4"
           aria-label={nisosAftiLabel}
         >
@@ -160,6 +162,8 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
 
         <Link
           href="/nisos-afti"
+          target="_blank"
+          rel="noreferrer"
           className="nisos-afti-tab flex h-20 w-20 items-center justify-center border border-[#0000ee] bg-white p-2 text-center text-xs leading-tight no-underline sm:hidden"
           aria-label={nisosAftiLabel}
         >
