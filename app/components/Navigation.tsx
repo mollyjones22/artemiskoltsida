@@ -26,7 +26,7 @@ const digitalLinks = [
     label: "Postgraduate Research: Digital Storytelling",
   },
   {
-    href: "/digital#diploma-thesis-architecture",
+    href: "/digital/diploma-thesis-architecture",
     label: "Diploma Thesis (Architecture)",
   },
   { href: "/digital#film-editing", label: "Film & Editing" },
