@@ -102,6 +102,19 @@ const threeDPrintProjects = [
   },
 ];
 
+const analogPhotographyProject = {
+  number: "A.02.01",
+  title:
+    '7 years Analog Calendar  "\u039c\u03b9\u03ba\u03c1\u03ae \u0395\u03bd\u03b7\u03bb\u03b9\u03ba\u03af\u03c9\u03c3\u03b7" (Young Adulthood)',
+  year: "2014-2021",
+  gallery: "1/53",
+  details: [
+    "Kodak, 28mm, 35mm I Minolta 50mm",
+    "The photos were developed at multiple studios, printed, scanned, and digitally edited for archival purposes.",
+  ],
+  link: "https://www.instagram.com/mollyjones22/",
+};
+
 export default function AnalogPage() {
   return (
     <>
@@ -152,6 +165,52 @@ export default function AnalogPage() {
                 </article>
               ))}
             </div>
+          </section>
+
+          <section
+            id="analog-photography"
+            className="mt-12 pt-4"
+            aria-labelledby="analog-photography-title"
+          >
+            <h2 id="analog-photography-title" className="sr-only">
+              Analog Photography
+            </h2>
+
+            <article className="grid gap-4 sm:grid-cols-[5rem_minmax(0,1fr)]">
+              <p className="text-sm leading-normal">
+                {analogPhotographyProject.number}
+              </p>
+              <div>
+                <h3 className="mb-3 text-lg font-normal leading-normal underline underline-offset-4">
+                  {analogPhotographyProject.title} (
+                  {analogPhotographyProject.year})
+                </h3>
+
+                <div className="mb-4 flex flex-col gap-1 text-base leading-normal">
+                  {analogPhotographyProject.details.map((detail, index) => (
+                    <p key={`analog-photography-${index}`}>{detail}</p>
+                  ))}
+                  <a
+                    href={analogPhotographyProject.link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {"\u2661"} {analogPhotographyProject.link}
+                  </a>
+                </div>
+
+                <div
+                  className="flex min-h-40 items-center justify-center border border-dashed border-black px-4 py-8 text-center text-sm leading-normal"
+                  aria-label={`${analogPhotographyProject.title} photo gallery placeholder`}
+                >
+                  <p>
+                    Photo gallery placeholder
+                    <br />
+                    {analogPhotographyProject.gallery}
+                  </p>
+                </div>
+              </div>
+            </article>
           </section>
         </div>
       </main>
