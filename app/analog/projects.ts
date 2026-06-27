@@ -193,6 +193,113 @@ export const constructionInstallationProjects: AnalogProject[] = [
   },
 ];
 
+export const drawingProjects: AnalogProject[] = [
+  {
+    number: "A.04.08",
+    slug: "dolce-vita-mesimeri",
+    title: "Dolce Vita Mesimeri",
+    year: "2026",
+    gallery: "photo gallery",
+    details: [
+      "Oil Pastels on cotton paper, 285 gsm, 100X70cm (Fabriano Rosaspina Paper Cotton 60%)",
+    ],
+  },
+  {
+    number: "A.04.07",
+    slug: "zzz",
+    title: "zzz",
+    year: "2026",
+    gallery: "photo gallery",
+    details: [
+      "dry pastels on cotton paper, 285 gsm, 100X70cm (Fabriano Rosaspina Paper Cotton 60%)",
+    ],
+  },
+  {
+    number: "A.04.06",
+    slug: "everything-is-important",
+    title: "Everything is important",
+    year: "2025",
+    gallery: "1/1",
+    galleryReferences: ["everything is important2", "everything is important2"],
+    details: [
+      "Color Markers on cotton paper, 285 gsm, 100X70cm (Fabriano Rosaspina Paper Cotton 60%)",
+    ],
+  },
+  {
+    number: "A.04.05",
+    slug: "random-ikaria-dream",
+    title: "Random Ikaria Dream",
+    year: "2025",
+    gallery: "1/1",
+    galleryReferences: ["Ikaria Dream", "Ikaria Dream"],
+    details: [
+      "Kaweco Sketch Up Brass Satin Chrome Pencil, 35X50 cm",
+      "Cotton Watercolour Paper Block Premium 300gsm",
+    ],
+  },
+  {
+    number: "A.04.04",
+    slug: "mayi",
+    title: "Mayi",
+    year: "2024",
+    gallery: "1/4",
+    galleryReferences: ["001_Mayi", "001_Mayi"],
+    details: [
+      "Oil pastels on cotton paper, 285 gsm, 100X70cm (Fabriano Rosaspina Paper Cotton 60%)",
+      "Etching: Linoleum 12X16cm. Red Caligo ink: Vegetable oil-based inks",
+      "Print: Riso at Dolce Pub, 3 colors (based on soy and rice oil), on Aralda paper, 200gr, slightly yellow, A3 size.",
+    ],
+  },
+  {
+    number: "A.04.03",
+    slug: "fraud-effect",
+    title: "Fraud Effect",
+    year: "2023-Today",
+    gallery: "1/17",
+    galleryReferences: ["017_Fraud", "017_Fraud"],
+    details: [
+      "Painting Crew Studio Sessions",
+      "Mediums used: Airbrush paint, Charcoal, Markers, Oilbased acrylics, Oil Pastels, Pen, Pnecil, Spray paint",
+      "Photographed with phone camera",
+      "Scanned with CanoScan LiDE 120",
+      "Archived:",
+      "☾ fraud-2023.tumblr.com/",
+      "⛓3E3",
+    ],
+  },
+  {
+    number: "A.04.02",
+    slug: "stoa",
+    title: "Stoa",
+    year: "2020",
+    gallery: "1/22",
+    galleryReferences: ["s16", "s16"],
+    details: [
+      "Painting inside a tunnel at Chalandri, Greece.",
+      "Team: Dima, Jim, LeToulo, Molly, Thanos",
+      "Mediums used: Spray paint, Oilbased acrylics,",
+      "Candle lighting",
+      "Phone camera",
+    ],
+  },
+  {
+    number: "A.04.01",
+    slug: "dragon-legend",
+    title: "Dragon Legend",
+    year: "2019",
+    gallery: "1/20",
+    galleryReferences: ["01 INTRO NOTE", "01 INTRO NOTE"],
+    details: [
+      "Nature Painting walk at Amfikleia, Greece.",
+      "Team: Dima, Jim, LeToulo, Molly, Thanos",
+      "Mediums used: Spray paint, Oilbased acrylics, Posca",
+      "Photographed with phone camera",
+      "Story by LeToulo",
+      "Created with Photoshop CC",
+    ],
+  },
+];
+
 export const analogProjectGroups = {
   "3d-prints": {
     title: "3D Prints",
@@ -208,5 +315,10 @@ export const analogProjectGroups = {
     title: "Constructions - Installations",
     basePath: "/analog/constructions-installations",
     projects: constructionInstallationProjects,
+  },
+  drawings: {
+    title: "Drawings",
+    basePath: "/analog/drawings",
+    projects: drawingProjects,
   },
 };
