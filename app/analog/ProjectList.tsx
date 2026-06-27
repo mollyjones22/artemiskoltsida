@@ -61,7 +61,18 @@ export default function ProjectList({
 
                   <div className="mb-4 flex flex-col gap-1 text-base leading-normal">
                     {project.details.map((detail, index) => (
-                      <p key={`${project.number}-${index}`}>{detail}</p>
+                      <p
+                        key={`${project.number}-${index}`}
+                        className={
+                          typeof detail === "string"
+                            ? undefined
+                            : detail.underline
+                              ? "underline underline-offset-4"
+                              : undefined
+                        }
+                      >
+                        {typeof detail === "string" ? detail : detail.text}
+                      </p>
                     ))}
                     {project.links?.map((link) => (
                       <a

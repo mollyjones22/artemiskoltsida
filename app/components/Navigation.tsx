@@ -12,7 +12,7 @@ const analogLinks = [
     label: "Constructions - Installations",
   },
   { href: "/analog/drawings", label: "Drawings" },
-  { href: "/analog#silkscreen-prints", label: "Silkscreen Prints" },
+  { href: "/analog/silkscreen-prints", label: "Silkscreen Prints" },
   { href: "/analog#zines", label: "Zines" },
 ];
 

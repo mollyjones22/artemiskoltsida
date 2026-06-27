@@ -5,7 +5,13 @@ export type AnalogProject = {
   year: string;
   gallery: string;
   galleryReferences?: string[];
-  details: string[];
+  details: (
+    | string
+    | {
+        text: string;
+        underline?: boolean;
+      }
+  )[];
   links?: {
     label: string;
     href: string;
@@ -300,6 +306,65 @@ export const drawingProjects: AnalogProject[] = [
   },
 ];
 
+export const silkscreenPrintProjects: AnalogProject[] = [
+  {
+    number: "A.05.01",
+    slug: "tipomata",
+    title: "Tipomata",
+    year: "2019-Today",
+    gallery: "1/8",
+    galleryReferences: [
+      "01_tipomata_aeroplanofront",
+      "01_tipomata_aeroplanofront",
+    ],
+    details: [
+      "Handpulled silkscreen printing at DIY studio.",
+      "Affordable wearables with original artworks.",
+      "Water-based inks.",
+      {
+        text: "Tipomata Diary",
+        underline: true,
+      },
+      "2019: Mitsi, Pits, Tsolis, Maria Tolia",
+      "2020: Mitsi for Qualia, Sophia-Danae Vorvyla, Marily Marouley, Kukuli (tags), Tsolis",
+      "2021: Mr Egglemon and the headfish, Moska Antigoni, Siel Athens (tags), Boseque, Gatamavrh, Mitsi, Pits, Sophia-Danae Vorvyla, Marily Marouley,",
+      "2022: Demi, Aspalaxcomic, Flokosh, Mitsi, Pits, Tsolis, Sophia-Danae Vorvyla, Marily Marouley, Boseque, Gatamavrh, Moska Antigoni.",
+      "2023: Demi, Flokosh, Mitsi, Pits, Tsolis, Sophia-Danae Vorvyla, Marily Marouley, Moska Antigoni, KoketaMC, Palmer, Meper, Rengin, Latraac, Jinxygoat, Gioukoulele, mctsel, Thomas, FRAUD EFFECT",
+      "2024: Demi, Flokosh, Mitsi, Pits, Tsolis, Sophia-Danae Vorvyla, Marily Marouley, Moska Antigoni, KoketaMC, Andreas Palmer, Meper, Rengin, Latraac, Jinxygoat, Gioukoulele, mctsel, Thomas, FRAUD EFFECT, RofosKnit, Georgia Zachari, Dolce Pub, Cottagecore.fm, Io Papadatou, Zela Archives",
+      "2025: Dima, D-Eras, Makalle, kiko,",
+      {
+        text: "Tipomata Excibition Diary",
+        underline: true,
+      },
+      "2021: 05-06/06 Tourlou Zine Fest,",
+      "08/07 Navarinou 12",
+      "09/10 Tourlou Fest 2,",
+      "10/10 ENSP,",
+      "16-17/10 2510SPACE",
+      "2022: 21/05 Tourlou 3,",
+      "12/06 DozenMinds Vol.2,",
+      "07/10 Tourlou 4",
+      "2023: 11-12/03 TERAS,",
+      "08-09/04 Spring Market,",
+      "03-04/06 IntoTheSpot,",
+      "21-22/10 TERAS,",
+      "09/12 TULPA,",
+      "28/12 Andreas Palmer X Tipomata at TETOIO VINTAGE",
+      "2024: 18-19/05 RejuvXClofie at ROMANTSO,",
+      "05/06 Cottagecore.fm Merch Launch @Tetoio",
+      "13/10 Showroom Ta lelouda,",
+      "28/10 Tetoio Vintage w/ Rozzita",
+      "2025: 31/06-01/07 IntoTheSpot",
+    ],
+    links: [
+      {
+        label: "𓃰 instagram.com/tipomata/",
+        href: "https://www.instagram.com/tipomata/",
+      },
+    ],
+  },
+];
+
 export const analogProjectGroups = {
   "3d-prints": {
     title: "3D Prints",
@@ -320,5 +385,10 @@ export const analogProjectGroups = {
     title: "Drawings",
     basePath: "/analog/drawings",
     projects: drawingProjects,
+  },
+  "silkscreen-prints": {
+    title: "Silkscreen Prints",
+    basePath: "/analog/silkscreen-prints",
+    projects: silkscreenPrintProjects,
   },
 };
