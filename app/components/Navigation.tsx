@@ -4,10 +4,16 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const links = [
-  { href: "#analog", label: "Analog \u25BE" },
-  { href: "/", label: "info" },
-  { href: "/poster", label: "Digital \u25BE" },
+const analogLinks = [
+  { href: "/analog#3d-prints", label: "3D Prints" },
+  { href: "/analog#analog-photography", label: "Analog Photography" },
+  {
+    href: "/analog#constructions-installations",
+    label: "Constructions - Installations",
+  },
+  { href: "/analog#drawings", label: "Drawings" },
+  { href: "/analog#silkscreen-prints", label: "Silkscreen Prints" },
+  { href: "/analog#zines", label: "Zines" },
 ];
 
 interface NavigationProps {
@@ -42,29 +48,57 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
 
         {/* Inline links on desktop */}
         <nav className="hidden items-center justify-center gap-4 md:flex">
-          {links.map((link) => {
-            const isActive = pathname === link.href;
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`relative rounded-md px-1 py-2 text-base no-underline underline-offset-4 transition-colors duration-200 hover:underline lg:text-lg ${
-                  isActive
-                    ? `font-semibold ${activeBg}`
-                    : hoverBg
-                }`}
-              >
-                {link.label}
-                {isActive && (
-                  <span
-                    className={`absolute inset-x-3 -bottom-0.5 h-[2px] ${underlineColor}`}
-                  />
-                )}
-              </Link>
-            );
-          })}
+          <div className="group relative">
+            <Link
+              href="/analog"
+              className={`block rounded-md px-1 py-2 text-base no-underline underline-offset-4 transition-colors duration-200 hover:underline lg:text-lg ${
+                pathname === "/analog" ? `font-semibold ${activeBg}` : hoverBg
+              }`}
+            >
+              Analog {"\u25be"}
+            </Link>
+            <div className="absolute left-1/2 top-full z-50 hidden w-56 -translate-x-1/2 flex-col items-center bg-white py-2 shadow-sm group-hover:flex group-focus-within:flex">
+              {analogLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="w-full px-3 py-1 text-center text-base no-underline underline-offset-4 hover:underline"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <Link
+            href="/"
+            className={`relative rounded-md px-1 py-2 text-base no-underline underline-offset-4 transition-colors duration-200 hover:underline lg:text-lg ${
+              pathname === "/" ? `font-semibold ${activeBg}` : hoverBg
+            }`}
+          >
+            info
+            {pathname === "/" && (
+              <span
+                className={`absolute inset-x-3 -bottom-0.5 h-[2px] ${underlineColor}`}
+              />
+            )}
+          </Link>
+
+          <Link
+            href="/poster"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`relative rounded-md px-1 py-2 text-base no-underline underline-offset-4 transition-colors duration-200 hover:underline lg:text-lg ${
+              pathname === "/poster" ? `font-semibold ${activeBg}` : hoverBg
+            }`}
+          >
+            Digital {"\u25be"}
+            {pathname === "/poster" && (
+              <span
+                className={`absolute inset-x-3 -bottom-0.5 h-[2px] ${underlineColor}`}
+              />
+            )}
+          </Link>
         </nav>
 
         {/* Mobile menu button */}
@@ -98,22 +132,43 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
           className={`absolute right-0 top-full z-50 w-full ${panelBg} border-t ${borderColor} shadow-lg md:hidden`}
         >
           <div className="flex flex-col items-center gap-1 px-3 py-3 sm:px-4 sm:py-4">
-            {links.map((link) => (
+            <Link
+              href="/analog"
+              onClick={() => setOpen(false)}
+              className={`w-full rounded px-3 py-2 text-center text-base no-underline underline-offset-4 transition-colors duration-200 hover:underline ${hoverBg}`}
+            >
+              Analog {"\u25be"}
+            </Link>
+            {analogLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
-                className={`w-full rounded px-3 py-2 text-center text-base no-underline underline-offset-4 transition-colors duration-200 hover:underline sm:text-lg ${
-                  pathname === link.href
-                    ? `font-semibold ${activeBg}`
-                    : hoverBg
-                }`}
+                className={`w-full rounded px-3 py-1 text-center text-sm no-underline underline-offset-4 transition-colors duration-200 hover:underline sm:text-base ${hoverBg}`}
               >
                 {link.label}
               </Link>
             ))}
+            <Link
+              href="/"
+              onClick={() => setOpen(false)}
+              className={`w-full rounded px-3 py-2 text-center text-base no-underline underline-offset-4 transition-colors duration-200 hover:underline sm:text-lg ${
+                pathname === "/" ? `font-semibold ${activeBg}` : hoverBg
+              }`}
+            >
+              info
+            </Link>
+            <Link
+              href="/poster"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className={`w-full rounded px-3 py-2 text-center text-base no-underline underline-offset-4 transition-colors duration-200 hover:underline sm:text-lg ${
+                pathname === "/poster" ? `font-semibold ${activeBg}` : hoverBg
+              }`}
+            >
+              Digital {"\u25be"}
+            </Link>
           </div>
         </div>
       )}
