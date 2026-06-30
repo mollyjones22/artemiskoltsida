@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ProjectGallery from "../components/ProjectGallery";
+import { getProjectPhotos } from "../gallery";
 import type { AnalogProject } from "./projects";
 
 type ProjectListProps = {
@@ -29,20 +30,33 @@ export default function ProjectList({
             aria-label={`${title} project gallery links`}
             className="mb-10 grid grid-cols-3 gap-2 sm:grid-cols-6"
           >
-            {projects.map((project) => (
-              <Link
-                key={`${project.number}-tile`}
-                href={
-                  showInlineProjects
-                    ? `#${project.slug}`
-                    : `${basePath}/${project.slug}#photo-gallery`
-                }
-                className="flex aspect-square w-full max-w-[4.5rem] items-center justify-center border border-[#0000ee] p-2 text-center text-sm leading-none text-black no-underline hover:text-[#0000ee] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0000ee]"
-                aria-label={`Jump to ${project.number}`}
-              >
-                {project.number}
-              </Link>
-            ))}
+            {projects.map((project) => {
+              const firstPhoto = getProjectPhotos(project.number, project.title)[0];
+
+              return (
+                <Link
+                  key={`${project.number}-tile`}
+                  href={
+                    showInlineProjects
+                      ? `#${project.slug}`
+                      : `${basePath}/${project.slug}#photo-gallery`
+                  }
+                  className="relative flex aspect-square w-full max-w-[4.5rem] items-center justify-center overflow-hidden border border-[#0000ee] bg-white p-2 text-center text-sm leading-none text-black no-underline hover:text-[#0000ee] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0000ee]"
+                  aria-label={`Jump to ${project.number}`}
+                >
+                  {firstPhoto ? (
+                    <img
+                      src={firstPhoto.src}
+                      alt=""
+                      className="absolute inset-0 h-full w-full object-cover"
+                    />
+                  ) : null}
+                  <span className="relative z-10 bg-white/80 px-1 py-0.5">
+                    {project.number}
+                  </span>
+                </Link>
+              );
+            })}
           </nav>
         ) : null}
 

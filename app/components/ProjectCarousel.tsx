@@ -25,36 +25,38 @@ export default function ProjectCarousel({ id, images, title }: ProjectCarouselPr
   return (
     <figure
       id={id}
-      className="relative mb-6 flex min-h-48 items-center justify-center"
+      className="mb-6 flex min-h-48 items-center justify-center"
       aria-label={`${title} photo gallery`}
     >
-      {hasMultipleImages ? (
-        <button
-          type="button"
-          onClick={showPrevious}
-          className="absolute left-0 top-1/2 z-10 -translate-y-1/2 px-2 py-4 text-3xl leading-none text-black hover:text-[#0000ee] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0000ee]"
-          aria-label="Previous photo"
-        >
-          {"<"}
-        </button>
-      ) : null}
+      <div className="relative w-1/2">
+        {hasMultipleImages ? (
+          <button
+            type="button"
+            onClick={showPrevious}
+            className="absolute left-0 top-1/2 z-10 -translate-y-1/2 px-2 py-4 text-3xl leading-none text-black hover:text-[#0000ee] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0000ee]"
+            aria-label="Previous photo"
+          >
+            {"<"}
+          </button>
+        ) : null}
 
-      <img
-        src={currentImage.src}
-        alt={currentImage.alt}
-        className="max-h-[70vh] w-full object-contain px-8"
-      />
+        <img
+          src={currentImage.src}
+          alt={currentImage.alt}
+          className="max-h-[70vh] w-full object-contain px-8"
+        />
 
-      {hasMultipleImages ? (
-        <button
-          type="button"
-          onClick={showNext}
-          className="absolute right-0 top-1/2 z-10 -translate-y-1/2 px-2 py-4 text-3xl leading-none text-black hover:text-[#0000ee] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0000ee]"
-          aria-label="Next photo"
-        >
-          {">"}
-        </button>
-      ) : null}
+        {hasMultipleImages ? (
+          <button
+            type="button"
+            onClick={showNext}
+            className="absolute right-0 top-1/2 z-10 -translate-y-1/2 px-2 py-4 text-3xl leading-none text-black hover:text-[#0000ee] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0000ee]"
+            aria-label="Next photo"
+          >
+            {">"}
+          </button>
+        ) : null}
+      </div>
     </figure>
   );
 }
