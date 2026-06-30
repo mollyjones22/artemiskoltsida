@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ProjectGallery from "../components/ProjectGallery";
 import type { AnalogProject } from "./projects";
 
 type ProjectListProps = {
@@ -86,22 +87,12 @@ export default function ProjectList({
                     ))}
                   </div>
 
-                  <div
-                    className="flex min-h-40 items-center justify-center border border-dashed border-black px-4 py-8 text-center text-sm leading-normal"
-                    aria-label={`${project.title} photo gallery placeholder`}
-                  >
-                    <p>
-                      Photo gallery placeholder
-                      <br />
-                      {project.galleryReferences?.map((reference) => (
-                        <span key={reference}>
-                          {reference}
-                          <br />
-                        </span>
-                      ))}
-                      {project.gallery}
-                    </p>
-                  </div>
+                  <ProjectGallery
+                    gallery={project.gallery}
+                    references={project.galleryReferences}
+                    title={project.title}
+                    number={project.number}
+                  />
                 </div>
               </article>
             ))}
