@@ -18,8 +18,16 @@ const infoLines = [
   {
     text: "M.A. in Information and Communication Technologies for Education, UoA, UTh, UniWA",
   },
-  { text: "\u2729 Greek Bio Pdf", bold: true },
-  { text: "\u2729 Short Bio w/ Press Photo", bold: true },
+  {
+    text: "\u2729 Greek Bio Pdf",
+    bold: true,
+    href: "/2606Artemis_Koltsida_CV.pdf",
+  },
+  {
+    text: "\u2729 Short Bio w/ Press Photo",
+    bold: true,
+    href: "/short-bio.jpg",
+  },
 ];
 
 export default function Home() {
@@ -35,7 +43,13 @@ export default function Home() {
                 line.underline ? "underline underline-offset-2" : ""
               }`}
             >
-              {line.text}
+              {line.href ? (
+                <a className="underline underline-offset-2" href={line.href}>
+                  {line.text}
+                </a>
+              ) : (
+                line.text
+              )}
             </p>
           ))}
         </div>
