@@ -36,14 +36,21 @@ export default function DesktopSideAudio() {
       audio.currentTime = 0;
     };
 
+    const getSide = (clientX: number): ActiveSide =>
+      clientX < window.innerWidth / 2 ? "day" : "night";
+
     const playSide = (side: ActiveSide) => {
-      if (!side || activeSide.current === side) {
+      if (!side) {
         return;
       }
 
       pendingSide.current = side;
 
       if (!audioUnlocked.current) {
+        return;
+      }
+
+      if (activeSide.current === side) {
         return;
       }
 
@@ -62,13 +69,22 @@ export default function DesktopSideAudio() {
       }
     };
 
-    const handleMouseMove = (event: MouseEvent) => {
-      playSide(event.clientX < window.innerWidth / 2 ? "day" : "night");
+    const handlePointerMove = (event: PointerEvent) => {
+      if (event.pointerType && event.pointerType !== "mouse") {
+        return;
+      }
+
+      playSide(getSide(event.clientX));
     };
 
-    const unlockAudio = () => {
+    const unlockAudio = (event: PointerEvent | KeyboardEvent) => {
       audioUnlocked.current = true;
-      playSide(pendingSide.current);
+
+      if ("clientX" in event) {
+        playSide(getSide(event.clientX));
+      } else {
+        playSide(pendingSide.current ?? "day");
+      }
     };
 
     const handleVisibilityChange = () => {
@@ -79,13 +95,13 @@ export default function DesktopSideAudio() {
       }
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("pointermove", handlePointerMove);
     window.addEventListener("pointerdown", unlockAudio);
     window.addEventListener("keydown", unlockAudio);
     document.addEventListener("visibilitychange", handleVisibilityChange);
 
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("pointermove", handlePointerMove);
       window.removeEventListener("pointerdown", unlockAudio);
       window.removeEventListener("keydown", unlockAudio);
       document.removeEventListener("visibilitychange", handleVisibilityChange);
