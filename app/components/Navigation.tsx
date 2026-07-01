@@ -69,14 +69,15 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
           href="/nisos-afti"
           target="_blank"
           rel="noreferrer"
-          className="nisos-afti-tab absolute left-[calc(50%+9rem)] top-3 hidden h-20 w-20 items-center justify-center no-underline sm:flex md:left-[calc(50%+11rem)] md:top-4"
+          className="nisos-afti-tab absolute left-[calc(50%+9rem)] top-3 hidden h-20 w-20 items-center justify-center overflow-hidden p-2 text-center text-xs leading-tight no-underline sm:flex md:left-[calc(50%+11rem)] md:top-4"
           aria-label={nisosAftiLabel}
         >
           <img
             src="/afti island 1-1.svg"
             alt=""
-            className="block h-full w-full object-contain"
+            className="absolute inset-0 block h-full w-full object-fill"
           />
+          <span className="relative z-10">{nisosAftiLabel}</span>
         </Link>
 
         {/* Inline links on desktop */}
@@ -168,14 +169,15 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
           href="/nisos-afti"
           target="_blank"
           rel="noreferrer"
-          className="nisos-afti-tab flex h-20 w-20 items-center justify-center no-underline sm:hidden"
+          className="nisos-afti-tab relative flex h-20 w-20 items-center justify-center overflow-hidden p-2 text-center text-xs leading-tight no-underline sm:hidden"
           aria-label={nisosAftiLabel}
         >
           <img
             src="/afti island 1-1.svg"
             alt=""
-            className="block h-full w-full object-contain"
+            className="absolute inset-0 block h-full w-full object-fill"
           />
+          <span className="relative z-10">{nisosAftiLabel}</span>
         </Link>
       </div>
 
