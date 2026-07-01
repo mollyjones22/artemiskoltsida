@@ -22,7 +22,7 @@ const digitalLinks = [
     label: "3D Visualisation - Architectural Projects",
   },
   {
-    href: "/digital#postgraduate-research-digital-storytelling",
+    href: "/digital/postgraduate-research-digital-storytelling",
     label: "Postgraduate Research: Digital Storytelling",
   },
   {

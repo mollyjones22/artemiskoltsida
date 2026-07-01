@@ -16,6 +16,55 @@ export const threeDVisualizationArchitecturalProjects: AnalogProject[] = [
   },
 ];
 
+export const postgraduateResearchProjects: AnalogProject[] = [
+  {
+    number: "D.02.01",
+    slug: "reclaim-female-self-image-digital-storytelling",
+    title:
+      "Attempting to Reclaim the Female Self-Image: A Qualitative Study Using the Methodology of Digital Storytelling",
+    year: "2026",
+    gallery: "photo gallery",
+    details: [
+      "Information and Communication Τechnologies for Education, Early Childhood Education UoA, Communication and Mass Media Studies UoA, Architecture UTh, Electrical and Electronic Engineering UniWA",
+      "Diploma Thesis by Koltsida A.",
+      "Supervisor: Meïmaris Michalis, Emeritus Professor, Communication and Mass Media Studies UoA",
+      "The present work concerns the exploration of digital storytelling as a methodology towards the appropriation of the female self-image. The female image is shaped through intersecting social, cultural, and historical representations, which are reinforced by the dominant normative logic around gender and the body. These representations inform internalized and externally imposed identities, in which women are recognized through the gaze of the “other”.",
+      "Consequently, the pursuit of self-determination and the construction of a self-image, that is not constrained by imposed standards, is a critical concern for contemporary femininity. The process of appropriating one’s self-image, through reinterpretation and reconstruction of these internalized representations, can be understood as part of a broader effort toward emancipation and the redefinition of the self.",
+      "Digital storytelling offers a methodology aligned with this aim, as the collective creation of narratives seeks to empower participants, cultivate critical awareness, and promote autonomy. By producing and sharing personal narratives in multimedia form, within the storytelling circle, women were invited to challenge dominant representations and articulate their own version of self-image.",
+      "This study explored how digital storytelling can serve as a tool for the appropriation of the female self-image, highlighting its capacity to deconstruct stereotypes and foster new forms of expression and self-definition. Findings from the subsequent qualitative research were positive, indicating that participants achieved goals such as reinterpreting dominant narratives from fresh perspectives, fostering awareness and creativity, engaging with and understanding multimedia production, and, most importantly, experiencing a safe space that encouraged sharing to a degree that was deeply meaningful for all involved.",
+    ],
+    links: [
+      {
+        label: "pergamos.lib.uoa.gr/en/item/uoadl:5371724",
+        href: "https://pergamos.lib.uoa.gr/en/item/uoadl:5371724",
+      },
+    ],
+  },
+  {
+    number: "D.02.02",
+    slug: "discussion-on-digital-storytelling",
+    title: "Discussion on Digital Storytelling",
+    year: "2026",
+    gallery: "photo gallery",
+    details: [
+      "Athens 984 FM - Δημόσια και Ιδιωτικά 17-05-2026",
+      "Μιχάλης Μεϊμάρης - Άρτεμις Κολτσίδα & Ανδρέας Μούτσιος-Ρέντζος",
+      "Discussion on digital storytelling, exploring its methodology, creative process, and its applications in education, communication, and participatory media practices.",
+      "Listen: Mixcloud",
+    ],
+    links: [
+      {
+        label: "mixcloud.com/ΑΘΗΝΑ984/δημόσια-και-ιδιωτικά-17-05-2026",
+        href: "https://www.mixcloud.com/%CE%91%CE%98%CE%97%CE%9D%CE%91984/%CE%B4%CE%B7%CE%BC%CF%8C%CF%83%CE%B9%CE%B1-%CE%BA%CE%B1%CE%B9-%CE%B9%CE%B4%CE%B9%CF%89%CF%84%CE%B9%CE%BA%CE%AC-17-05-2026-%CE%BC%CE%B9%CF%87%CE%AC%CE%BB%CE%B7%CF%82-%CE%BC%CE%B5%CF%8A%CE%BC%CE%AC%CF%81%CE%B7%CF%82-%CE%AC%CF%81%CF%84%CE%B5%CE%BC%CE%B9%CF%82-%CE%BA%CE%BF%CE%BB%CF%84%CF%83%CE%AF%CE%B4%CE%B1-%CE%B1%CE%BD%CE%B4%CF%81%CE%AD%CE%B1%CF%82-%CE%BC%CE%BF%CF%8D%CF%84%CF%83%CE%B9%CE%BF%CF%82-%CF%81%CE%AD%CE%BD%CF%84%CE%B6%CE%BF%CF%82/",
+      },
+      {
+        label: "facebook.com/share/p/1CnMhNmhFv",
+        href: "https://www.facebook.com/share/p/1CnMhNmhFv/?mibextid=wwXIfr",
+      },
+    ],
+  },
+];
+
 export const webDesignProjects: AnalogProject[] = [
   {
     number: "D.05.02",
@@ -237,6 +286,11 @@ export const digitalProjectGroups = {
     title: "3D Visualisation - Architectural Projects",
     basePath: "/digital/3d-visualization-architectural-projects",
     projects: threeDVisualizationArchitecturalProjects,
+  },
+  "postgraduate-research-digital-storytelling": {
+    title: "Postgraduate Research: Digital Storytelling",
+    basePath: "/digital/postgraduate-research-digital-storytelling",
+    projects: postgraduateResearchProjects,
   },
   "diploma-thesis-architecture": {
     title: "Diploma Thesis (Architecture)",

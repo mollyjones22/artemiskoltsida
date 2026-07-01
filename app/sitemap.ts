@@ -35,6 +35,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
     },
     {
+      path: "/digital/postgraduate-research-digital-storytelling",
+      priority: 0.7,
+      changeFrequency: "monthly" as const,
+    },
+    {
       path: "/digital/web-design",
       priority: 0.7,
       changeFrequency: "monthly" as const,
