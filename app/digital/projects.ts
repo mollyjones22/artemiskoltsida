@@ -1,5 +1,21 @@
 import type { AnalogProject } from "../analog/projects";
 
+export const threeDVisualizationArchitecturalProjects: AnalogProject[] = [
+  {
+    number: "D.01.01",
+    slug: "apartment-renovation-ilioupoli",
+    title: "Apartment Renovation - Ilioupoli",
+    year: "2026",
+    gallery: "photo gallery",
+    details: [
+      "Residential Renovation & Energy Upgrade Project",
+      "Architectural Study and Construction Supervision by Papadopoulou E. and Koltsida A",
+      "The project involved the complete renovation and energy upgrade of an apartment in Ilioupoli, from the initial design concept to the implementation phase. The work included the architectural study, spatial redesign, energy upgrade strategy, material selection, construction drawings, and on-site supervision throughout the renovation process.",
+      "The proposal focused on improving functionality, spatial quality, energy performance, and the everyday living experience through a contemporary architectural approach. The project was developed collaboratively, ensuring continuity between the design process and its execution on site.",
+    ],
+  },
+];
+
 export const diplomaThesisProjects: AnalogProject[] = [
   {
     number: "D.03.01",
@@ -192,6 +208,11 @@ export const howToBeCuriousProjects: AnalogProject[] = filmEditingProjects.filte
 );
 
 export const digitalProjectGroups = {
+  "3d-visualization-architectural-projects": {
+    title: "3D Visualisation - Architectural Projects",
+    basePath: "/digital/3d-visualization-architectural-projects",
+    projects: threeDVisualizationArchitecturalProjects,
+  },
   "diploma-thesis-architecture": {
     title: "Diploma Thesis (Architecture)",
     basePath: "/digital/diploma-thesis-architecture",

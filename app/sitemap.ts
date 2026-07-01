@@ -30,6 +30,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     { path: "/digital", priority: 0.8, changeFrequency: "monthly" as const },
     {
+      path: "/digital/3d-visualization-architectural-projects",
+      priority: 0.7,
+      changeFrequency: "monthly" as const,
+    },
+    {
       path: "/digital/how-to-be-curious",
       priority: 0.7,
       changeFrequency: "monthly" as const,
