@@ -49,7 +49,9 @@ a:visited {
 .nisos-afti-label {
   text-shadow:
     0 0 2px white,
-    0 0 2px white,
     0 0 3px white,
-    0 0 3px white;
+    0 0 4px white,
+    0 0 5px white,
+    0 0 6px white,
+    0 0 7px white;
 }
