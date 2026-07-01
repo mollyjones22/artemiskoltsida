@@ -69,13 +69,13 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
           href="/nisos-afti"
           target="_blank"
           rel="noreferrer"
-          className="nisos-afti-tab absolute left-[calc(50%+9rem)] top-3 hidden h-20 w-20 items-center justify-center overflow-hidden p-2 text-center text-xs leading-tight no-underline sm:flex md:left-[calc(50%+11rem)] md:top-4"
+          className="nisos-afti-tab absolute relative left-[calc(50%+9rem)] top-3 hidden h-20 w-20 items-center justify-center overflow-hidden p-2 text-center text-xs leading-tight no-underline sm:flex md:left-[calc(50%+11rem)] md:top-4"
           aria-label={nisosAftiLabel}
         >
           <img
             src="/afti island 1-1.svg"
             alt=""
-            className="absolute inset-0 block h-full w-full object-fill"
+            className="absolute inset-0 block h-full w-full object-contain"
           />
           <span className="relative z-10">{nisosAftiLabel}</span>
         </Link>
@@ -175,7 +175,7 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
           <img
             src="/afti island 1-1.svg"
             alt=""
-            className="absolute inset-0 block h-full w-full object-fill"
+            className="absolute inset-0 block h-full w-full object-contain"
           />
           <span className="relative z-10">{nisosAftiLabel}</span>
         </Link>
