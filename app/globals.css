@@ -10,7 +10,15 @@ body {
   margin: 0;
   background: white;
   color: black;
+  cursor: url("/star-cursor.svg") 4 4, auto;
   font-family: "Times New Roman", Times, serif;
+}
+
+a,
+button,
+[role="button"],
+summary {
+  cursor: pointer;
 }
 
 a {
