@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import DesktopSideAudio from "./components/DesktopSideAudio";
 import Footer from "./components/Footer";
 import {
   DEFAULT_DESCRIPTION,
@@ -75,6 +76,7 @@ export default function RootLayout({
   return (
     <html lang="el" className="antialiased">
       <body className="flex min-h-screen flex-col bg-white text-black">
+        <DesktopSideAudio />
         <div className="relative flex-1">{children}</div>
         <Footer />
       </body>
