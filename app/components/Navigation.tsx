@@ -75,7 +75,7 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
           <img
             src="/afti island 1-1.svg"
             alt=""
-            className="absolute inset-0 block h-full w-full object-contain"
+            className="absolute left-1/2 top-1/2 block h-[150%] w-[150%] -translate-x-1/2 -translate-y-1/2 object-contain"
           />
           <span className="relative z-10">{nisosAftiLabel}</span>
         </Link>
@@ -175,7 +175,7 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
           <img
             src="/afti island 1-1.svg"
             alt=""
-            className="absolute inset-0 block h-full w-full object-contain"
+            className="absolute left-1/2 top-1/2 block h-[150%] w-[150%] -translate-x-1/2 -translate-y-1/2 object-contain"
           />
           <span className="relative z-10">{nisosAftiLabel}</span>
         </Link>
