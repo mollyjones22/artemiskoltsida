@@ -63,11 +63,31 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
       }`}
     >
       <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-3 px-3 py-3 sm:px-4 sm:py-4">
+        <Link href="/" className="flex h-20 w-20 items-center justify-center sm:hidden">
+          <img
+            src="/artlogo.png"
+            alt="Artemis Koltsida logo"
+            className="block h-full w-full object-contain"
+          />
+        </Link>
+
         <Link
           href="/"
           className="text-center text-base font-semibold tracking-[0.18em] no-underline underline-offset-4 hover:underline sm:text-lg md:text-xl"
         >
           {"\u263c artemis koltsida \u263e"}
+        </Link>
+
+        <Link
+          href="/"
+          className="absolute right-[calc(50%+9rem)] top-3 hidden h-20 w-20 items-center justify-center no-underline sm:flex md:right-[calc(50%+11rem)] md:top-4"
+          aria-label="artemis koltsida home"
+        >
+          <img
+            src="/artlogo.png"
+            alt="Artemis Koltsida logo"
+            className="block h-full w-full object-contain"
+          />
         </Link>
 
         <Link
