@@ -29,6 +29,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
     })),
     { path: "/digital", priority: 0.8, changeFrequency: "monthly" as const },
+    {
+      path: "/digital/how-to-be-curious",
+      priority: 0.7,
+      changeFrequency: "monthly" as const,
+    },
     { path: "/nisos-afti", priority: 0.6, changeFrequency: "monthly" as const },
     {
       path: "/nisos-afti/letter-a",

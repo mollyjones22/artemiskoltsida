@@ -183,6 +183,10 @@ export const filmEditingProjects: AnalogProject[] = [
   },
 ];
 
+export const howToBeCuriousProjects: AnalogProject[] = filmEditingProjects.filter(
+  (project) => project.slug === "how-to-be-curious",
+);
+
 export const digitalProjectGroups = {
   "diploma-thesis-architecture": {
     title: "Diploma Thesis (Architecture)",
@@ -198,5 +202,10 @@ export const digitalProjectGroups = {
     title: "Film & Editing",
     basePath: "/digital/film-editing",
     projects: filmEditingProjects,
+  },
+  "how-to-be-curious": {
+    title: "How To be Curious",
+    basePath: "/digital/how-to-be-curious",
+    projects: howToBeCuriousProjects,
   },
 };

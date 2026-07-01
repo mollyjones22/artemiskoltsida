@@ -30,6 +30,11 @@ const digitalLinks = [
     label: "Diploma Thesis (Architecture)",
   },
   { href: "/digital/film-editing", label: "Film & Editing" },
+  {
+    href: "/digital/how-to-be-curious",
+    label: "How To be Curious",
+    italic: true,
+  },
   { href: "/digital#web-design", label: "Web Design" },
   { href: "/digital/digital-photography", label: "Digital Photography" },
 ];
@@ -136,7 +141,7 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
                   href={link.href}
                   className="w-full px-3 py-1 text-center text-base no-underline underline-offset-4 hover:underline"
                 >
-                  {link.label}
+                  {link.italic ? <span className="italic">{link.label}</span> : link.label}
                 </Link>
               ))}
             </div>
@@ -233,7 +238,7 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
                 onClick={() => setOpen(false)}
                 className={`w-full rounded px-3 py-1 text-center text-sm no-underline underline-offset-4 transition-colors duration-200 hover:underline sm:text-base ${hoverBg}`}
               >
-                {link.label}
+                {link.italic ? <span className="italic">{link.label}</span> : link.label}
               </Link>
             ))}
           </div>
