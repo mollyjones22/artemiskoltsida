@@ -16,6 +16,31 @@ export const threeDVisualizationArchitecturalProjects: AnalogProject[] = [
   },
 ];
 
+export const webDesignProjects: AnalogProject[] = [
+  {
+    number: "D.05.02",
+    slug: "rhetoric-seminar-visual-identity",
+    title: "Rhetoric Seminar - Visual Identity",
+    year: "2026",
+    gallery: "photo gallery",
+    details: [
+      "University of Florida",
+      "Harvard-funded Rhetoric Seminar",
+      "Visual Identity, Web Design & Print Design",
+      "The project involved the development of the visual identity for a university-level Rhetoric Seminar at the University of Florida, funded by Harvard University. The work included the design of the seminar's visual language and its application across digital and printed media.",
+      { text: "Scope", underline: true },
+      "Visual Identity",
+      "Art Direction",
+      "Website Design",
+      "Poster Design",
+      "Social Media Assets",
+      "Print Material",
+      { text: "Outcome", underline: true },
+      "The final identity established a cohesive visual system across all communication channels, ensuring consistency between the website, posters, and promotional material while supporting the seminar's academic character and public outreach.",
+    ],
+  },
+];
+
 export const diplomaThesisProjects: AnalogProject[] = [
   {
     number: "D.03.01",
@@ -217,6 +242,11 @@ export const digitalProjectGroups = {
     title: "Diploma Thesis (Architecture)",
     basePath: "/digital/diploma-thesis-architecture",
     projects: diplomaThesisProjects,
+  },
+  "web-design": {
+    title: "Web Design",
+    basePath: "/digital/web-design",
+    projects: webDesignProjects,
   },
   "digital-photography": {
     title: "Digital Photography",

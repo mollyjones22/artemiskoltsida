@@ -35,7 +35,7 @@ const digitalLinks = [
     label: "How to be curious",
     italic: true,
   },
-  { href: "/digital#web-design", label: "Web Design" },
+  { href: "/digital/web-design", label: "Web Design" },
   { href: "/digital/digital-photography", label: "Digital Photography" },
 ];
 
