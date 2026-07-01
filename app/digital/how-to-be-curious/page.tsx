@@ -8,7 +8,7 @@ const group = digitalProjectGroups["how-to-be-curious"];
 
 export const metadata: Metadata = createPageMetadata({
   title: group.title,
-  description: "How To be Curious video series by Artemis Koltsida.",
+  description: "How to be curious video series by Artemis Koltsida.",
   path: group.basePath,
 });
 

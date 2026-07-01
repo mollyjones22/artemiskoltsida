@@ -29,7 +29,7 @@ export const diplomaThesisProjects: AnalogProject[] = [
 
 export const digitalPhotographyProjects: AnalogProject[] = [
   {
-    number: "D.06.03",
+    number: "D.07.03",
     slug: "music-marble-2022",
     title: "Music Marble",
     year: "2022",
@@ -41,7 +41,7 @@ export const digitalPhotographyProjects: AnalogProject[] = [
     ],
   },
   {
-    number: "D.06.02",
+    number: "D.07.02",
     slug: "music-marble-2021",
     title: "Music Marble",
     year: "2021",
@@ -53,7 +53,7 @@ export const digitalPhotographyProjects: AnalogProject[] = [
     ],
   },
   {
-    number: "D.06.01",
+    number: "D.07.01",
     slug: "walk",
     title: "Walk",
     year: "2017",
@@ -71,7 +71,7 @@ export const digitalPhotographyProjects: AnalogProject[] = [
 
 export const filmEditingProjects: AnalogProject[] = [
   {
-    number: "D.04.05",
+    number: "D.04.04",
     slug: "bearcave",
     title: "BearCave",
     year: "Short 2023",
@@ -93,7 +93,7 @@ export const filmEditingProjects: AnalogProject[] = [
     ],
   },
   {
-    number: "D.04.04",
+    number: "D.05.01",
     slug: "how-to-be-curious",
     title: "How to be curious",
     year: "2022-Today",
@@ -183,6 +183,10 @@ export const filmEditingProjects: AnalogProject[] = [
   },
 ];
 
+export const filmEditingOnlyProjects: AnalogProject[] = filmEditingProjects.filter(
+  (project) => project.slug !== "how-to-be-curious",
+);
+
 export const howToBeCuriousProjects: AnalogProject[] = filmEditingProjects.filter(
   (project) => project.slug === "how-to-be-curious",
 );
@@ -201,10 +205,10 @@ export const digitalProjectGroups = {
   "film-editing": {
     title: "Film & Editing",
     basePath: "/digital/film-editing",
-    projects: filmEditingProjects,
+    projects: filmEditingOnlyProjects,
   },
   "how-to-be-curious": {
-    title: "How To be Curious",
+    title: "How to be curious",
     basePath: "/digital/how-to-be-curious",
     projects: howToBeCuriousProjects,
   },

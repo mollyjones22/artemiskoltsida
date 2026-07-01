@@ -32,7 +32,7 @@ const digitalLinks = [
   { href: "/digital/film-editing", label: "Film & Editing" },
   {
     href: "/digital/how-to-be-curious",
-    label: "How To be Curious",
+    label: "How to be curious",
     italic: true,
   },
   { href: "/digital#web-design", label: "Web Design" },
