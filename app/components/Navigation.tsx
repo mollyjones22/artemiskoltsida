@@ -45,7 +45,7 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
 
   const isDark = variant === "dark";
   const borderColor = isDark ? "border-white/20" : "border-gray-200";
-  const burgerBg = isDark ? "bg-white" : "bg-black";
+  const burgerBg = "bg-[#0000ee]";
   const panelBg = isDark ? "bg-[#231e59]" : "bg-white";
   const hoverBg = isDark ? "hover:bg-white/10" : "hover:bg-blue-50";
   const activeBg = isDark ? "bg-white/10" : "bg-transparent";
@@ -77,7 +77,9 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
             alt=""
             className="absolute left-1/2 top-1/2 block h-[200%] w-[200%] -translate-x-1/2 -translate-y-1/2 object-contain"
           />
-          <span className="nisos-afti-label relative z-10">{nisosAftiLabel}</span>
+          <span className="nisos-afti-label relative z-10 text-[#0000ee]">
+            {nisosAftiLabel}
+          </span>
         </Link>
 
         {/* Inline links on desktop */}
@@ -177,7 +179,9 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
             alt=""
             className="absolute left-1/2 top-1/2 block h-[200%] w-[200%] -translate-x-1/2 -translate-y-1/2 object-contain"
           />
-          <span className="nisos-afti-label relative z-10">{nisosAftiLabel}</span>
+          <span className="nisos-afti-label relative z-10 text-[#0000ee]">
+            {nisosAftiLabel}
+          </span>
         </Link>
       </div>
 
