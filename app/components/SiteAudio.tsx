@@ -60,17 +60,20 @@ export default function SiteAudio() {
     <button
       type="button"
       onClick={toggleAudio}
-      className="fixed bottom-4 right-4 z-50 flex h-16 w-16 items-center justify-center bg-transparent p-0 sm:h-20 sm:w-20"
+      className="fixed bottom-4 right-4 z-50 flex items-center gap-2 bg-transparent p-0 text-[#0000ee] underline-offset-4 hover:underline focus-visible:underline sm:gap-3"
       aria-label={isPlaying ? "Stop audio" : "Play audio"}
       aria-pressed={isPlaying}
     >
       <img
         src="/artlogo.png"
         alt=""
-        className={`block h-full w-full object-contain transition-opacity duration-200 ${
+        className={`block h-16 w-16 object-contain transition-opacity duration-200 sm:h-20 sm:w-20 ${
           isPlaying ? "opacity-100" : "opacity-55"
         }`}
       />
+      <span className="text-xl leading-none sm:text-2xl" aria-hidden="true">
+        🔊
+      </span>
     </button>
   );
 }
