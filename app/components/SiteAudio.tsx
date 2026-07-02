@@ -38,17 +38,10 @@ export default function SiteAudio() {
     };
   }, []);
 
-  const toggleAudio = () => {
+  const stopAudio = () => {
     const audio = audioRef.current;
 
     if (!audio) {
-      return;
-    }
-
-    if (audio.paused) {
-      void audio.play().catch(() => {
-        setIsPlaying(false);
-      });
       return;
     }
 
@@ -59,9 +52,9 @@ export default function SiteAudio() {
   return (
     <button
       type="button"
-      onClick={toggleAudio}
+      onClick={stopAudio}
       className="fixed bottom-4 right-4 z-50 flex items-center gap-2 bg-transparent p-0 text-[#0000ee] underline-offset-4 hover:underline focus-visible:underline sm:gap-3"
-      aria-label={isPlaying ? "Stop audio" : "Play audio"}
+      aria-label="Stop audio"
       aria-pressed={isPlaying}
     >
       <img
@@ -72,7 +65,7 @@ export default function SiteAudio() {
         }`}
       />
       <span className="text-xl leading-none sm:text-2xl" aria-hidden="true">
-        🔊
+        {"\uD83D\uDD0A"}
       </span>
     </button>
   );
