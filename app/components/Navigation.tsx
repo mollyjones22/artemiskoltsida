@@ -102,7 +102,7 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
             alt=""
             className="absolute left-1/2 top-1/2 z-0 block h-[200%] w-[200%] -translate-x-1/2 -translate-y-1/2 object-contain"
           />
-          <span className="nisos-afti-label relative z-10 font-semibold text-[#0000ee]">
+          <span className="nisos-afti-label relative z-10 text-[#0000ee]">
             {nisosAftiLabel}
           </span>
         </Link>
@@ -204,7 +204,7 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
             alt=""
             className="absolute left-1/2 top-1/2 z-0 block h-[200%] w-[200%] -translate-x-1/2 -translate-y-1/2 object-contain"
           />
-          <span className="nisos-afti-label relative z-10 font-semibold text-[#0000ee]">
+          <span className="nisos-afti-label relative z-10 text-[#0000ee]">
             {nisosAftiLabel}
           </span>
         </Link>

@@ -55,13 +55,11 @@ a:visited {
 }
 
 .nisos-afti-label {
-  color: #0000ee;
-  -webkit-text-fill-color: #0000ee;
-  -webkit-text-stroke: 0.5px white;
+  -webkit-text-stroke: 3px white;
+  paint-order: stroke fill;
   text-shadow:
-    -1px -1px 0 white,
-    1px -1px 0 white,
-    -1px 1px 0 white,
-    1px 1px 0 white,
-    0 0 4px white;
+    0 0 4px white,
+    0 0 6px white,
+    0 0 8px white,
+    0 0 10px white;
 }
