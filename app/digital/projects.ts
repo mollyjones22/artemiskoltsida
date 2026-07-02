@@ -185,13 +185,12 @@ export const filmEditingProjects: AnalogProject[] = [
   {
     number: "D.05.01",
     slug: "how-to-be-curious",
-    title: "How to be curious",
+    title: "How to Be Curious",
     year: "2022-Today",
     gallery: "1/1",
     galleryReferences: ["Ep03: How to make a spot", "Ep03: How to make a spot"],
     details: [
-      "How to Be Curious is a video series created by Molly. The show aims to make the viewer see the world through Molly’s gaze, using a huge archive of details, lists, and instructions.",
-      "A video series shot with a handheld Panasonic SDR-T70 camera, featuring text by Molly and original music in some episodes.",
+      "How to Be Curious is a video series created by Molly, offering an exploratory view of the world through a neverending archive of details, lists, and instructions.",
     ],
     links: [
       {
@@ -313,7 +312,7 @@ export const digitalProjectGroups = {
     projects: filmEditingOnlyProjects,
   },
   "how-to-be-curious": {
-    title: "How to be curious",
+    title: "How to Be Curious",
     basePath: "/digital/how-to-be-curious",
     projects: howToBeCuriousProjects,
   },
