@@ -1,23 +1,35 @@
-# Seminar in Greek Rhetoric, Law, and Society
+# Artemis Koltsida Portfolio
 
-Static website for the **Seminar in Greek Rhetoric, Law, and Society** — Fall 2026, University of Florida.
+Digital portfolio for Artemis Koltsida, an architect and creative practitioner working across analog and digital media.
 
-Generously sponsored by Harvard University and the Institute for Strategy, Politics & Security (ISHR).
+Live site: [mollyjones22.github.io/artemiskoltsida](https://mollyjones22.github.io/artemiskoltsida)
 
-## Pages
+## Sections
 
 | Route | Description |
 |-------|-------------|
-| `/` | Homepage with background image and floating menu |
-| `/registration` | Zoom meeting registration link |
-| `/talks` | Talks schedule table (Presenter, Topic, Date, Video) |
-| `/poster` | Downloadable seminar poster |
-| `/news` | News and updates (coming soon) |
+| `/` | Info page with bio links |
+| `/analog` | Analog portfolio landing page |
+| `/analog/3d-prints` | 3D printed objects and process notes |
+| `/analog/analog-photography` | Analog photography projects |
+| `/analog/constructions-installations` | Constructions, installations, and spatial projects |
+| `/analog/drawings` | Drawings, paintings, and mixed-media works |
+| `/analog/silkscreen-prints` | Silkscreen printing and Tipomata archive |
+| `/analog/zines` | Zines and self-published printed works |
+| `/digital` | Digital portfolio landing page |
+| `/digital/3d-visualization-architectural-projects` | Architectural visualization projects |
+| `/digital/postgraduate-research-digital-storytelling` | Postgraduate research on digital storytelling |
+| `/digital/diploma-thesis-architecture` | Architecture diploma thesis |
+| `/digital/film-editing` | Film, editing, and production projects |
+| `/digital/how-to-be-curious` | Video series archive |
+| `/digital/web-design` | Web and visual identity projects |
+| `/digital/digital-photography` | Digital photography projects |
+| `/nisos-afti` | Standalone Nisos Afti project page |
 
 ## Tech Stack
 
-- [Next.js 16](https://nextjs.org) (App Router, static export)
-- [React 19](https://react.dev) + [TypeScript](https://www.typescriptlang.org)
+- [Next.js 16](https://nextjs.org) with App Router and static export
+- [React 19](https://react.dev) and [TypeScript](https://www.typescriptlang.org)
 - [Tailwind CSS v4](https://tailwindcss.com)
 - [Bun](https://bun.sh) package manager
 
@@ -36,25 +48,18 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 bun run build
 ```
 
-Produces a static export in the `out/` directory. Serve locally with:
-
-```bash
-bunx serve out
-```
+The production build is exported to the `out/` directory for static hosting.
 
 ## Project Structure
 
-```
+```text
 app/
-  page.tsx                Homepage
-  registration/page.tsx   Registration page
-  talks/page.tsx          Talks listing
-  poster/page.tsx         Poster display & download
-  news/page.tsx           News (placeholder)
-  components/
-    Navigation.tsx        Shared navigation bar
-    Footer.tsx            Sponsor logos footer
-  layout.tsx              Root layout
-  globals.css             Global styles & theme
-public/                   Static assets (images)
+  page.tsx                    Info page
+  analog/                     Analog portfolio pages and project data
+  digital/                    Digital portfolio pages and project data
+  nisos-afti/                 Standalone project page
+  components/                 Shared navigation, footer, audio, and galleries
+  layout.tsx                  Root layout and metadata
+  globals.css                 Global styles
+public/                       Static assets and project images
 ```
