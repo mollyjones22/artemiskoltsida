@@ -124,7 +124,7 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="w-full px-3 py-1 text-center text-base no-underline underline-offset-4 hover:underline"
+                  className="w-full px-3 py-1 text-center text-base text-[#0000ee] no-underline underline-offset-4 hover:underline"
                 >
                   {link.italic ? <span className="italic">{link.label}</span> : link.label}
                 </Link>
@@ -229,7 +229,7 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className={`w-full rounded px-3 py-1 text-center text-sm no-underline underline-offset-4 transition-colors duration-200 hover:underline sm:text-base ${hoverBg}`}
+                className={`w-full rounded px-3 py-1 text-center text-sm text-[#0000ee] no-underline underline-offset-4 transition-colors duration-200 hover:underline sm:text-base ${hoverBg}`}
               >
                 {link.italic ? <span className="italic">{link.label}</span> : link.label}
               </Link>
