@@ -46,6 +46,15 @@ export function getProjectPhotos(projectNumber: string, projectTitle: string): P
       };
     })
     .filter((photo): photo is ProjectPhoto & { order: number } => photo !== null)
-    .sort((a, b) => a.order - b.order || a.src.localeCompare(b.src))
+    .sort(
+      (a, b) =>
+        a.order - b.order ||
+        b.src.split("/").length - a.src.split("/").length ||
+        a.src.localeCompare(b.src),
+    )
+    .filter(
+      (photo, index, photos) =>
+        index === 0 || photo.order !== photos[index - 1].order,
+    )
     .map(({ alt, src }) => ({ alt, src }));
 }
