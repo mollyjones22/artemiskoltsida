@@ -21,7 +21,8 @@ export default function ProjectPage({
         <p className="text-sm leading-normal">{project.number}</p>
         <div>
           <h1 className="mb-3 text-lg font-normal leading-normal underline underline-offset-4">
-            {project.title} ({project.year})
+            {project.title}
+            {project.year ? ` (${project.year})` : ""}
           </h1>
 
           <div className="mb-4 flex flex-col gap-1 text-base leading-normal">

@@ -71,7 +71,8 @@ export default function ProjectList({
                 <p className="text-sm leading-normal">{project.number}</p>
                 <div>
                   <h2 className="mb-3 text-lg font-normal leading-normal underline underline-offset-4">
-                    {project.title} ({project.year})
+                    {project.title}
+                    {project.year ? ` (${project.year})` : ""}
                   </h2>
 
                   <div className="mb-4 flex flex-col gap-1 text-base leading-normal">
@@ -123,7 +124,8 @@ export default function ProjectList({
                   href={`${basePath}/${project.slug}`}
                   className="text-lg font-normal leading-normal underline underline-offset-4"
                 >
-                  {project.title} ({project.year})
+                  {project.title}
+                  {project.year ? ` (${project.year})` : ""}
                 </Link>
               </article>
             ))}

@@ -434,7 +434,40 @@ export const zineProjects: AnalogProject[] = [
   },
 ];
 
-export const funProjects: AnalogProject[] = [];
+export const funProjects: AnalogProject[] = [
+  {
+    number: "A.07.04",
+    slug: "cigarette-tiara",
+    title: "Cigarette Tiara",
+    year: "2026",
+    gallery: "photo gallery",
+    details: [],
+  },
+  {
+    number: "A.07.03",
+    slug: "princess-nebula",
+    title: "Princess Nebula",
+    year: "2026",
+    gallery: "photo gallery",
+    details: [],
+  },
+  {
+    number: "A.07.02",
+    slug: "walls",
+    title: "Walls",
+    year: "",
+    gallery: "photo gallery",
+    details: [],
+  },
+  {
+    number: "A.07.01",
+    slug: "crochet",
+    title: "Crochet",
+    year: "",
+    gallery: "photo gallery",
+    details: [],
+  },
+];
 
 export const analogProjectGroups = {
   "3d-prints": {
