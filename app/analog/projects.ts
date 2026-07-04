@@ -145,6 +145,24 @@ export const analogPhotographyProjects: AnalogProject[] = [
 
 export const constructionInstallationProjects: AnalogProject[] = [
   {
+    number: "A.03.04",
+    slug: "matter-in-the-park",
+    title: "Matter in the Park",
+    year: "2025",
+    gallery: "photo gallery",
+    details: [
+      "Pedion tou Areos, Athens, Greece",
+      "Design and construction of a temporary bar, two entrance gateways, and a stage using the Clouds system by LUDD Studio, as part of a collaborative team.",
+      "Scenography and decorative treatment of the stage and entrance gateways, developed in collaboration with Pits and Io, featuring patchwork textile installations and large-scale airbrushed artwork.",
+    ],
+    links: [
+      {
+        label: "✹ https://ra.co/events/2253643",
+        href: "https://ra.co/events/2253643",
+      },
+    ],
+  },
+  {
     number: "A.03.03",
     slug: "tom",
     title: "Tom",
