@@ -56,6 +56,9 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
   const hoverBg = isDark ? "hover:bg-white/10" : "hover:bg-blue-50";
   const activeBg = isDark ? "bg-white/10" : "bg-transparent";
   const underlineColor = isDark ? "bg-white" : "bg-[#0000ee]";
+  const isSubmenuPage =
+    pathname.startsWith("/analog/") || pathname.startsWith("/digital/");
+  const compactMobileHeader = isSubmenuPage && !open;
 
   return (
     <div
@@ -63,8 +66,19 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
         isDark ? "bg-[#231e59]/85 backdrop-blur-md" : "bg-white/90 backdrop-blur-md"
       }`}
     >
-      <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-3 px-3 py-3 sm:px-4 sm:py-4">
-        <Link href="/" className="flex h-20 w-20 items-center justify-center sm:hidden">
+      <div
+        className={`relative mx-auto flex max-w-6xl items-center px-3 sm:flex-col sm:gap-3 sm:px-4 sm:py-4 ${
+          compactMobileHeader
+            ? "flex-row justify-between gap-2 py-2"
+            : "flex-col gap-3 py-3"
+        }`}
+      >
+        <Link
+          href="/"
+          className={`flex items-center justify-center sm:hidden ${
+            compactMobileHeader ? "h-10 w-10" : "h-20 w-20"
+          }`}
+        >
           <img
             src="/artlogo.png"
             alt="Artemis Koltsida logo"
@@ -74,7 +88,11 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
 
         <Link
           href="/"
-          className="text-center text-base font-semibold tracking-[0.18em] no-underline underline-offset-4 hover:underline sm:text-lg md:text-xl"
+          className={`text-center font-semibold no-underline underline-offset-4 hover:underline sm:text-lg sm:tracking-[0.18em] md:text-xl ${
+            compactMobileHeader
+              ? "min-w-0 flex-1 text-sm tracking-[0.08em]"
+              : "text-base tracking-[0.18em]"
+          }`}
         >
           {"\u263c artemis koltsida \u263e"}
         </Link>
@@ -172,7 +190,9 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
         {/* Mobile menu button */}
         <button
           onClick={() => setOpen(!open)}
-          className="flex shrink-0 flex-col items-center justify-center gap-[5px] p-2 md:hidden"
+          className={`flex shrink-0 flex-col items-center justify-center gap-[5px] md:hidden ${
+            compactMobileHeader ? "p-1" : "p-2"
+          }`}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
         >
@@ -197,7 +217,9 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
           href="/nisos-afti"
           target="_blank"
           rel="noreferrer"
-          className="nisos-afti-tab relative flex h-20 w-20 items-center justify-center overflow-hidden p-2 text-center text-xs leading-tight no-underline sm:hidden"
+          className={`nisos-afti-tab relative flex items-center justify-center overflow-hidden text-center leading-tight no-underline sm:hidden ${
+            compactMobileHeader ? "h-10 w-10 p-1 text-[0.55rem]" : "h-20 w-20 p-2 text-xs"
+          }`}
           aria-label={nisosAftiLabel}
         >
           <img
