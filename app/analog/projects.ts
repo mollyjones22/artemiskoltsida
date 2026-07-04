@@ -434,6 +434,8 @@ export const zineProjects: AnalogProject[] = [
   },
 ];
 
+export const funProjects: AnalogProject[] = [];
+
 export const analogProjectGroups = {
   "3d-prints": {
     title: "3D Prints",
@@ -464,5 +466,10 @@ export const analogProjectGroups = {
     title: "Zines",
     basePath: "/analog/zines",
     projects: zineProjects,
+  },
+  fun: {
+    title: "Fun",
+    basePath: "/analog/fun",
+    projects: funProjects,
   },
 };

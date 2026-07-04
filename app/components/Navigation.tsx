@@ -14,6 +14,7 @@ const analogLinks = [
   { href: "/analog/drawings", label: "Drawings" },
   { href: "/analog/silkscreen-prints", label: "Silkscreen Prints" },
   { href: "/analog/zines", label: "Zines" },
+  { href: "/analog/fun", label: "Fun", italic: true },
 ];
 
 const digitalLinks = [
@@ -125,7 +126,7 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
                   href={link.href}
                   className="w-full px-3 py-1 text-center text-base no-underline underline-offset-4 hover:underline"
                 >
-                  {link.label}
+                  {link.italic ? <span className="italic">{link.label}</span> : link.label}
                 </Link>
               ))}
             </div>
@@ -230,7 +231,7 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
                 onClick={() => setOpen(false)}
                 className={`w-full rounded px-3 py-1 text-center text-sm no-underline underline-offset-4 transition-colors duration-200 hover:underline sm:text-base ${hoverBg}`}
               >
-                {link.label}
+                {link.italic ? <span className="italic">{link.label}</span> : link.label}
               </Link>
             ))}
             <Link
