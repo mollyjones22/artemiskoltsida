@@ -235,17 +235,24 @@ export default function NisosAftiPage() {
                 {title}
               </h2>
               <PlaceholderImage label={imageSlots[0]} />
-              <dl className="mt-4 grid grid-cols-[6rem_minmax(0,1fr)] gap-x-3 gap-y-2">
-                <dt className="font-bold">Τύπος</dt>
-                <dd>φανταστικό νησί</dd>
-                <dt className="font-bold">Πέλαγος</dt>
-                <dd>Μυρτώο</dd>
-                <dt className="font-bold">Πρωτεύουσα</dt>
-                <dd>Χωριό</dd>
-                <dt className="font-bold">Κατάσταση</dt>
-                <dd>αρχειακή / επινοημένη</dd>
-                <dt className="font-bold">Γνωστό για</dt>
-                <dd>γράμματα, μύθους, εικόνες</dd>
+              <p className="mt-2 text-center text-xs leading-snug">
+                Η πρωτεύουσα του Αυτιού, το Νέο Χωριό.
+              </p>
+              <div className="mt-3">
+                <PlaceholderImage label="" />
+              </div>
+              <h3 className="mt-4 bg-[#eaecf0] py-1 text-center font-bold">
+                Γεωγραφία
+              </h3>
+              <dl className="mt-3 grid grid-cols-[9rem_minmax(0,1fr)] gap-x-3 gap-y-2 text-right">
+                <dt className="font-bold">Νησιώτικα Σύμπλεγμα:</dt>
+                <dd>Επτάνησα</dd>
+                <dt className="font-bold">Έκταση</dt>
+                <dd>ΧΧΧ,00 km2</dd>
+                <dt className="font-bold">Υψόμετρο:</dt>
+                <dd>520μ</dd>
+                <dt className="font-bold">Υψηλότερη κορυφή:</dt>
+                <dd>Λεντής</dd>
               </dl>
             </aside>
           </div>
