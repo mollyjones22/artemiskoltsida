@@ -109,6 +109,9 @@ export default function NisosAftiPage() {
                 className="block text-[#0645ad] underline-offset-2 hover:underline"
               >
                 <span className="block text-lg leading-none">{project.label}</span>
+                <span className="mt-1 flex aspect-[4/3] w-full items-center justify-center border border-dashed border-[#72777d] bg-white px-2 text-center text-[0.65rem] leading-tight text-[#54595d]">
+                  photo placeholder
+                </span>
                 <span className="block text-xs text-[#54595d]">{project.note}</span>
               </Link>
             ))}
