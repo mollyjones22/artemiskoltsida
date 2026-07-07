@@ -128,9 +128,10 @@ export default function NisosAftiPage() {
           <div className="mt-4 grid gap-6 xl:grid-cols-[minmax(0,1fr)_19rem]">
             <div className="min-w-0">
               <p className="mb-4 leading-relaxed">
-                Η <strong>Νήσος Αυτί</strong> είναι φανταστικό νησί, καλλιτεχνικό
-                αρχείο και ψευδο-εγκυκλοπαιδικό λήμμα. Τοποθετείται ανάμεσα σε
-                πραγματική γεωγραφία και επινοημένη μνήμη.
+                Το Αυτί είναι ένα νησί στο Μυρτώο Πέλαγος, ανάμεσα στα Κύθηρα
+                και την Κρήτη, με πρωτεύουσα το Χωριό. Σήμερα, το νησί αριθμεί
+                9.000 κατοίκους, ενώ η πόλη του Χωριού μπορεί να χαρακτηριστεί
+                πλήρως ως αστικό κέντρο.
               </p>
 
               <section className="mb-5 inline-block border border-[#a2a9b1] bg-[#f8f9fa] p-3 text-sm">
