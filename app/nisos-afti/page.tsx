@@ -123,7 +123,7 @@ function PlaceholderImage({ label }: { label: string }) {
 export default function NisosAftiPage() {
   return (
     <main className="min-h-screen bg-white px-4 py-5 text-[#202122] sm:px-6 lg:px-10">
-      <div className="mx-auto grid max-w-[1180px] gap-5 lg:grid-cols-[9.5rem_minmax(0,1fr)]">
+      <div className="mx-auto grid max-w-[1180px] gap-5 lg:grid-cols-[11.5rem_minmax(0,1fr)]">
         <aside className="order-2 border-t border-[#a2a9b1] pt-4 text-sm lg:order-1 lg:border-r lg:border-t-0 lg:pr-4 lg:pt-16">
           <Link href="/" className="mb-5 inline-block text-[#0645ad]">
             BACK
@@ -144,7 +144,6 @@ export default function NisosAftiPage() {
                 <span className="mt-1 flex aspect-[4/3] w-full items-center justify-center border border-dashed border-[#72777d] bg-white px-2 text-center text-[0.65rem] leading-tight text-[#54595d]">
                   photo placeholder
                 </span>
-                <span className="block text-xs text-[#54595d]">{project.note}</span>
               </Link>
             ))}
           </nav>
