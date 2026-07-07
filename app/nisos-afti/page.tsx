@@ -161,6 +161,11 @@ export default function NisosAftiPage() {
                   <h2 className="mb-3 border-b border-[#a2a9b1] text-2xl font-normal leading-tight">
                     {section.heading}
                   </h2>
+                  {section.heading === "Ιστορία" ? (
+                    <h3 className="mb-3 text-base font-bold leading-relaxed">
+                      Προϊστορία - Ρωμϊκοί χρόνοι
+                    </h3>
+                  ) : null}
                   <div className="space-y-3 leading-relaxed">
                     {section.paragraphs.map((paragraph) => (
                       <p key={paragraph}>{paragraph}</p>
