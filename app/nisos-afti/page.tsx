@@ -16,7 +16,7 @@ const projectLinks = [
 
 const toc = [
   "Ετυμολογία",
-  "Γεωγραφία",
+  "Μυθολογία",
   "Μυθολογία",
   "Ιστορία",
   "Σύγχρονη ζωή",
@@ -33,7 +33,7 @@ const sections = [
     ],
   },
   {
-    heading: "Γεωγραφία",
+    heading: "Μυθολογία",
     paragraphs: [
       "Η Νήσος Αυτί βρίσκεται ανάμεσα στα Κύθηρα και την Κρήτη, σε ένα σημείο όπου οι χάρτες συχνά αφήνουν μικρά κενά. Η πρωτεύουσα ονομάζεται Χωριό και περιγράφεται ως αστικό κέντρο σε μικρογραφία, με στενά περάσματα, χαμηλές αυλές και πλατείες που μοιάζουν περισσότερο με δωμάτια.",
       "Στα δυτικά υψώνονται ξηρολιθιές και αναβαθμίδες. Στα ανατολικά υπάρχουν απότομα βράχια, φάροι και τρεις μικρές ακατοίκητες νησίδες που οι ναυτικοί αποφεύγουν όταν φυσάει ο προβέντζας.",
@@ -137,8 +137,8 @@ export default function NisosAftiPage() {
               <section className="mb-5 inline-block border border-[#a2a9b1] bg-[#f8f9fa] p-3 text-sm">
                 <h2 className="mb-2 text-center font-bold">Contents</h2>
                 <ol className="list-decimal space-y-1 pl-5">
-                  {toc.map((item) => (
-                    <li key={item}>
+                  {toc.map((item, index) => (
+                    <li key={`${item}-${index}`}>
                       <a className="text-[#0645ad]" href={`#${item}`}>
                         {item}
                       </a>
@@ -147,8 +147,12 @@ export default function NisosAftiPage() {
                 </ol>
               </section>
 
-              {sections.map((section) => (
-                <section key={section.heading} id={section.heading} className="mb-6">
+              {sections.map((section, index) => (
+                <section
+                  key={`${section.heading}-${index}`}
+                  id={section.heading}
+                  className="mb-6"
+                >
                   <h2 className="mb-3 border-b border-[#a2a9b1] text-2xl font-normal leading-tight">
                     {section.heading}
                   </h2>
