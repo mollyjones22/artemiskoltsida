@@ -20,6 +20,10 @@ const toc = [
   "Ιστορία",
   "Κλίμα και πανίδα",
   "Αρχείο εικόνων",
+  "Δείτε επίσης",
+  "Παραπομπές",
+  "Βιβλιογραφία",
+  "Εξωτερικοί Σύνδεσμοι",
 ];
 
 const sections = [
@@ -88,6 +92,13 @@ const imageSlots = [
   "Άποψη του Χωριού",
   "Ακτή με φάρο",
   "Αρχείο αντικειμένων",
+];
+
+const closingSections = [
+  "Δείτε επίσης",
+  "Παραπομπές",
+  "Βιβλιογραφία",
+  "Εξωτερικοί Σύνδεσμοι",
 ];
 
 export const metadata: Metadata = {
@@ -209,6 +220,14 @@ export default function NisosAftiPage() {
                   ))}
                 </div>
               </section>
+
+              {closingSections.map((section) => (
+                <section key={section} id={section} className="mb-6">
+                  <h2 className="mb-3 border-b border-[#a2a9b1] text-2xl font-normal leading-tight">
+                    {section}
+                  </h2>
+                </section>
+              ))}
             </div>
 
             <aside className="h-fit border border-[#a2a9b1] bg-[#f8f9fa] p-3 text-sm">
