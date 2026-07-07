@@ -4,12 +4,12 @@ import Link from "next/link";
 const title = "Νήσος Αυτί";
 
 const projectLinks = [
-  { label: "Λ.", href: "/nisos-afti/letter-a", note: "λεξικό / γράμμα" },
-  { label: "Δ.", href: "/nisos-afti/letter-a", note: "δελτίο ακτής" },
-  { label: "Π.", href: "/nisos-afti/letter-a", note: "προσωπικό αρχείο" },
+  { label: "Λ.", href: "/nisos-afti/lambda", note: "λεξικό / γράμμα" },
+  { label: "Δ.", href: "/nisos-afti/delta", note: "δελτίο ακτής" },
+  { label: "Π.", href: "/nisos-afti/pi", note: "προσωπικό αρχείο" },
   {
     label: "πυρόξανθα μαλλιά",
-    href: "/nisos-afti/letter-a",
+    href: "/nisos-afti/pyroksantha-mallia",
     note: "εικόνα - αφήγηση",
   },
 ];
