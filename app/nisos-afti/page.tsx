@@ -253,7 +253,27 @@ export default function NisosAftiPage() {
                 <dd>520μ</dd>
                 <dt className="font-bold">Υψηλότερη κορυφή:</dt>
                 <dd>Λεντής</dd>
+                <dt className="font-bold">Χώρα</dt>
+                <dd>Ελλάδα</dd>
+                <dt className="font-bold">Περιφέρεια:</dt>
+                <dd>Αττικής</dd>
+                <dt className="font-bold">Δήμος:</dt>
+                <dd>Αφταβούς</dd>
+                <dt className="font-bold">Πρωτεύουσα:</dt>
+                <dd>Νέο Χωριό</dd>
               </dl>
+              <h3 className="mt-4 bg-[#eaecf0] py-1 text-center font-bold">
+                Δημογραφικά
+              </h3>
+              <dl className="mt-3 grid grid-cols-[9rem_minmax(0,1fr)] gap-x-3 gap-y-2 text-right">
+                <dt className="font-bold">Πληθυσμός:</dt>
+                <dd>ΧΧΧΧΧ (Απογραφής 2021)</dd>
+                <dt className="font-bold">Πυκνότητα</dt>
+                <dd>12/χλμ2</dd>
+              </dl>
+              <h3 className="mt-4 bg-[#eaecf0] py-1 text-center font-bold">
+                Σχετικά πολυμέσα
+              </h3>
             </aside>
           </div>
         </article>
