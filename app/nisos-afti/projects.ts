@@ -35,24 +35,17 @@ const lambdaProjects: AnalogProject[] = [
 const deltaProjects: AnalogProject[] = [
   {
     number: "Δ.01",
-    slug: "deltio-aktis",
-    title: "Δελτίο ακτής",
-    year: "",
+    slug: "dracocasa",
+    title: "Dracocasa",
+    year: "2025",
     gallery: "photo gallery",
     details: [
-      "Coastal notice from the island edge.",
-      "A project entry for maps, tide notes, warning signs, and sea-weather images.",
-    ],
-  },
-  {
-    number: "Δ.02",
-    slug: "diadromes",
-    title: "Διαδρομές",
-    year: "",
-    gallery: "photo gallery",
-    details: [
-      "Walking routes through the invented geography of Αυτί.",
-      "Placeholder project for paths, crossings, and marked distances.",
+      "Story by Molly",
+      "Music by NAEUS",
+      "For KRAMA ENTRIES, aired on March 25, 2025",
+      "In the northern part of Afti, a towering column crowned by a great cauldron rises above the fog. Similar structures stretch down the Pindus mountains, once used to signal threats of disease. A dragon, guardian of the island’s health, kept watch, lighting the fire whenever the Peloponnese cauldron burned, a constant reality in recent months.",
+      "A band of pirates, lost at sea, sought refuge in a cave near the dragon’s lair, Dracocasa. Determined to extinguish the beast’s fire and enter the island unhindered, they devised a trap: they soaked a body they found in the cave in alcohol. When the dragon devoured it, its flames erupted violently, exploding the beast and snuffing out the undetected fire.",
+      "Unaware, the people of Afti welcomed travelers home, unknowingly inviting tragedy. When the fog lifted, they found the dragon’s remains. The Big Disease swept through Afti, Antikythera, and Crete. Too late, they realized, none were left to warn them.",
     ],
   },
 ];
