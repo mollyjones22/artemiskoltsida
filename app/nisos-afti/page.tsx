@@ -62,6 +62,13 @@ const sections = [
   },
 ];
 
+const historySubtitles: Record<string, string> = {
+  "Η οροσειρά την Πίνδου κάποτε χώριζε το Μυρτώο Πέλαγος κι έφτανε ως την Κρήτη.":
+    "Προϊστορία - Ρωμϊκοί χρόνοι",
+  "Τον 15ο αιώνα π.Χ., στα Κύθηρα εγκαταστάθηκαν και οι Φοίνικες, άγνωστο από πότε, οι οποίοι παρήγαγαν πορφύρα και χρησιμοποιούσαν την αποικία τους ως εμπορικό σταθμό. Μετά την πτώση των Μινωιτών, περίπου το 1400 π.Χ., το νησί κατακτήθηκε από τους Μυκηναίους. Κατά τον 12ο αιώνα π.Χ., την κυριαρχία τους διαδέχθηκαν οι Δωριείς. Η ιστορική πορεία της Άμπως ακολούθησε την ίδια κατεύθυνση, με μια σημαντική αλλαγή τον 6ο αιώνα π.Χ.: ενώ τα Κύθηρα κατακτήθηκαν από τους Σπαρτιάτες, το νησί του Αυτιού πέρασε υπό την κυριαρχία των Αθηναίων.":
+    "Αρχαία Ελλάδα",
+};
+
 const imageSlots = [
   "Χάρτης της νήσου",
   "Άποψη του Χωριού",
@@ -155,14 +162,17 @@ export default function NisosAftiPage() {
                   <h2 className="mb-3 border-b border-[#a2a9b1] text-2xl font-normal leading-tight">
                     {section.heading}
                   </h2>
-                  {section.heading === "Ιστορία" ? (
-                    <h3 className="mb-3 text-base font-bold leading-relaxed">
-                      Προϊστορία - Ρωμϊκοί χρόνοι
-                    </h3>
-                  ) : null}
                   <div className="space-y-3 leading-relaxed">
                     {section.paragraphs.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
+                      <div key={paragraph} className="space-y-3">
+                        {section.heading === "Ιστορία" &&
+                        historySubtitles[paragraph] ? (
+                          <h3 className="text-base font-bold leading-relaxed">
+                            {historySubtitles[paragraph]}
+                          </h3>
+                        ) : null}
+                        <p>{paragraph}</p>
+                      </div>
                     ))}
                   </div>
                 </section>
