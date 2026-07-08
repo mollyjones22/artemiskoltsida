@@ -411,6 +411,17 @@ export const silkscreenPrintProjects: AnalogProject[] = [
 
 export const zineProjects: AnalogProject[] = [
   {
+    number: "A.06.06",
+    slug: "netfree",
+    title: "NetFree",
+    year: "2025",
+    gallery: "photo gallery",
+    details: [
+      "A story by mctsel, left and molly",
+      "A photographic collage presenting a mini capsule collection of hand airbrushed archive garments from the 2007 La Redoute × André Courrèges collaboration.",
+    ],
+  },
+  {
     number: "A.06.05",
     slug: "softathens",
     title: "SOFTATHENS, BY CARHARTT WIP x LATRAAC x TIPOMATA",
