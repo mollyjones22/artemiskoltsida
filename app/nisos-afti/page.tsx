@@ -151,7 +151,6 @@ export default function NisosAftiPage() {
 
         <article className="order-1 lg:order-2">
           <header className="border-b border-[#a2a9b1] pb-2">
-            <p className="text-sm text-[#54595d]">from the free imaginary encyclopedia</p>
             <h1 className="mt-1 text-4xl font-normal leading-tight">{title}</h1>
           </header>
 
