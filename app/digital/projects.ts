@@ -67,7 +67,7 @@ export const postgraduateResearchProjects: AnalogProject[] = [
 
 export const webDesignProjects: AnalogProject[] = [
   {
-    number: "D.05.02",
+    number: "D.06.01",
     slug: "rhetoric-seminar-visual-identity",
     title: "Rhetoric Seminar - Visual Identity",
     year: "2026",
