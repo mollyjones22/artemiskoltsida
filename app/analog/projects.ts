@@ -145,7 +145,7 @@ export const analogPhotographyProjects: AnalogProject[] = [
 
 export const constructionInstallationProjects: AnalogProject[] = [
   {
-    number: "A.03.04",
+    number: "A.03.05",
     slug: "matter-in-the-park",
     title: "Matter in the Park",
     year: "2025",
@@ -160,6 +160,16 @@ export const constructionInstallationProjects: AnalogProject[] = [
         label: "✹ https://ra.co/events/2253643",
         href: "https://ra.co/events/2253643",
       },
+    ],
+  },
+  {
+    number: "A.03.04",
+    slug: "bench-from-found-stones",
+    title: "Bench from Found Stones",
+    year: "2024",
+    gallery: "photo gallery",
+    details: [
+      "Outdoor bench constructed using stones found on site in the courtyard.",
     ],
   },
   {
@@ -219,7 +229,7 @@ export const constructionInstallationProjects: AnalogProject[] = [
 
 export const drawingProjects: AnalogProject[] = [
   {
-    number: "A.04.08",
+    number: "A.04.10",
     slug: "dolce-vita-mesimeri",
     title: "Dolce Vita Mesimeri",
     year: "2026",
@@ -227,6 +237,22 @@ export const drawingProjects: AnalogProject[] = [
     details: [
       "Oil Pastels on cotton paper, 285 gsm, 100X70cm (Fabriano Rosaspina Paper Cotton 60%)",
     ],
+  },
+  {
+    number: "A.04.09",
+    slug: "diloti",
+    title: "Diloti",
+    year: "2026",
+    gallery: "photo gallery",
+    details: [],
+  },
+  {
+    number: "A.04.08",
+    slug: "kitchen-party",
+    title: "Kitchen Party",
+    year: "2026",
+    gallery: "photo gallery",
+    details: ["colored pencils", "35 X 50"],
   },
   {
     number: "A.04.07",
