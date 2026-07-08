@@ -54,12 +54,20 @@ a:visited {
   animation-play-state: paused;
 }
 
+.nisos-afti-tab,
+.nisos-afti-tab:visited,
+.nisos-afti-tab:hover {
+  color: #0000ee;
+}
+
 .nisos-afti-label {
-  -webkit-text-stroke: 3px white;
-  paint-order: stroke fill;
+  color: #0000ee;
+  font-weight: 700;
   text-shadow:
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white,
     0 0 4px white,
-    0 0 6px white,
-    0 0 8px white,
-    0 0 10px white;
+    0 0 7px white;
 }
