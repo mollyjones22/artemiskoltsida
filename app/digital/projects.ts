@@ -119,7 +119,7 @@ export const diplomaThesisProjects: AnalogProject[] = [
 
 export const digitalPhotographyProjects: AnalogProject[] = [
   {
-    number: "D.07.03",
+    number: "D.07.04",
     slug: "music-marble-2022",
     title: "Music Marble",
     year: "2022",
@@ -131,7 +131,7 @@ export const digitalPhotographyProjects: AnalogProject[] = [
     ],
   },
   {
-    number: "D.07.02",
+    number: "D.07.03",
     slug: "music-marble-2021",
     title: "Music Marble",
     year: "2021",
@@ -143,7 +143,7 @@ export const digitalPhotographyProjects: AnalogProject[] = [
     ],
   },
   {
-    number: "D.07.01",
+    number: "D.07.02",
     slug: "walk",
     title: "Walk",
     year: "2017",
@@ -156,6 +156,14 @@ export const digitalPhotographyProjects: AnalogProject[] = [
         href: "https://marthakotsia.wixsite.com/kartha/work?pgid=ksg5tk4a-885a9305-0dbd-416d-bb66-a639fd1c0f71",
       },
     ],
+  },
+  {
+    number: "D.07.01",
+    slug: "eye-center-athens",
+    title: "Eye Center Athens",
+    year: "2017",
+    gallery: "photo gallery",
+    details: ["Photos of Athens Eye Center Clinic for commercial use."],
   },
 ];
 
