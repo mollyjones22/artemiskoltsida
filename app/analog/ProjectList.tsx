@@ -94,6 +94,7 @@ export default function ProjectList({
                     references={project.galleryReferences}
                     title={project.title}
                     number={project.number}
+                    variant="nisos"
                   />
                 ) : (
                   <p className="text-sm leading-normal">{project.number}</p>

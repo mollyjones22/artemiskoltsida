@@ -7,6 +7,7 @@ type ProjectGalleryProps = {
   title: string;
   number: string;
   id?: string;
+  variant?: "default" | "nisos";
 };
 
 export default function ProjectGallery({
@@ -15,11 +16,12 @@ export default function ProjectGallery({
   title,
   number,
   id,
+  variant = "default",
 }: ProjectGalleryProps) {
   const photos = getProjectPhotos(number, title);
 
   if (photos.length > 0) {
-    return <ProjectCarousel id={id} images={photos} title={title} />;
+    return <ProjectCarousel id={id} images={photos} title={title} variant={variant} />;
   }
 
   return (

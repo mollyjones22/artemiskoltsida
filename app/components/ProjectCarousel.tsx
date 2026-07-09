@@ -6,10 +6,16 @@ import type { ProjectPhoto } from "../gallery";
 type ProjectCarouselProps = {
   id?: string;
   images: ProjectPhoto[];
+  variant?: "default" | "nisos";
   title: string;
 };
 
-export default function ProjectCarousel({ id, images, title }: ProjectCarouselProps) {
+export default function ProjectCarousel({
+  id,
+  images,
+  title,
+  variant = "default",
+}: ProjectCarouselProps) {
   const [index, setIndex] = useState(0);
   const currentImage = images[index];
   const hasMultipleImages = images.length > 1;
@@ -27,10 +33,12 @@ export default function ProjectCarousel({ id, images, title }: ProjectCarouselPr
   return (
     <figure
       id={id}
-      className="mb-6 flex min-h-48 items-center justify-center sm:-ml-24 sm:w-[calc(100%+6rem)]"
+      className={`mb-6 flex min-h-48 items-center justify-center ${
+        variant === "nisos" ? "" : "sm:-ml-24 sm:w-[calc(100%+6rem)]"
+      }`}
       aria-label={`${title} photo gallery`}
     >
-      <div className="w-[55%]">
+      <div className={variant === "nisos" ? "w-full" : "w-[55%]"}>
         <div className="relative">
           {hasMultipleImages ? (
             <button

@@ -21,9 +21,33 @@ function getPublicFiles(directory: string, baseUrl = ""): string[] {
   });
 }
 
+function getNisosPrefix(projectNumber: string) {
+  const section = projectNumber.split(".")[0];
+
+  if (section === "\u039b") {
+    return "n-01-";
+  }
+
+  if (section === "\u0394") {
+    return "n-02-";
+  }
+
+  if (section === "\u03a0") {
+    return "n-03-";
+  }
+
+  if (section === "\u0391") {
+    return "n-04-";
+  }
+
+  return null;
+}
+
 export function getProjectPhotos(projectNumber: string, projectTitle: string): ProjectPhoto[] {
   const publicDirectory = path.join(process.cwd(), "public");
-  const prefix = `p-${projectNumber.toLowerCase().replaceAll(".", "-")}-`;
+  const prefix =
+    getNisosPrefix(projectNumber) ??
+    `p-${projectNumber.toLowerCase().replaceAll(".", "-")}-`;
   const photoPattern = new RegExp(
     `^${prefix.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(\\d+)\\.[^.]+$`,
     "i",
