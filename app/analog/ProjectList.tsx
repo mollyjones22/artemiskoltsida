@@ -87,12 +87,20 @@ export default function ProjectList({
                   <p className="text-sm leading-normal">{project.number}</p>
                 )}
                 <div className={isNisosLayout ? "sm:pt-1" : undefined}>
-                  <h2 className="mb-3 text-lg font-normal leading-normal underline underline-offset-4">
+                  <h2
+                    className={`mb-3 font-normal leading-normal underline underline-offset-4 ${
+                      isNisosLayout ? "text-sm" : "text-lg"
+                    }`}
+                  >
                     {project.title}
                     {project.year ? ` (${project.year})` : ""}
                   </h2>
 
-                  <div className="mb-4 flex flex-col gap-1 text-base leading-normal">
+                  <div
+                    className={`mb-4 flex flex-col gap-1 leading-normal ${
+                      isNisosLayout ? "text-sm" : "text-base"
+                    }`}
+                  >
                     {project.details.map((detail, index) => (
                       <p
                         key={`${project.number}-${index}`}
