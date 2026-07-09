@@ -27,10 +27,10 @@ export default function ProjectCarousel({ id, images, title }: ProjectCarouselPr
   return (
     <figure
       id={id}
-      className="mb-6 flex min-h-48 items-center justify-center"
+      className="mb-6 flex min-h-48 items-center justify-center sm:-ml-24 sm:w-[calc(100%+6rem)]"
       aria-label={`${title} photo gallery`}
     >
-      <div className="w-1/2">
+      <div className="w-[55%]">
         <div className="relative">
           {hasMultipleImages ? (
             <button
