@@ -49,6 +49,13 @@ const deltaProjects: AnalogProject[] = [
     title: "Δ.",
     year: "25/03/2025",
     gallery: "photo gallery",
+    mediaLinks: [
+      {
+        afterPhoto: 1,
+        href: "https://soundcloud.com/naeus_osc/dracocasa",
+        label: "Dracocasa",
+      },
+    ],
     details: [
       {
         text: "Τα Δρακόκαζα",
