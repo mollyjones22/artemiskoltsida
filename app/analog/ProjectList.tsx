@@ -42,7 +42,7 @@ export default function ProjectList({
                 className="flex aspect-[4/3] w-full max-w-40 items-center justify-center border border-dashed border-black bg-white px-4 text-center text-sm leading-normal text-black no-underline hover:border-[#0000ee] hover:text-[#0000ee] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0000ee]"
                 aria-label="Open Nisos Afti map"
               >
-                image placeholder
+                map placeholder
               </Link>
             ) : (
               projects.map((project) => {
