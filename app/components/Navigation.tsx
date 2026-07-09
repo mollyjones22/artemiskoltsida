@@ -47,6 +47,13 @@ interface NavigationProps {
 export default function Navigation({ variant = "light" }: NavigationProps) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [openSection, setOpenSection] = useState<"analog" | "digital" | null>(
+    pathname.startsWith("/analog")
+      ? "analog"
+      : pathname.startsWith("/digital")
+        ? "digital"
+        : null,
+  );
   const nisosAftiLabel = "\u039d\u03ae\u03c3\u03bf\u03c2 \u0391\u03c5\u03c4\u03af";
 
   const isDark = variant === "dark";
@@ -58,7 +65,29 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
   const underlineColor = isDark ? "bg-white" : "bg-[#0000ee]";
   const isSubmenuPage =
     pathname.startsWith("/analog/") || pathname.startsWith("/digital/");
-  const compactMobileHeader = isSubmenuPage && !open;
+  const compactMobileHeader = isSubmenuPage || open;
+  const mobileSectionButton = `w-full rounded px-3 py-2 text-center text-base no-underline underline-offset-4 transition-colors duration-200 hover:underline ${hoverBg}`;
+  const mobileSubmenuLink = `w-full rounded px-3 py-1.5 text-center text-sm no-underline underline-offset-4 transition-colors duration-200 hover:underline sm:text-base ${hoverBg}`;
+
+  function toggleMenu() {
+    setOpen((current) => {
+      const next = !current;
+      if (next) {
+        setOpenSection(
+          pathname.startsWith("/analog")
+            ? "analog"
+            : pathname.startsWith("/digital")
+              ? "digital"
+              : null,
+        );
+      }
+      return next;
+    });
+  }
+
+  function closeMenu() {
+    setOpen(false);
+  }
 
   return (
     <div
@@ -189,7 +218,7 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
 
         {/* Mobile menu button */}
         <button
-          onClick={() => setOpen(!open)}
+          onClick={toggleMenu}
           className={`flex shrink-0 flex-col items-center justify-center gap-[5px] md:hidden ${
             compactMobileHeader ? "p-1" : "p-2"
           }`}
@@ -236,54 +265,80 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
       {/* Mobile dropdown menu */}
       {open && (
         <div
-          className={`absolute right-0 top-full z-50 w-full ${panelBg} border-t ${borderColor} shadow-lg md:hidden`}
+          className={`absolute right-0 top-full z-50 max-h-[calc(100dvh-3.5rem)] w-full overflow-y-auto overscroll-contain ${panelBg} border-t ${borderColor} shadow-lg md:hidden`}
         >
-          <div className="flex flex-col items-center gap-1 px-3 py-3 sm:px-4 sm:py-4">
-            <Link
-              href="/analog"
-              onClick={() => setOpen(false)}
-              className={`w-full rounded px-3 py-2 text-center text-base no-underline underline-offset-4 transition-colors duration-200 hover:underline ${hoverBg}`}
+          <div className="flex flex-col items-center gap-1 px-3 py-2 sm:px-4 sm:py-3">
+            <button
+              type="button"
+              onClick={() =>
+                setOpenSection((current) => (current === "analog" ? null : "analog"))
+              }
+              className={mobileSectionButton}
+              aria-expanded={openSection === "analog"}
             >
               Analog {"\u25be"}
-            </Link>
-            {analogLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className={`w-full rounded px-3 py-1 text-center text-sm text-[#0000ee] no-underline underline-offset-4 transition-colors duration-200 hover:underline sm:text-base ${hoverBg}`}
-              >
-                {link.italic ? <span className="italic">{link.label}</span> : link.label}
-              </Link>
-            ))}
+            </button>
+            {openSection === "analog" && (
+              <>
+                <Link
+                  href="/analog"
+                  onClick={closeMenu}
+                  className={mobileSubmenuLink}
+                >
+                  Analog
+                </Link>
+                {analogLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={closeMenu}
+                    className={`text-[#0000ee] ${mobileSubmenuLink}`}
+                  >
+                    {link.italic ? <span className="italic">{link.label}</span> : link.label}
+                  </Link>
+                ))}
+              </>
+            )}
             <Link
               href="/"
-              onClick={() => setOpen(false)}
+              onClick={closeMenu}
               className={`w-full rounded px-3 py-2 text-center text-base no-underline underline-offset-4 transition-colors duration-200 hover:underline sm:text-lg ${
                 pathname === "/" ? `font-semibold ${activeBg}` : hoverBg
               }`}
             >
               info
             </Link>
-            <Link
-              href="/digital"
-              onClick={() => setOpen(false)}
-              className={`w-full rounded px-3 py-2 text-center text-base no-underline underline-offset-4 transition-colors duration-200 hover:underline sm:text-lg ${
-                pathname === "/digital" ? `font-semibold ${activeBg}` : hoverBg
-              }`}
+            <button
+              type="button"
+              onClick={() =>
+                setOpenSection((current) => (current === "digital" ? null : "digital"))
+              }
+              className={mobileSectionButton}
+              aria-expanded={openSection === "digital"}
             >
               Digital {"\u25be"}
-            </Link>
-            {digitalLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className={`w-full rounded px-3 py-1 text-center text-sm no-underline underline-offset-4 transition-colors duration-200 hover:underline sm:text-base ${hoverBg}`}
-              >
-                {link.italic ? <span className="italic">{link.label}</span> : link.label}
-              </Link>
-            ))}
+            </button>
+            {openSection === "digital" && (
+              <>
+                <Link
+                  href="/digital"
+                  onClick={closeMenu}
+                  className={mobileSubmenuLink}
+                >
+                  Digital
+                </Link>
+                {digitalLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={closeMenu}
+                    className={mobileSubmenuLink}
+                  >
+                    {link.italic ? <span className="italic">{link.label}</span> : link.label}
+                  </Link>
+                ))}
+              </>
+            )}
           </div>
         </div>
       )}
