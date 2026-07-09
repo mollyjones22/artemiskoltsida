@@ -491,6 +491,14 @@ export const zineProjects: AnalogProject[] = [
 
 export const funProjects: AnalogProject[] = [
   {
+    number: "A.07.06",
+    slug: "mikri-festivalina-picnic",
+    title: "Mikri Festivalina picnic",
+    year: "",
+    gallery: "photo gallery",
+    details: [],
+  },
+  {
     number: "A.07.04",
     slug: "cigarette-tiara",
     title: "Cigarette Tiara",
@@ -510,6 +518,14 @@ export const funProjects: AnalogProject[] = [
     number: "A.07.02",
     slug: "walls",
     title: "Walls",
+    year: "",
+    gallery: "photo gallery",
+    details: [],
+  },
+  {
+    number: "A.07.05",
+    slug: "random-sketchbook-pages",
+    title: "Random Sketchbook Pages",
     year: "",
     gallery: "photo gallery",
     details: [],
