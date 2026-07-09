@@ -3,6 +3,11 @@ import ProjectCarousel from "./ProjectCarousel";
 
 type ProjectGalleryProps = {
   gallery: string;
+  mediaLinks?: {
+    afterPhoto?: number;
+    href: string;
+    label: string;
+  }[];
   references?: string[];
   title: string;
   number: string;
@@ -12,6 +17,7 @@ type ProjectGalleryProps = {
 
 export default function ProjectGallery({
   gallery,
+  mediaLinks,
   references,
   title,
   number,
@@ -21,7 +27,15 @@ export default function ProjectGallery({
   const photos = getProjectPhotos(number, title);
 
   if (photos.length > 0) {
-    return <ProjectCarousel id={id} images={photos} title={title} variant={variant} />;
+    return (
+      <ProjectCarousel
+        id={id}
+        images={photos}
+        mediaLinks={mediaLinks}
+        title={title}
+        variant={variant}
+      />
+    );
   }
 
   return (

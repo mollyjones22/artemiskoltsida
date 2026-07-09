@@ -16,6 +16,11 @@ export type AnalogProject = {
     label: string;
     href: string;
   }[];
+  mediaLinks?: {
+    afterPhoto?: number;
+    href: string;
+    label: string;
+  }[];
 };
 
 export const threeDPrintProjects: AnalogProject[] = [

@@ -91,6 +91,7 @@ export default function ProjectList({
                 {isNisosLayout ? (
                   <ProjectGallery
                     gallery={project.gallery}
+                    mediaLinks={project.mediaLinks}
                     references={project.galleryReferences}
                     title={project.title}
                     number={project.number}
