@@ -228,7 +228,22 @@ export default function NisosAftiPage() {
               ))}
             </div>
 
-            <aside className="h-fit border border-[#a2a9b1] bg-[#f8f9fa] p-3 text-sm">
+            <aside className="flex flex-col gap-6 text-sm">
+              <section className="h-fit border border-[#a2a9b1] bg-[#f8f9fa] p-3">
+                <h2 className="mb-3 bg-[#eaecf0] py-1 text-center text-base font-bold">
+                  Map submenu
+                </h2>
+                <figure>
+                  <div className="flex aspect-square items-center justify-center border border-dashed border-[#72777d] bg-white px-4 text-center text-xs text-[#54595d]">
+                    island map placeholder
+                  </div>
+                  <figcaption className="mt-2 text-center text-xs leading-snug text-[#202122]">
+                    Upload island map image here
+                  </figcaption>
+                </figure>
+              </section>
+
+              <section className="h-fit border border-[#a2a9b1] bg-[#f8f9fa] p-3 xl:mt-20">
               <h2 className="mb-3 bg-[#eaecf0] py-1 text-center text-base font-bold">
                 {title}
               </h2>
@@ -272,6 +287,7 @@ export default function NisosAftiPage() {
               <h3 className="mt-4 bg-[#eaecf0] py-1 text-center font-bold">
                 Σχετικά πολυμέσα
               </h3>
+              </section>
             </aside>
           </div>
         </article>
