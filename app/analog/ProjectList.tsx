@@ -5,6 +5,7 @@ import type { AnalogProject } from "./projects";
 
 type ProjectListProps = {
   basePath: string;
+  layoutVariant?: "default" | "nisos";
   projects: AnalogProject[];
   showInlineProjects?: boolean;
   showProjectTiles?: boolean;
@@ -13,11 +14,14 @@ type ProjectListProps = {
 
 export default function ProjectList({
   basePath,
+  layoutVariant = "default",
   projects,
   showInlineProjects = false,
   showProjectTiles = false,
   title,
 }: ProjectListProps) {
+  const isNisosLayout = layoutVariant === "nisos";
+
   return (
     <main className="bg-white px-6 py-6 text-left text-black sm:px-16">
       <section className="mx-auto max-w-4xl" aria-labelledby="category-title">
@@ -66,10 +70,23 @@ export default function ProjectList({
               <article
                 key={project.number}
                 id={project.slug}
-                className="scroll-mt-8 grid gap-4 sm:grid-cols-[5rem_minmax(0,1fr)]"
+                className={
+                  isNisosLayout
+                    ? "scroll-mt-8 grid gap-6 sm:grid-cols-[minmax(0,1fr)_minmax(18rem,28rem)] sm:items-start"
+                    : "scroll-mt-8 grid gap-4 sm:grid-cols-[5rem_minmax(0,1fr)]"
+                }
               >
-                <p className="text-sm leading-normal">{project.number}</p>
-                <div>
+                {isNisosLayout ? (
+                  <ProjectGallery
+                    gallery={project.gallery}
+                    references={project.galleryReferences}
+                    title={project.title}
+                    number={project.number}
+                  />
+                ) : (
+                  <p className="text-sm leading-normal">{project.number}</p>
+                )}
+                <div className={isNisosLayout ? "sm:pt-1" : undefined}>
                   <h2 className="mb-3 text-lg font-normal leading-normal underline underline-offset-4">
                     {project.title}
                     {project.year ? ` (${project.year})` : ""}
@@ -102,12 +119,14 @@ export default function ProjectList({
                     ))}
                   </div>
 
-                  <ProjectGallery
-                    gallery={project.gallery}
-                    references={project.galleryReferences}
-                    title={project.title}
-                    number={project.number}
-                  />
+                  {!isNisosLayout ? (
+                    <ProjectGallery
+                      gallery={project.gallery}
+                      references={project.galleryReferences}
+                      title={project.title}
+                      number={project.number}
+                    />
+                  ) : null}
                 </div>
               </article>
             ))}

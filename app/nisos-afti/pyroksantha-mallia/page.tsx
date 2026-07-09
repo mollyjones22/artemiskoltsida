@@ -18,6 +18,7 @@ export default function PyroksanthaMalliaPage() {
       <Navigation />
       <ProjectList
         basePath={group.basePath}
+        layoutVariant="nisos"
         projects={group.projects}
         showInlineProjects
         showProjectTiles

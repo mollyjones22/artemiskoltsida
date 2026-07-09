@@ -18,6 +18,7 @@ export default function PiPage() {
       <Navigation />
       <ProjectList
         basePath={group.basePath}
+        layoutVariant="nisos"
         projects={group.projects}
         showInlineProjects
         showProjectTiles
