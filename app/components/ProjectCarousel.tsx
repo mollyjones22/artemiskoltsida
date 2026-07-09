@@ -17,6 +17,7 @@ export default function ProjectCarousel({
   variant = "default",
 }: ProjectCarouselProps) {
   const [index, setIndex] = useState(0);
+  const [fullscreenOpen, setFullscreenOpen] = useState(false);
   const currentImage = images[index];
   const hasMultipleImages = images.length > 1;
   const currentPhotoNumber = String(index + 1).padStart(2, "0");
@@ -57,6 +58,17 @@ export default function ProjectCarousel({
             className="max-h-[70vh] w-full object-contain px-8"
           />
 
+          {variant === "nisos" ? (
+            <button
+              type="button"
+              onClick={() => setFullscreenOpen(true)}
+              className="absolute right-1 top-1 z-20 flex h-8 w-8 items-center justify-center border border-black bg-white text-xl leading-none text-black hover:border-[#0000ee] hover:text-[#0000ee] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0000ee]"
+              aria-label="Open image fullscreen"
+            >
+              {"\u26f6"}
+            </button>
+          ) : null}
+
           {hasMultipleImages ? (
             <button
               type="button"
@@ -69,9 +81,34 @@ export default function ProjectCarousel({
           ) : null}
         </div>
         <figcaption className="mt-2 text-center text-sm leading-normal text-[#0000ee]">
-          {currentPhotoNumber}/{totalPhotoNumber}
+          {variant === "nisos"
+            ? "Imaginary recipe handwritten by Eleni Papadopoulou, designed and aged by Molly"
+            : `${currentPhotoNumber}/${totalPhotoNumber}`}
         </figcaption>
       </div>
+
+      {fullscreenOpen ? (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-white/95 p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${title} fullscreen image`}
+        >
+          <button
+            type="button"
+            onClick={() => setFullscreenOpen(false)}
+            className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center border border-black bg-white text-2xl leading-none text-black hover:border-[#0000ee] hover:text-[#0000ee] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0000ee]"
+            aria-label="Close fullscreen image"
+          >
+            {"\u00d7"}
+          </button>
+          <img
+            src={currentImage.src}
+            alt={currentImage.alt}
+            className="max-h-[92vh] max-w-[96vw] object-contain"
+          />
+        </div>
+      ) : null}
     </figure>
   );
 }
