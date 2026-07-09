@@ -105,8 +105,19 @@ export default function ProjectList({
                       isNisosLayout ? "text-sm" : "text-lg"
                     }`}
                   >
-                    {project.title}
-                    {project.year ? ` (${project.year})` : ""}
+                    {isNisosLayout ? (
+                      <>
+                        {project.year ? (
+                          <span className="block">{project.year}</span>
+                        ) : null}
+                        <span className="block">{project.title}</span>
+                      </>
+                    ) : (
+                      <>
+                        {project.title}
+                        {project.year ? ` (${project.year})` : ""}
+                      </>
+                    )}
                   </h2>
 
                   <div
