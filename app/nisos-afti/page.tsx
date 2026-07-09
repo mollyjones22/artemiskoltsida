@@ -229,7 +229,10 @@ export default function NisosAftiPage() {
             </div>
 
             <aside className="flex flex-col gap-6 text-sm">
-              <section className="h-fit border border-[#a2a9b1] bg-[#f8f9fa] p-3">
+              <Link
+                href="/nisos-afti/map"
+                className="block h-fit border border-[#a2a9b1] bg-[#f8f9fa] p-3 text-[#202122] no-underline hover:text-[#0645ad] hover:no-underline"
+              >
                 <h2 className="mb-3 bg-[#eaecf0] py-1 text-center text-base font-bold">
                   Map submenu
                 </h2>
@@ -241,7 +244,7 @@ export default function NisosAftiPage() {
                     Upload island map image here
                   </figcaption>
                 </figure>
-              </section>
+              </Link>
 
               <section className="h-fit border border-[#a2a9b1] bg-[#f8f9fa] p-3 xl:mt-20">
               <h2 className="mb-3 bg-[#eaecf0] py-1 text-center text-base font-bold">

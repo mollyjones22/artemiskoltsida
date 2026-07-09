@@ -51,6 +51,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     { path: "/nisos-afti", priority: 0.6, changeFrequency: "monthly" as const },
     {
+      path: "/nisos-afti/map",
+      priority: 0.5,
+      changeFrequency: "monthly" as const,
+    },
+    {
       path: "/nisos-afti/letter-a",
       priority: 0.5,
       changeFrequency: "monthly" as const,
