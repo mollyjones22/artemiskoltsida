@@ -5,7 +5,13 @@ const photoExtensions = new Set([".avif", ".gif", ".jpeg", ".jpg", ".png", ".web
 
 export type ProjectPhoto = {
   alt: string;
+  caption?: string;
   src: string;
+};
+
+const nisosPhotoCaptions: Record<string, string> = {
+  "n-01-01":
+    "Imaginary recipe handwritten by Eleni Papadopoulou, designed and aged by Molly",
 };
 
 function getPublicFiles(directory: string, baseUrl = ""): string[] {
@@ -63,8 +69,11 @@ export function getProjectPhotos(projectNumber: string, projectTitle: string): P
         return null;
       }
 
+      const caption = nisosPhotoCaptions[path.basename(filename, extension)];
+
       return {
         alt: `${projectTitle} photo ${Number(match[1])}`,
+        ...(caption ? { caption } : {}),
         order: Number(match[1]),
         src,
       };
@@ -80,5 +89,5 @@ export function getProjectPhotos(projectNumber: string, projectTitle: string): P
       (photo, index, photos) =>
         index === 0 || photo.order !== photos[index - 1].order,
     )
-    .map(({ alt, src }) => ({ alt, src }));
+    .map(({ alt, caption, src }) => ({ alt, caption, src }));
 }

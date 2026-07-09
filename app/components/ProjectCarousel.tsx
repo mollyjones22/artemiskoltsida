@@ -22,6 +22,10 @@ export default function ProjectCarousel({
   const hasMultipleImages = images.length > 1;
   const currentPhotoNumber = String(index + 1).padStart(2, "0");
   const totalPhotoNumber = String(images.length).padStart(2, "0");
+  const caption =
+    variant === "nisos"
+      ? currentImage.caption ?? "Legend placeholder"
+      : `${currentPhotoNumber}/${totalPhotoNumber}`;
 
   const showPrevious = () => {
     setIndex((current) => (current === 0 ? images.length - 1 : current - 1));
@@ -81,9 +85,7 @@ export default function ProjectCarousel({
           ) : null}
         </div>
         <figcaption className="mt-2 text-center text-sm leading-normal text-[#0000ee]">
-          {variant === "nisos"
-            ? "Imaginary recipe handwritten by Eleni Papadopoulou, designed and aged by Molly"
-            : `${currentPhotoNumber}/${totalPhotoNumber}`}
+          {caption}
         </figcaption>
       </div>
 

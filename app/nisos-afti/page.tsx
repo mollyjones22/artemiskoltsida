@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { existsSync } from "node:fs";
+import path from "node:path";
 import Link from "next/link";
 
 const title = "Νήσος Αυτί";
@@ -13,6 +15,39 @@ const projectLinks = [
     note: "εικόνα - αφήγηση",
   },
 ];
+
+const projectLinkImages: Record<string, string> = {
+  "/nisos-afti/lambda": "n-01-01",
+  "/nisos-afti/delta": "n-02-01",
+  "/nisos-afti/pi": "n-03-01",
+  "/nisos-afti/pyroksantha-mallia": "n-04-01",
+};
+
+const projectImageExtensions = ["jpg", "jpeg", "png", "gif", "webp"];
+
+function getProjectLinkImageSrc(href: string) {
+  const imageName = projectLinkImages[href];
+
+  if (!imageName) {
+    return null;
+  }
+
+  for (const extension of projectImageExtensions) {
+    const imageSrc = `/Nisos Afti/${imageName}.${extension}`;
+    const publicPath = path.join(
+      process.cwd(),
+      "public",
+      "Nisos Afti",
+      `${imageName}.${extension}`,
+    );
+
+    if (existsSync(publicPath)) {
+      return imageSrc;
+    }
+  }
+
+  return null;
+}
 
 const toc = [
   "Ετυμολογία",
@@ -132,20 +167,32 @@ export default function NisosAftiPage() {
             Projects
           </p>
           <nav aria-label="Νήσος Αυτί projects" className="space-y-2">
-            {projectLinks.map((project) => (
-              <Link
-                key={project.label}
-                href={project.href}
-                target="_blank"
-                rel="noreferrer"
-                className="block text-[#0645ad] underline-offset-2 hover:underline"
-              >
-                <span className="block text-lg leading-none">{project.label}</span>
-                <span className="mt-1 flex aspect-[4/3] w-full items-center justify-center border border-dashed border-[#72777d] bg-white px-2 text-center text-[0.65rem] leading-tight text-[#54595d]">
-                  photo placeholder
-                </span>
-              </Link>
-            ))}
+            {projectLinks.map((project) => {
+              const imageSrc = getProjectLinkImageSrc(project.href);
+
+              return (
+                <Link
+                  key={project.label}
+                  href={project.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block text-[#0645ad] underline-offset-2 hover:underline"
+                >
+                  <span className="block text-lg leading-none">{project.label}</span>
+                  <span className="mt-1 flex aspect-[4/3] w-full items-center justify-center border border-dashed border-[#72777d] bg-white px-2 text-center text-[0.65rem] leading-tight text-[#54595d]">
+                    {imageSrc ? (
+                      <img
+                        src={imageSrc}
+                        alt={`${project.label} project preview`}
+                        className="h-full w-full object-cover"
+                      />
+                    ) : (
+                      "photo placeholder"
+                    )}
+                  </span>
+                </Link>
+              );
+            })}
           </nav>
         </aside>
 
