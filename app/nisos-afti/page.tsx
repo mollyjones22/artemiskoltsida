@@ -237,11 +237,15 @@ export default function NisosAftiPage() {
                   Map submenu
                 </h2>
                 <figure>
-                  <div className="flex aspect-square items-center justify-center border border-dashed border-[#72777d] bg-white px-4 text-center text-xs text-[#54595d]">
-                    island map placeholder
+                  <div className="flex aspect-square items-center justify-center border border-[#a2a9b1] bg-white p-3">
+                    <img
+                      src="/afti island 1-1.svg"
+                      alt="Nisos Afti island map"
+                      className="h-full w-full object-contain"
+                    />
                   </div>
                   <figcaption className="mt-2 text-center text-xs leading-snug text-[#202122]">
-                    Upload island map image here
+                    Island map
                   </figcaption>
                 </figure>
               </Link>
