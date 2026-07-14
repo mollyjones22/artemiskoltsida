@@ -10,8 +10,8 @@ const projectLinks = [
   { label: "Δ.", href: "/nisos-afti/delta", note: "δελτίο ακτής" },
   { label: "Π.", href: "/nisos-afti/pi", note: "προσωπικό αρχείο" },
   {
-    label: "πυρόξανθα μαλλιά",
-    href: "/nisos-afti/pyroksantha-mallia",
+    label: "Τ.",
+    href: "/nisos-afti/t",
     note: "εικόνα - αφήγηση",
   },
 ];
@@ -20,7 +20,7 @@ const projectLinkImages: Record<string, string> = {
   "/nisos-afti/lambda": "n-01-01",
   "/nisos-afti/delta": "n-02-01",
   "/nisos-afti/pi": "n-03-01",
-  "/nisos-afti/pyroksantha-mallia": "n-04-01",
+  "/nisos-afti/t": "n-04-01",
 };
 
 const projectImageExtensions = ["jpg", "jpeg", "png", "gif", "webp"];
