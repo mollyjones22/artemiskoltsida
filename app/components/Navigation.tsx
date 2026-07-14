@@ -280,13 +280,6 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
             </button>
             {openSection === "analog" && (
               <>
-                <Link
-                  href="/analog"
-                  onClick={closeMenu}
-                  className={mobileSubmenuLink}
-                >
-                  Analog
-                </Link>
                 {analogLinks.map((link) => (
                   <Link
                     key={link.href}
@@ -320,13 +313,6 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
             </button>
             {openSection === "digital" && (
               <>
-                <Link
-                  href="/digital"
-                  onClick={closeMenu}
-                  className={mobileSubmenuLink}
-                >
-                  Digital
-                </Link>
                 {digitalLinks.map((link) => (
                   <Link
                     key={link.href}
