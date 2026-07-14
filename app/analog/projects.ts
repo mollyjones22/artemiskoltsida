@@ -15,6 +15,7 @@ export type AnalogProject = {
   links?: {
     label: string;
     href: string;
+    spacerBefore?: boolean;
   }[];
   mediaLinks?: {
     afterPhoto?: number;

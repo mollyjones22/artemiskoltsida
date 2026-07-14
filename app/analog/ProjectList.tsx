@@ -143,6 +143,7 @@ export default function ProjectList({
                     {project.links?.map((link) => (
                       <a
                         key={link.href}
+                        className={link.spacerBefore ? "mt-4" : undefined}
                         href={link.href}
                         target="_blank"
                         rel="noreferrer"
