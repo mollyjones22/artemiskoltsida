@@ -65,7 +65,7 @@ export default function SiteAudio() {
         }`}
       />
       <span className="text-xl leading-none sm:text-2xl" aria-hidden="true">
-        {")))"}
+        {"♪₊˚⊘"}
       </span>
     </button>
   );
