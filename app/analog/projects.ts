@@ -380,9 +380,10 @@ export const silkscreenPrintProjects: AnalogProject[] = [
       "2022: Demi, Aspalaxcomic, Flokosh, Mitsi, Pits, Tsolis, Sophia-Danae Vorvyla, Marily Marouley, Boseque, Gatamavrh, Moska Antigoni.",
       "2023: Demi, Flokosh, Mitsi, Pits, Tsolis, Sophia-Danae Vorvyla, Marily Marouley, Moska Antigoni, KoketaMC, Palmer, Meper, Rengin, Latraac, Jinxygoat, Gioukoulele, mctsel, Thomas, FRAUD EFFECT",
       "2024: Demi, Flokosh, Mitsi, Pits, Tsolis, Sophia-Danae Vorvyla, Marily Marouley, Moska Antigoni, KoketaMC, Andreas Palmer, Meper, Rengin, Latraac, Jinxygoat, Gioukoulele, mctsel, Thomas, FRAUD EFFECT, RofosKnit, Georgia Zachari, Dolce Pub, Cottagecore.fm, Io Papadatou, Zela Archives",
-      "2025: Dima, D-Eras, Makalle, kiko,",
+      "2025: Dima, D-Eras, Makalle, kiko, NetFree story by mctsel, left & molly",
+      "2026: kiko, giouli?, Akonisma, featuring Orama Archive",
       {
-        text: "Tipomata Excibition Diary",
+        text: "Tipomata Bazaar Diary",
         underline: true,
       },
       "2021: 05-06/06 Tourlou Zine Fest,",
@@ -403,7 +404,8 @@ export const silkscreenPrintProjects: AnalogProject[] = [
       "05/06 Cottagecore.fm Merch Launch @Tetoio",
       "13/10 Showroom Ta lelouda,",
       "28/10 Tetoio Vintage w/ Rozzita",
-      "2025: 31/06-01/07 IntoTheSpot",
+      "2025: 31/06-01/07 IntoTheSpot, 13-14/12 Unbound Expressions, 20-21/12 IntoTheSpot",
+      "2026: 22/03 FORMWAVE, 30-31/05 IntoTheSpot",
     ],
     links: [
       {
