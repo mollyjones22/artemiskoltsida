@@ -12,7 +12,7 @@ export const metadata: Metadata = createPageMetadata({
   path: group.basePath,
 });
 
-export default function PyroksanthaMalliaPage() {
+export default function TPage() {
   return (
     <>
       <Navigation />
