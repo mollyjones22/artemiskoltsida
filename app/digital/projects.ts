@@ -9,7 +9,9 @@ export const threeDVisualizationArchitecturalProjects: AnalogProject[] = [
     gallery: "photo gallery",
     details: [
       "Residential Renovation & Energy Upgrade Project",
-      "Architectural Study and Construction Supervision by Papadopoulou E. and Koltsida A",
+      " ",
+      "Architectural Study and Construction Supervision by Papadopoulou E. and Koltsida A.",
+      " ",
       "The project involved the complete renovation and energy upgrade of an apartment in Ilioupoli, from the initial design concept to the implementation phase. The work included the architectural study, spatial redesign, energy upgrade strategy, material selection, construction drawings, and on-site supervision throughout the renovation process.",
       "The proposal focused on improving functionality, spatial quality, energy performance, and the everyday living experience through a contemporary architectural approach. The project was developed collaboratively, ensuring continuity between the design process and its execution on site.",
     ],
