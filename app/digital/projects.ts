@@ -28,16 +28,20 @@ export const postgraduateResearchProjects: AnalogProject[] = [
     gallery: "photo gallery",
     details: [
       "Information and Communication Τechnologies for Education, Early Childhood Education UoA, Communication and Mass Media Studies UoA, Architecture UTh, Electrical and Electronic Engineering UniWA",
+      " ",
       "Diploma Thesis by Koltsida A.",
+      " ",
       "Supervisor: Meïmaris Michalis, Emeritus Professor, Communication and Mass Media Studies UoA",
+      " ",
       "The present work concerns the exploration of digital storytelling as a methodology towards the appropriation of the female self-image. The female image is shaped through intersecting social, cultural, and historical representations, which are reinforced by the dominant normative logic around gender and the body. These representations inform internalized and externally imposed identities, in which women are recognized through the gaze of the “other”.",
       "Consequently, the pursuit of self-determination and the construction of a self-image, that is not constrained by imposed standards, is a critical concern for contemporary femininity. The process of appropriating one’s self-image, through reinterpretation and reconstruction of these internalized representations, can be understood as part of a broader effort toward emancipation and the redefinition of the self.",
       "Digital storytelling offers a methodology aligned with this aim, as the collective creation of narratives seeks to empower participants, cultivate critical awareness, and promote autonomy. By producing and sharing personal narratives in multimedia form, within the storytelling circle, women were invited to challenge dominant representations and articulate their own version of self-image.",
       "This study explored how digital storytelling can serve as a tool for the appropriation of the female self-image, highlighting its capacity to deconstruct stereotypes and foster new forms of expression and self-definition. Findings from the subsequent qualitative research were positive, indicating that participants achieved goals such as reinterpreting dominant narratives from fresh perspectives, fostering awareness and creativity, engaging with and understanding multimedia production, and, most importantly, experiencing a safe space that encouraged sharing to a degree that was deeply meaningful for all involved.",
+      " ",
     ],
     links: [
       {
-        label: "pergamos.lib.uoa.gr/en/item/uoadl:5371724",
+        label: "𓂃✍︎  pergamos.lib.uoa.gr/en/item/uoadl:5371724",
         href: "https://pergamos.lib.uoa.gr/en/item/uoadl:5371724",
       },
     ],
