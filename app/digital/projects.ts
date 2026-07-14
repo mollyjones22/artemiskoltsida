@@ -54,18 +54,21 @@ export const postgraduateResearchProjects: AnalogProject[] = [
     gallery: "photo gallery",
     details: [
       "Athens 984 FM - Δημόσια και Ιδιωτικά 17-05-2026",
-      "Μιχάλης Μεϊμάρης - Άρτεμις Κολτσίδα & Ανδρέας Μούτσιος-Ρέντζος",
-      "Discussion on digital storytelling, exploring its methodology, creative process, and its applications in education, communication, and participatory media practices.",
-      "Listen: Mixcloud",
+      " ",
+      "Meimaris M. - Koltsida A. & Moutsios-Rentzos A.",
+      " ",
+      "Discussion on digital storytelling, exploring its methodology, creative process, and its applications in education, communication and participatory media practices.",
+      " ",
     ],
     links: [
       {
-        label: "mixcloud.com/ΑΘΗΝΑ984/δημόσια-και-ιδιωτικά-17-05-2026",
-        href: "https://www.mixcloud.com/%CE%91%CE%98%CE%97%CE%9D%CE%91984/%CE%B4%CE%B7%CE%BC%CF%8C%CF%83%CE%B9%CE%B1-%CE%BA%CE%B1%CE%B9-%CE%B9%CE%B4%CE%B9%CF%89%CF%84%CE%B9%CE%BA%CE%AC-17-05-2026-%CE%BC%CE%B9%CF%87%CE%AC%CE%BB%CE%B7%CF%82-%CE%BC%CE%B5%CF%8A%CE%BC%CE%AC%CF%81%CE%B7%CF%82-%CE%AC%CF%81%CF%84%CE%B5%CE%BC%CE%B9%CF%82-%CE%BA%CE%BF%CE%BB%CF%84%CF%83%CE%AF%CE%B4%CE%B1-%CE%B1%CE%BD%CE%B4%CF%81%CE%AD%CE%B1%CF%82-%CE%BC%CE%BF%CF%8D%CF%84%CF%83%CE%B9%CE%BF%CF%82-%CF%81%CE%AD%CE%BD%CF%84%CE%B6%CE%BF%CF%82/",
+        label: "▷▷ mixcloud.com/ΑΘΗΝΑ984/δημόσια-και-ιδιωτικά-17-05-2026",
+        href: "http://mixcloud.com/%CE%91%CE%98%CE%97%CE%9D%CE%91984/%CE%B4%CE%B7%CE%BC%CF%8C%CF%83%CE%B9%CE%B1-%CE%BA%CE%B1%CE%B9-%CE%B9%CE%B4%CE%B9%CF%89%CF%84%CE%B9%CE%BA%CE%AC-17-05-2026",
       },
       {
-        label: "facebook.com/share/p/1CnMhNmhFv",
-        href: "https://www.facebook.com/share/p/1CnMhNmhFv/?mibextid=wwXIfr",
+        label: "⚯ https://athina984.gr/2026/05/15/039-039-dimosia-kai-idiotika-039-039-peri-psifiakis-afigisis/",
+        href: "https://athina984.gr/2026/05/15/039-039-dimosia-kai-idiotika-039-039-peri-psifiakis-afigisis/",
+        spacerBefore: true,
       },
     ],
   },
