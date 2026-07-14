@@ -44,7 +44,10 @@ export default function Home() {
               }`}
             >
               {line.href ? (
-                <a className="underline underline-offset-2" href={line.href}>
+                <a
+                  className="text-[#021263] underline underline-offset-2"
+                  href={line.href}
+                >
                   {line.text}
                 </a>
               ) : (
