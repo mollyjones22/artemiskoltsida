@@ -249,7 +249,7 @@ export const drawingProjects: AnalogProject[] = [
     title: "Diloti",
     year: "2026",
     gallery: "photo gallery",
-    details: [],
+    details: ["Fabriano watercolour pencils, 35X50cm"],
   },
   {
     number: "A.04.08",
@@ -257,7 +257,7 @@ export const drawingProjects: AnalogProject[] = [
     title: "Kitchen Party",
     year: "2026",
     gallery: "photo gallery",
-    details: ["colored pencils", "35 X 50"],
+    details: ["Faber-Castell Polychromos, 35X50cm"],
   },
   {
     number: "A.04.07",
@@ -266,7 +266,7 @@ export const drawingProjects: AnalogProject[] = [
     year: "2026",
     gallery: "photo gallery",
     details: [
-      "dry pastels on cotton paper, 285 gsm, 100X70cm (Fabriano Rosaspina Paper Cotton 60%)",
+      "Dry pastels on cotton paper, 285 gsm, 100X70cm (Fabriano Rosaspina Paper Cotton 60%)",
     ],
   },
   {
