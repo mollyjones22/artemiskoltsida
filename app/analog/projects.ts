@@ -425,8 +425,8 @@ export const zineProjects: AnalogProject[] = [
     year: "2025",
     gallery: "photo gallery",
     details: [
-      "A story by mctsel, Left, and Molly",
-      "A dystopian hero story created as a photographic zine, featuring a mini capsule of archival garments from the André Courrèges x La Redoute Summer 2007 collection, hand-painted and airbrushed by Flokosh and Molly",
+      "A story by mctsel, left, and molly",
+      "A dystopian hero story created as a photographic zine, featuring a mini capsule of archival garments from the André Courrèges x La Redoute Summer 2007 collection, hand-painted and airbrushed by FlökosH and Molly",
     ],
   },
   {
