@@ -38,23 +38,28 @@ export default function SiteAudio() {
     };
   }, []);
 
-  const stopAudio = () => {
+  const toggleAudio = () => {
     const audio = audioRef.current;
 
     if (!audio) {
       return;
     }
 
-    audio.pause();
-    audio.currentTime = 0;
+    if (audio.paused) {
+      void audio.play().catch(() => {
+        setIsPlaying(false);
+      });
+    } else {
+      audio.pause();
+    }
   };
 
   return (
     <button
       type="button"
-      onClick={stopAudio}
+      onClick={toggleAudio}
       className="fixed bottom-4 right-4 z-50 flex items-center gap-2 bg-transparent p-0 text-[#0000ee] underline-offset-4 hover:underline focus-visible:underline sm:gap-3"
-      aria-label="Stop audio"
+      aria-label={isPlaying ? "Pause audio" : "Resume audio"}
       aria-pressed={isPlaying}
     >
       <img
