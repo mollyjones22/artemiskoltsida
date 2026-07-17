@@ -53,7 +53,7 @@ const deltaProjects: AnalogProject[] = [
       {
         afterPhoto: 1,
         href: "https://soundcloud.com/naeus_osc/dracocasa",
-        label: "Dracocasa",
+        label: "Listen to Dracocasa by NAEUS",
       },
     ],
     details: [
