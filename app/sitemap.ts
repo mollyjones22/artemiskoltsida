@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "./seo";
 import { analogPhotographyProjects, threeDPrintProjects } from "./analog/projects";
+import { nisosAftiProjectLinks } from "./nisos-afti/project-index";
 
 export const dynamic = "force-static";
 
@@ -50,6 +51,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
     },
     { path: "/nisos-afti", priority: 0.6, changeFrequency: "monthly" as const },
+    ...nisosAftiProjectLinks.map((project) => ({
+      path: `/nisos-afti/${project.slug}`,
+      priority: 0.5,
+      changeFrequency: "monthly" as const,
+    })),
     {
       path: "/nisos-afti/map",
       priority: 0.5,

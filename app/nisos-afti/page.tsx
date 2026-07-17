@@ -2,19 +2,9 @@ import type { Metadata } from "next";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import Link from "next/link";
+import { nisosAftiProjectLinks } from "./project-index";
 
 const title = "Νήσος Αυτί";
-
-const projectLinks = [
-  { label: "Λ.", href: "/nisos-afti/lambda", note: "λεξικό / γράμμα" },
-  { label: "Δ.", href: "/nisos-afti/delta", note: "δελτίο ακτής" },
-  { label: "Π.", href: "/nisos-afti/pi", note: "προσωπικό αρχείο" },
-  {
-    label: "Τ.",
-    href: "/nisos-afti/t",
-    note: "εικόνα - αφήγηση",
-  },
-];
 
 const projectLinkImages: Record<string, string> = {
   "/nisos-afti/lambda": "n-01-01",
@@ -167,23 +157,32 @@ export default function NisosAftiPage() {
             Projects
           </p>
           <nav aria-label="Νήσος Αυτί projects" className="space-y-2">
-            {projectLinks.map((project) => {
-              const imageSrc = getProjectLinkImageSrc(project.href);
+            {nisosAftiProjectLinks.map((project) => {
+              const href = `/nisos-afti/${project.slug}`;
+              const imageSrc = getProjectLinkImageSrc(href);
 
               return (
                 <Link
-                  key={project.label}
-                  href={project.href}
+                  key={project.letter}
+                  href={href}
                   target="_blank"
                   rel="noreferrer"
                   className="block text-[#0645ad] underline-offset-2 hover:underline"
                 >
-                  <span className="block text-lg leading-none">{project.label}</span>
+                  <span className="flex items-baseline justify-between gap-2">
+                    <span className="text-lg leading-none">{project.letter}.</span>
+                    <span className="text-[0.65rem] text-[#54595d] no-underline">
+                      {project.date ?? "Pending"}
+                    </span>
+                  </span>
+                  <span className="mt-0.5 block text-xs text-[#54595d] no-underline">
+                    {project.note}
+                  </span>
                   <span className="mt-1 flex aspect-[4/3] w-full items-center justify-center border border-dashed border-[#72777d] bg-white px-2 text-center text-[0.65rem] leading-tight text-[#54595d]">
                     {imageSrc ? (
                       <img
                         src={imageSrc}
-                        alt={`${project.label} project preview`}
+                        alt={`${project.letter}. project preview`}
                         className="h-full w-full object-cover"
                       />
                     ) : (
