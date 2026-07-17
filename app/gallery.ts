@@ -12,6 +12,7 @@ export type ProjectPhoto = {
 const nisosPhotoCaptions: Record<string, string> = {
   "n-01-01":
     "Imaginary recipe handwritten by Eleni Papadopoulou, designed and aged by Molly",
+  "n-02-01": "The moment of the explosion",
 };
 
 function getPublicFiles(directory: string, baseUrl = ""): string[] {
