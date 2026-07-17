@@ -133,6 +133,8 @@ export default function ProjectList({
                           typeof detail === "string"
                             ? undefined
                             : [
+                                detail.bold ? "font-bold" : "",
+                                detail.italic ? "italic" : "",
                                 detail.spacerBefore ? "mt-4" : "",
                                 detail.underline
                                   ? "underline underline-offset-4"

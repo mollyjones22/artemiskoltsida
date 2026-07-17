@@ -8,6 +8,8 @@ export type AnalogProject = {
   details: (
     | string
     | {
+        bold?: boolean;
+        italic?: boolean;
         text: string;
         spacerBefore?: boolean;
         underline?: boolean;

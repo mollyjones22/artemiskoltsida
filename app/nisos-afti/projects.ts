@@ -97,6 +97,17 @@ const piProjects: AnalogProject[] = [
     details: [
       "Personal archive entry connected to the Νήσος Αυτί page.",
       "A container for notes, letters, scans, and image fragments.",
+      {
+        text: "Όποιος πηγαίνει στο Παλιό Χωριό δεν ξαναγυρνά",
+        bold: true,
+        italic: true,
+        spacerBefore: true,
+      },
+      {
+        text: "μα για πάντα μένει στο κουτί που τραγουδά.",
+        bold: true,
+        italic: true,
+      },
     ],
   },
   {
