@@ -52,7 +52,10 @@ export default function ProjectCarousel({
           );
 
           return (
-            <div key={image.src} className="space-y-3">
+            <div
+              key={image.src}
+              className={`space-y-3 ${linksAfterImage.length > 0 ? "pb-6" : ""}`}
+            >
               <figure>
                 <div className="relative">
                   <img
