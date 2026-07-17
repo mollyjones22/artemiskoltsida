@@ -90,36 +90,22 @@ const deltaProjects: AnalogProject[] = [
 const piProjects: AnalogProject[] = [
   {
     number: "Π.01",
-    slug: "prosopiko-arxeio",
-    title: "Προσωπικό αρχείο",
-    year: "",
+    slug: "pi",
+    title: "Π.",
+    year: "11/9/2024",
     gallery: "photo gallery",
     galleryReferences: ["Pillow-zine by kiko and molly"],
     details: [
-      "Personal archive entry connected to the Νήσος Αυτί page.",
-      "A container for notes, letters, scans, and image fragments.",
       {
         text: "Όποιος πηγαίνει στο Παλιό Χωριό δεν ξαναγυρνά",
         bold: true,
         italic: true,
-        spacerBefore: true,
       },
       {
         text: "μα για πάντα μένει στο κουτί που τραγουδά.",
         bold: true,
         italic: true,
       },
-    ],
-  },
-  {
-    number: "Π.02",
-    slug: "parathyro",
-    title: "Παράθυρο",
-    year: "",
-    gallery: "photo gallery",
-    details: [
-      "A small window into a separate project page.",
-      "This entry keeps the same project structure used across the portfolio.",
     ],
   },
 ];
