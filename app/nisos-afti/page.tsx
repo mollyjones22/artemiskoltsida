@@ -175,9 +175,6 @@ export default function NisosAftiPage() {
                       {project.date ?? "Pending"}
                     </span>
                   </span>
-                  <span className="mt-0.5 block text-xs text-[#54595d] no-underline">
-                    {project.note}
-                  </span>
                   <span className="mt-1 flex aspect-[4/3] w-full items-center justify-center border border-dashed border-[#72777d] bg-white px-2 text-center text-[0.65rem] leading-tight text-[#54595d]">
                     {imageSrc ? (
                       <img
