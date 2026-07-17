@@ -13,6 +13,7 @@ const nisosPhotoCaptions: Record<string, string> = {
   "n-01-01":
     "Imaginary recipe handwritten by Eleni Papadopoulou, designed and aged by Molly",
   "n-02-01": "The moment of the explosion",
+  "n-03-01": "Pillow-zine by kiko and molly",
 };
 
 function getPublicFiles(directory: string, baseUrl = ""): string[] {

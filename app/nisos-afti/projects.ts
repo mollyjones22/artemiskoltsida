@@ -94,6 +94,7 @@ const piProjects: AnalogProject[] = [
     title: "Προσωπικό αρχείο",
     year: "",
     gallery: "photo gallery",
+    galleryReferences: ["Pillow-zine by kiko and molly"],
     details: [
       "Personal archive entry connected to the Νήσος Αυτί page.",
       "A container for notes, letters, scans, and image fragments.",
