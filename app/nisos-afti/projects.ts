@@ -74,7 +74,10 @@ const deltaProjects: AnalogProject[] = [
       "Η ημέρα βρήκε το νησί με τον πυρσό ψιλοψόφιο και μέχρι το σούρουπο είχε σβήσει. Οι πειρατές προσέγγισαν ειρηνικά το λιμάνι, που είχε ανάψει τα γιορτινά του φώτα. Έφαγαν, ήπιαν και έφυγαν, χωρίς κανείς να τους υποψιαστεί, τόση ήταν η χαρά των κατοίκων που η αρρώστια είχε πάψει.",
       "Ο δράκος των Αντικυθήρων, αντίστοιχα, βλέποντας σβηστό τον πυρσό, έσβησε κι εκείνος τη δική του φλόγα. Η ίδια ακριβώς καταστροφή επαναλήφθηκε σε όλα τα υπόλοιπα νησιά της νοητής αλυσίδας.",
       "Χιλιάδες ζωές χάθηκαν και άλλες τόσες (για λίγο) βρήκαν καταφύγιο: διαβάτες, άρρωστοι περιπλανώμενοι, εξόριστοι, ναυτικοί. Κανείς δεν ήξερε τον κίνδυνο που διέτρεχαν όταν τους έβαζαν στα σπίτια τους. Και κανείς δεν έμαθε την αλήθεια, μέχρι που, όταν καθάρισε η ομίχλη στα Δρακόκαζα, οι γενναίοι που πλησίασαν, βρήκαν τα απομεινάρια του θηρίου της πλέον απροστάτευτης νήσου.",
-      "Story by Molly",
+      {
+        text: "Story by Molly",
+        spacerBefore: true,
+      },
       "Music by NAEUS",
       "For KRAMA ENTRIES, aired on March 25, 2025",
       "In the northern part of Afti, a towering column crowned by a great cauldron rises above the fog. Similar structures stretch down the Pindus mountains, once used to signal threats of disease. A dragon, guardian of the island’s health, kept watch, lighting the fire whenever the Peloponnese cauldron burned, a constant reality in recent months.",

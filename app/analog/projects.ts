@@ -9,6 +9,7 @@ export type AnalogProject = {
     | string
     | {
         text: string;
+        spacerBefore?: boolean;
         underline?: boolean;
       }
   )[];

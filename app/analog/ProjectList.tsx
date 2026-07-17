@@ -132,9 +132,14 @@ export default function ProjectList({
                         className={
                           typeof detail === "string"
                             ? undefined
-                            : detail.underline
-                              ? "underline underline-offset-4"
-                              : undefined
+                            : [
+                                detail.spacerBefore ? "mt-4" : "",
+                                detail.underline
+                                  ? "underline underline-offset-4"
+                                  : "",
+                              ]
+                                .filter(Boolean)
+                                .join(" ") || undefined
                         }
                       >
                         {typeof detail === "string" ? detail : detail.text}
