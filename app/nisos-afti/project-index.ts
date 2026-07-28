@@ -24,7 +24,7 @@ const projects: NisosAftiProjectLink[] = [
   { letter: "Π", slug: "pi", date: "2024-09-11", isPending: false },
   { letter: "Ρ", slug: "rho", date: null, isPending: true },
   { letter: "Σ", slug: "sigma", date: null, isPending: true },
-  { letter: "Τ", slug: "t", date: null, isPending: false },
+  { letter: "Τ", slug: "t", date: "2022-02-28", isPending: false },
   { letter: "Υ", slug: "upsilon", date: null, isPending: true },
   { letter: "Φ", slug: "phi", date: null, isPending: true },
   { letter: "Χ", slug: "chi", date: null, isPending: true },
