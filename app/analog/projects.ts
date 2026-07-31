@@ -241,7 +241,7 @@ export const drawingProjects: AnalogProject[] = [
     year: "2026",
     gallery: "photo gallery",
     details: [
-      "Oil Pastels on cotton paper, 285 gsm, 100X70cm (Fabriano Rosaspina Paper Cotton 60%)",
+      "Oil pastels on Fabriano Rosaspina paper (60% cotton), 285 gsm, 100 × 70 cm.",
     ],
   },
   {
@@ -250,7 +250,7 @@ export const drawingProjects: AnalogProject[] = [
     title: "Diloti",
     year: "2026",
     gallery: "photo gallery",
-    details: ["Fabriano watercolour pencils, 35X50cm"],
+    details: ["Watercolour pencils on Fabriano paper, 35 × 50 cm."],
   },
   {
     number: "A.04.08",
@@ -258,7 +258,9 @@ export const drawingProjects: AnalogProject[] = [
     title: "Kitchen Party",
     year: "2026",
     gallery: "photo gallery",
-    details: ["Faber-Castell Polychromos, 35X50cm"],
+    details: [
+      "Faber-Castell Polychromos coloured pencils on paper, 35 × 50 cm.",
+    ],
   },
   {
     number: "A.04.07",
@@ -267,18 +269,18 @@ export const drawingProjects: AnalogProject[] = [
     year: "2026",
     gallery: "photo gallery",
     details: [
-      "Dry pastels on cotton paper, 285 gsm, 100X70cm (Fabriano Rosaspina Paper Cotton 60%)",
+      "Dry pastels on Fabriano Rosaspina paper (60% cotton), 285 gsm, 100 × 70 cm.",
     ],
   },
   {
     number: "A.04.06",
     slug: "everything-is-important",
-    title: "Everything is important",
+    title: "Everything Is Important",
     year: "2025",
     gallery: "1/1",
     galleryReferences: ["everything is important2", "everything is important2"],
     details: [
-      "Color Markers on cotton paper, 285 gsm, 100X70cm (Fabriano Rosaspina Paper Cotton 60%)",
+      "Markers on Fabriano Rosaspina paper (60% cotton), 285 gsm, 100 × 70 cm.",
     ],
   },
   {
@@ -289,8 +291,7 @@ export const drawingProjects: AnalogProject[] = [
     gallery: "1/1",
     galleryReferences: ["Ikaria Dream", "Ikaria Dream"],
     details: [
-      "Kaweco Sketch Up Brass Satin Chrome Pencil, 35X50 cm",
-      "Cotton Watercolour Paper Block Premium 300gsm",
+      "Kaweco SKETCH UP 5.6 mm Satin Chrome pencil on premium cotton watercolour paper, 300 gsm, 35 × 50 cm.",
     ],
   },
   {
@@ -301,26 +302,31 @@ export const drawingProjects: AnalogProject[] = [
     gallery: "1/4",
     galleryReferences: ["001_Mayi", "001_Mayi"],
     details: [
-      "Oil pastels on cotton paper, 285 gsm, 100X70cm (Fabriano Rosaspina Paper Cotton 60%)",
-      "Etching: Linoleum 12X16cm. Red Caligo ink: Vegetable oil-based inks",
-      "Print: Riso at Dolce Pub, 3 colors (based on soy and rice oil), on Aralda paper, 200gr, slightly yellow, A3 size.",
+      "Oil pastels on Fabriano Rosaspina paper (60% cotton), 285 gsm, 100 × 70 cm.",
+      "Linocut: 12 × 16 cm, printed with red Caligo vegetable-oil-based ink.",
+      "Three-colour Risograph print produced at Dolce Pub using soy- and rice-oil-based inks on slightly yellow Aralda paper, 200 gsm, A3.",
     ],
   },
   {
     number: "A.04.03",
     slug: "fraud-effect",
     title: "Fraud Effect",
-    year: "2023-Today",
+    year: "2023–present",
     gallery: "1/17",
     galleryReferences: ["017_Fraud", "017_Fraud"],
     details: [
-      "Painting Crew Studio Sessions",
-      "Mediums used: Airbrush paint, Charcoal, Markers, Oilbased acrylics, Oil Pastels, Pen, Pnecil, Spray paint",
-      "Photographed with phone camera",
-      "Scanned with CanoScan LiDE 120",
-      "Archived:",
-      "☾ fraud-2023.tumblr.com/",
-      "⛓3E3",
+      "Painting crew: studio sessions.",
+      "Media: airbrush paint, charcoal, markers, oil-based acrylics, oil pastels, pen, pencil, and spray paint.",
+      "Photographed with a phone camera.",
+      "Scanned using a CanoScan LiDE 120.",
+      "Archive:",
+      "⛓ 3E3",
+    ],
+    links: [
+      {
+        label: "☾ fraud-2023.tumblr.com",
+        href: "https://fraud-2023.tumblr.com/",
+      },
     ],
   },
   {
@@ -331,11 +337,11 @@ export const drawingProjects: AnalogProject[] = [
     gallery: "1/22",
     galleryReferences: ["s16", "s16"],
     details: [
-      "Painting inside a tunnel at Chalandri, Greece.",
-      "Team: Dima, Jim, LeToulo, Molly, Thanos",
-      "Mediums used: Spray paint, Oilbased acrylics,",
-      "Candle lighting",
-      "Phone camera",
+      "Painting inside a tunnel in Chalandri, Greece.",
+      "Team: Dima, Jim, LeToulo, Molly, and Thanos.",
+      "Media: spray paint and oil-based acrylics.",
+      "Lighting: candles.",
+      "Photographed with a phone camera.",
     ],
   },
   {
@@ -346,12 +352,12 @@ export const drawingProjects: AnalogProject[] = [
     gallery: "1/20",
     galleryReferences: ["01 INTRO NOTE", "01 INTRO NOTE"],
     details: [
-      "Nature Painting walk at Amfikleia, Greece.",
-      "Team: Dima, Jim, LeToulo, Molly, Thanos",
-      "Mediums used: Spray paint, Oilbased acrylics, Posca",
-      "Photographed with phone camera",
-      "Story by LeToulo",
-      "Created with Photoshop CC",
+      "Outdoor painting walk in Amfikleia, Greece.",
+      "Team: Dima, Jim, LeToulo, Molly, and Thanos.",
+      "Media: spray paint, oil-based acrylics, and Posca markers.",
+      "Photographed with a phone camera.",
+      "Story by LeToulo.",
+      "Created using Photoshop CC.",
     ],
   },
 ];
