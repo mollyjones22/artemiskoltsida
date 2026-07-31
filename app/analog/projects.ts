@@ -136,12 +136,12 @@ export const analogPhotographyProjects: AnalogProject[] = [
     number: "A.02.01",
     slug: "mikri-enilikiosi",
     title:
-      '7 years Analog Calendar  "\u039c\u03b9\u03ba\u03c1\u03ae \u0395\u03bd\u03b7\u03bb\u03b9\u03ba\u03af\u03c9\u03c3\u03b7" (Young Adulthood)',
-    year: "2014-2021",
+      "\u039c\u03b9\u03ba\u03c1\u03ae \u0395\u03bd\u03b7\u03bb\u03b9\u03ba\u03af\u03c9\u03c3\u03b7 (Young Adulthood): A 7-Year Analog Calendar",
+    year: "2014–2021",
     gallery: "1/53",
     details: [
-      "Kodak, 28mm, 35mm I Minolta 50mm",
-      "The photos were developed at multiple studios, printed, scanned, and digitally edited for archival purposes.",
+      "Kodak 35 mm camera with a 28 mm lens; Minolta camera with a 50 mm lens.",
+      "The film was developed at several photography labs. The photographs were then printed, scanned, and digitally edited for archival purposes.",
     ],
     links: [
       {
