@@ -150,8 +150,8 @@ export const digitalPhotographyProjects: AnalogProject[] = [
     gallery: "1/7",
     galleryReferences: ["001_Music Marble 2", "001_Music Marble 2"],
     details: [
-      "Live Performance by sculptor Nikos Benos and musician Tsev at Syllogos Archeologon, Athens.",
-      "Audiovisual Team: Artemis Koltsida & Anastasia Magganiari",
+      "A live performance by sculptor Nikos Benos and musician Tsev at Syllogos Archeologon in Athens.",
+      "Audiovisual team: Artemis Koltsida and Anastasia Magganiari.",
     ],
   },
   {
@@ -162,8 +162,8 @@ export const digitalPhotographyProjects: AnalogProject[] = [
     gallery: "1/6",
     galleryReferences: ["001_Music Marble", "001_Music Marble"],
     details: [
-      "Live Performance by sculptor Nikos Benos and musician Tsev at Kapandriti.",
-      "Audiovisual Team: Artemis Koltsida & Anastasia Magganiari",
+      "A live performance by sculptor Nikos Benos and musician Tsev in Kapandriti.",
+      "Audiovisual team: Artemis Koltsida and Anastasia Magganiari.",
     ],
   },
   {
@@ -172,7 +172,7 @@ export const digitalPhotographyProjects: AnalogProject[] = [
     title: "Walk",
     year: "2017",
     gallery: "photo gallery",
-    details: ["Social performance by Martha Kotsia"],
+    details: ["A social performance by Martha Kotsia."],
     links: [
       {
         label:
@@ -187,7 +187,7 @@ export const digitalPhotographyProjects: AnalogProject[] = [
     title: "Eye Center Athens",
     year: "2017",
     gallery: "photo gallery",
-    details: ["Photos of Athens Eye Center Clinic for commercial use."],
+    details: ["Commercial photography for Eye Center Athens."],
   },
 ];
 
