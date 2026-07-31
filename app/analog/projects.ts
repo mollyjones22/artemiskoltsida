@@ -468,8 +468,8 @@ export const zineProjects: AnalogProject[] = [
     gallery: "1/7",
     galleryReferences: ["001_CD", "001_CD"],
     details: [
-      "A zine presented in a CD jewel case, showcasing analog photographs from my 2020 trip to Morocco.",
-      "Mixtape:",
+      "A photographic zine housed in a CD jewel case, featuring analog photographs taken during a trip to Morocco in 2020.",
+      "Accompanied by a mixtape:",
     ],
     links: [
       {
