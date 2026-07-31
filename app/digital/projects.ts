@@ -116,7 +116,7 @@ export const diplomaThesisProjects: AnalogProject[] = [
     number: "D.03.01",
     slug: "furniture-in-the-production-of-space",
     title:
-      "Furniture in the production of space: Network of local sex education centers",
+      "Furniture in the Production of Space: A Network of Local Sex Education Centres",
     year: "2021",
     gallery: "1/13",
     galleryReferences: [
@@ -124,19 +124,19 @@ export const diplomaThesisProjects: AnalogProject[] = [
       "001_Koltsida A._Papadopoulou E.",
     ],
     details: [
-      "Architectural Engineering NTUA, Dept III: Architectural language, communication and design",
+      "NTUA School of Architecture — Department III: Architectural Language, Communication and Design.",
       " ",
-      "Diploma Thesis by Koltsida A. and Papadopoulou E.",
+      "Diploma thesis by A. Koltsida and E. Papadopoulou.",
       " ",
-      "Advisors: Stavridis S., Vasilatos P., Koutrolikou P.",
+      "Advisers: S. Stavridis, P. Vasilatos, and P. Koutrolikou.",
       " ",
-      "The present work concerns the establishment of a methodology towards the creation of a network of Neighborhood Centers for Sex Education. The aim is to reuse empty ground floors within the metropolitan area in terms of kit-housing. The kit consists of a construction vocabulary - flatpack design which resides within the selected shells, meeting the specifications of a sensitive space, ensuring safety, intimacy and visibility. The pilot study is applied at Gyzi, a neighborhood located in the centre of Athens.",
+      "This project develops a methodology for creating a network of neighbourhood sex education centres. The aim is to reuse vacant ground-floor spaces across the Athens metropolitan area through a kit-based spatial system. The kit comprises a construction vocabulary: a flat-pack system inserted into selected existing building shells, meeting the requirements of a sensitive programme while ensuring safety, intimacy, and visibility. The pilot proposal was developed for Gyzi, a neighbourhood in central Athens.",
       " ",
     ],
     links: [
       {
-        label: "☁︎ dspace.lib.ntua.gr/xmlui/handle/123456789/53148",
-        href: "https://dspace.lib.ntua.gr/xmlui/handle/123456789/53148",
+        label: "☁︎ dspace.lib.ntua.gr/xmlui/handle/123456789/53660",
+        href: "https://dspace.lib.ntua.gr/xmlui/handle/123456789/53660",
       },
     ],
   },
@@ -326,7 +326,7 @@ export const digitalProjectGroups = {
     projects: postgraduateResearchProjects,
   },
   "diploma-thesis-architecture": {
-    title: "Diploma Thesis (Architecture)",
+    title: "Diploma Thesis in Architecture",
     basePath: "/digital/diploma-thesis-architecture",
     projects: diplomaThesisProjects,
   },

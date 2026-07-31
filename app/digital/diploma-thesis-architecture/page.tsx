@@ -8,7 +8,7 @@ const group = digitalProjectGroups["diploma-thesis-architecture"];
 
 export const metadata: Metadata = createPageMetadata({
   title: group.title,
-  description: "Diploma thesis architecture project by Artemis Koltsida.",
+  description: "Diploma thesis in architecture by Artemis Koltsida.",
   path: group.basePath,
 });
 

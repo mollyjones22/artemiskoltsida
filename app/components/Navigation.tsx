@@ -28,7 +28,7 @@ const digitalLinks = [
   },
   {
     href: "/digital/diploma-thesis-architecture",
-    label: "Diploma Thesis (Architecture)",
+    label: "Diploma Thesis in Architecture",
   },
   { href: "/digital/film-editing", label: "Film & Editing" },
   {
