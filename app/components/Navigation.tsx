@@ -9,7 +9,7 @@ const analogLinks = [
   { href: "/analog/analog-photography", label: "Analog Photography" },
   {
     href: "/analog/constructions-installations",
-    label: "Constructions - Installations",
+    label: "Constructions & Installations",
   },
   { href: "/analog/drawings", label: "Drawings" },
   { href: "/analog/silkscreen-prints", label: "Silkscreen Prints" },

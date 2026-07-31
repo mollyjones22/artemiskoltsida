@@ -150,7 +150,9 @@ export default function ProjectList({
                     {project.links?.map((link) => (
                       <a
                         key={link.href}
-                        className={link.spacerBefore ? "mt-4" : undefined}
+                        className={`text-[#0000ee] underline underline-offset-2 ${
+                          link.spacerBefore ? "mt-4" : ""
+                        }`}
                         href={link.href}
                         target="_blank"
                         rel="noreferrer"
