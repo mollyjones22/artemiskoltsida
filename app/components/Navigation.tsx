@@ -20,7 +20,7 @@ const analogLinks = [
 const digitalLinks = [
   {
     href: "/digital/3d-visualization-architectural-projects",
-    label: "3D Visualisation - Architectural Projects",
+    label: "3D Visualisation & Architectural Projects",
   },
   {
     href: "/digital/postgraduate-research-digital-storytelling",

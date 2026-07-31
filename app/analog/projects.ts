@@ -506,7 +506,7 @@ export const funProjects: AnalogProject[] = [
   {
     number: "A.07.06",
     slug: "mikri-festivalina-picnic",
-    title: "Mikri Festivalina picnic",
+    title: "Picnic Fabric for Mikri Festivalina",
     year: "",
     gallery: "photo gallery",
     details: [],

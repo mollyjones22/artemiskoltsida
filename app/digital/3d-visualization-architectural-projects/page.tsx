@@ -8,7 +8,7 @@ const group = digitalProjectGroups["3d-visualization-architectural-projects"];
 
 export const metadata: Metadata = createPageMetadata({
   title: group.title,
-  description: "3D visualisation and architectural projects by Artemis Koltsida.",
+  description: "3D visualisation and architectural design projects by Artemis Koltsida.",
   path: group.basePath,
 });
 

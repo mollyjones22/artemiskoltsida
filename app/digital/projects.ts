@@ -4,16 +4,16 @@ export const threeDVisualizationArchitecturalProjects: AnalogProject[] = [
   {
     number: "D.01.01",
     slug: "apartment-renovation-ilioupoli",
-    title: "Apartment Renovation - Ilioupoli",
+    title: "Apartment Renovation — Ilioupoli",
     year: "2026",
     gallery: "photo gallery",
     details: [
-      "Residential Renovation & Energy Upgrade Project",
+      "Residential Renovation and Energy Upgrade",
       " ",
-      "Architectural Study and Construction Supervision by Papadopoulou E. and Koltsida A.",
+      "Architectural design and construction supervision by E. Papadopoulou and A. Koltsida.",
       " ",
-      "The project involved the complete renovation and energy upgrade of an apartment in Ilioupoli, from the initial design concept to the implementation phase. The work included the architectural study, spatial redesign, energy upgrade strategy, material selection, construction drawings, and on-site supervision throughout the renovation process.",
-      "The proposal focused on improving functionality, spatial quality, energy performance, and the everyday living experience through a contemporary architectural approach. The project was developed collaboratively, ensuring continuity between the design process and its execution on site.",
+      "The project involved the complete renovation and energy upgrade of an apartment in Ilioupoli, from the initial design concept through the implementation phase. The work included architectural design, spatial redesign, an energy-upgrade strategy, material selection, construction drawings, and on-site supervision throughout the renovation.",
+      "The proposal used a contemporary architectural approach to improve functionality, spatial quality, energy performance, and quality of everyday life. The project was developed collaboratively, ensuring continuity from the design process through on-site implementation.",
     ],
   },
 ];
@@ -316,7 +316,7 @@ export const howToBeCuriousProjects: AnalogProject[] = filmEditingProjects.filte
 
 export const digitalProjectGroups = {
   "3d-visualization-architectural-projects": {
-    title: "3D Visualisation - Architectural Projects",
+    title: "3D Visualisation & Architectural Projects",
     basePath: "/digital/3d-visualization-architectural-projects",
     projects: threeDVisualizationArchitecturalProjects,
   },
