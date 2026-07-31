@@ -25,7 +25,7 @@ export const postgraduateResearchProjects: AnalogProject[] = [
     title:
       "Attempting to Reclaim the Female Self-Image: A Qualitative Study Using the Methodology of Digital Storytelling",
     year: "2026",
-    gallery: "photo gallery",
+    gallery: "",
     details: [
       "Information and Communication Technologies for Education, Early Childhood Education UoA, Communication and Mass Media Studies UoA, Architecture UTh, Electrical and Electronic Engineering UniWA",
       " ",
@@ -51,7 +51,7 @@ export const postgraduateResearchProjects: AnalogProject[] = [
     slug: "discussion-on-digital-storytelling",
     title: "A Discussion on Digital Storytelling",
     year: "2026",
-    gallery: "photo gallery",
+    gallery: "",
     details: [
       "Athens 9.84 FM — Δημόσια και Ιδιωτικά, 17 May 2026.",
       " ",

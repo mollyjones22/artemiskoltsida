@@ -38,6 +38,10 @@ export default function ProjectGallery({
     );
   }
 
+  if (!gallery) {
+    return null;
+  }
+
   return (
     <div
       id={id}
