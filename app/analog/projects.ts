@@ -431,22 +431,21 @@ export const zineProjects: AnalogProject[] = [
     year: "2025",
     gallery: "photo gallery",
     details: [
-      "A story by mctsel, left, and molly",
-      "A dystopian hero story created as a photographic zine, featuring a mini capsule of archival garments from the André Courrèges x La Redoute Summer 2007 collection, hand-painted and airbrushed by FlökosH and Molly",
+      "A story by mctsel, left, and molly.",
+      "A dystopian story presented as a photographic zine, featuring a mini capsule of archival garments from the André Courrèges × La Redoute Summer 2007 collection. The garments were hand-painted and airbrushed by FlökosH and Molly.",
     ],
   },
   {
     number: "A.06.05",
     slug: "softathens",
-    title: "SOFTATHENS, BY CARHARTT WIP x LATRAAC x TIPOMATA",
+    title: "SOFTATHENS by CARHARTT WIP × LATRAAC × TIPOMATA",
     year: "2023",
     gallery: "1/2",
     galleryReferences: ["softathens01", "softathens01"],
     details: [
-      "SOFTATHENS",
-      "Unbound zine, made from series of stand-alone risoprints.",
-      "Two stories by Giannis Galiatsos",
-      "Printed at DolcePub",
+      "An unbound zine made from a series of standalone Risograph prints.",
+      "Two stories by Giannis Galiatsos.",
+      "Printed at Dolce Pub.",
     ],
   },
   {
@@ -457,19 +456,19 @@ export const zineProjects: AnalogProject[] = [
     gallery: "1/5",
     galleryReferences: ["001_SistersHome", "001_SistersHome"],
     details: [
-      "Self-published zine with a poem and photos",
-      "Cover: Ipad sketch",
+      "A self-published zine featuring a poem and photographs.",
+      "Cover artwork: an iPad sketch.",
     ],
   },
   {
     number: "A.06.03",
     slug: "cd-booklet-desert-blues",
-    title: "CD BOOKLET Desert Blues",
+    title: "CD Booklet: Desert Blues",
     year: "2020",
     gallery: "1/7",
     galleryReferences: ["001_CD", "001_CD"],
     details: [
-      "A zine in a CD hard case showcasing analog photos from my Morocco trip in 2020.",
+      "A zine presented in a CD jewel case, showcasing analog photographs from my 2020 trip to Morocco.",
       "Mixtape:",
     ],
     links: [
@@ -488,7 +487,7 @@ export const zineProjects: AnalogProject[] = [
     gallery: "1/5",
     galleryReferences: ["photoanalogpoems00", "photoanalogpoems00"],
     details: [
-      "A hand-sewn zine featuring photos with poems handwritten on transparent paper.",
+      "A hand-sewn zine featuring photographs overlaid with poems handwritten on transparent paper.",
     ],
   },
   {
@@ -498,7 +497,7 @@ export const zineProjects: AnalogProject[] = [
     year: "2018",
     gallery: "photo gallery",
     details: [
-      "The Coen Brothers’ film The Ballad of Buster Scruggs, reimagined as a children’s storybook with illustrations",
+      "The Coen brothers’ film The Ballad of Buster Scruggs, reimagined as an illustrated children’s storybook.",
     ],
   },
 ];
