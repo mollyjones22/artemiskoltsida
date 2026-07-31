@@ -102,18 +102,21 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
             : "flex-col gap-3 py-3"
         }`}
       >
-        <Link
-          href="/"
+        <a
+          href="https://www.youtube.com/watch?v=ktN5kpzGuow&list=PLVHLus1cvQkCsF_H_XR0QJJZOHcOYf8sX&index=1"
+          target="_blank"
+          rel="noreferrer"
           className={`flex items-center justify-center sm:hidden ${
             compactMobileHeader ? "h-10 w-10" : "h-20 w-20"
           }`}
+          aria-label="Watch Artemis Koltsida's YouTube playlist"
         >
           <img
             src="/artlogo.png"
             alt="Artemis Koltsida logo"
             className="block h-full w-full object-contain"
           />
-        </Link>
+        </a>
 
         <Link
           href="/"
@@ -126,17 +129,19 @@ export default function Navigation({ variant = "light" }: NavigationProps) {
           {"\u263c artemis koltsida \u263e"}
         </Link>
 
-        <Link
-          href="/"
+        <a
+          href="https://www.youtube.com/watch?v=ktN5kpzGuow&list=PLVHLus1cvQkCsF_H_XR0QJJZOHcOYf8sX&index=1"
+          target="_blank"
+          rel="noreferrer"
           className="absolute right-[calc(50%+9rem)] top-3 hidden h-20 w-20 items-center justify-center no-underline sm:flex md:right-[calc(50%+11rem)] md:top-4"
-          aria-label="artemis koltsida home"
+          aria-label="Watch Artemis Koltsida's YouTube playlist"
         >
           <img
             src="/artlogo.png"
             alt="Artemis Koltsida logo"
             className="block h-full w-full object-contain"
           />
-        </Link>
+        </a>
 
         <Link
           href="/nisos-afti"
