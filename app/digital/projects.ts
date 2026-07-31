@@ -218,12 +218,12 @@ export const filmEditingProjects: AnalogProject[] = [
     number: "D.05.01",
     slug: "how-to-be-curious",
     title: "How to Be Curious",
-    year: "2022-Today",
+    year: "2022–present",
     gallery: "1/1",
     galleryReferences: ["Ep03: How to make a spot", "Ep03: How to make a spot"],
     details: [
       "How to Be Curious is a video series created by Molly, offering an exploratory view of the world through a neverending archive of details, lists, and instructions.",
-      "A video series shot with a handheld Panasonic SDR-T70 camera, featuring text by Molly and original music in some episodes.",
+      "Shot with a handheld Panasonic SDR-T70 camera, the series features text by Molly, with original music in selected episodes.",
     ],
     links: [
       {
@@ -250,7 +250,7 @@ export const filmEditingProjects: AnalogProject[] = [
     ],
     links: [
       {
-        label: "⚛ Watch Τα νέα της Αλεξάνδρας | Reclaim on YouTube",
+        label: "⚛ youtube.com/watch?v=yqC_iUOFo8c",
         href: "https://www.youtube.com/watch?v=yqC_iUOFo8c",
       },
     ],
@@ -268,11 +268,11 @@ export const filmEditingProjects: AnalogProject[] = [
     ],
     links: [
       {
-        label: "♥ Watch Προσέχουμε ο Ένας τον Άλλο on YouTube",
+        label: "♥ youtube.com/watch?v=p_rh4ijVTAQ",
         href: "https://www.youtube.com/watch?v=p_rh4ijVTAQ",
       },
       {
-        label: "Watch Δουλεύει για σένα! on YouTube",
+        label: "Δουλεύει για σένα!",
         href: "https://www.youtube.com/watch?v=Q5UZ_67OOUQ",
       },
     ],
@@ -293,7 +293,7 @@ export const filmEditingProjects: AnalogProject[] = [
     ],
     links: [
       {
-        label: "✦ Watch the START promotional videos on YouTube",
+        label: "✦ youtube.com/watch?v=vMRRnSe5Ko4",
         href: "https://www.youtube.com/watch?v=vMRRnSe5Ko4",
       },
     ],
