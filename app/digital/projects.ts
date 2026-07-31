@@ -196,21 +196,20 @@ export const filmEditingProjects: AnalogProject[] = [
   {
     number: "D.04.04",
     slug: "bearcave",
-    title: "BearCave",
-    year: "Short 2023",
+    title: "Bearcave / Αρκουδότρυπα",
+    year: "2023",
     gallery: "1/2",
     galleryReferences: ["BearCave Αρκουδότρυπα", "BearCave Αρκουδότρυπα"],
     details: [
-      "BearCave/Αρκουδότρυπα by Krysianna Papadakis, Stergios Dinopoulos",
-      "Queer, women-led teen drama set in the mountains of rural Greece.",
-      "Casting Department, Production assistant",
-      "Golden Dionysus - Best Film Awaed and",
-      "Best Female Performance Award",
-      "at 46th Drama International Short Film Festival",
+      "Short film written and directed by Krysianna Papadakis and Stergios Dinopoulos.",
+      "A queer, women-led teen drama set in the mountains of rural Greece.",
+      "Credits: casting department; production assistant.",
+      "Golden Dionysus – Best Film and Best Actress at the 46th Drama International Short Film Festival.",
+      "The short film was later developed into a feature-length film.",
     ],
     links: [
       {
-        label: "　 ҉ 　imdb.com/title/tt29063820/",
+        label: "　 ҉ 　View Bearcave on IMDb",
         href: "https://www.imdb.com/title/tt29063820/",
       },
     ],
@@ -237,7 +236,7 @@ export const filmEditingProjects: AnalogProject[] = [
   {
     number: "D.04.03",
     slug: "ta-nea-tis-alexandras-reclaim",
-    title: "Τα νέα της Αλεξάνδρας| reclaim",
+    title: "Τα νέα της Αλεξάνδρας | Reclaim",
     year: "2022",
     gallery: "1/9",
     galleryReferences: [
@@ -245,13 +244,13 @@ export const filmEditingProjects: AnalogProject[] = [
       "01_Τα νέα της Αλεξάνδρας",
     ],
     details: [
-      'Traditional Light-Folk song "Ta nea tis Alexandras-Perpiniadis" reclaimed.',
-      "by Ladie's Fingers Directing Duo",
-      "Production Assistant",
+      "A traditional Greek light-folk song, ‘Ta Nea tis Alexandras’ by Perpiniadis, reclaimed.",
+      "Directed by Ladies Fingers Directing Duo.",
+      "Role: production assistant.",
     ],
     links: [
       {
-        label: "⚛youtube.com/watch?v=yqC_iUOFo8c",
+        label: "⚛ Watch Τα νέα της Αλεξάνδρας | Reclaim on YouTube",
         href: "https://www.youtube.com/watch?v=yqC_iUOFo8c",
       },
     ],
@@ -260,24 +259,20 @@ export const filmEditingProjects: AnalogProject[] = [
     number: "D.04.02",
     slug: "promitheas",
     title: "Σύλλογος Ασθενών Ήπατος Ελλάδος “ΠΡΟΜΗΘΕΑΣ”",
-    year: "2020, 2021",
+    year: "2020–2021",
     gallery: "1/1",
     galleryReferences: ["01", "01"],
     details: [
-      "Production Assistant at Ladies Fingers Directing Duo",
-      "Streetwork Project: Προσέχουμε ο Ένας τον Άλλο​",
+      "Production assistant for Ladies Fingers Directing Duo.",
+      "Streetwork project: Προσέχουμε ο Ένας τον Άλλο.",
     ],
     links: [
       {
-        label: "♥youtube.com/watch?v=p_rh4ijVTAQ",
+        label: "♥ Watch Προσέχουμε ο Ένας τον Άλλο on YouTube",
         href: "https://www.youtube.com/watch?v=p_rh4ijVTAQ",
       },
       {
-        label: "Δουλεύει για σένα!​",
-        href: "https://www.youtube.com/watch?v=Q5UZ_67OOUQ",
-      },
-      {
-        label: "✼youtube.com/watch?v=Q5UZ_67OOUQ",
+        label: "Watch Δουλεύει για σένα! on YouTube",
         href: "https://www.youtube.com/watch?v=Q5UZ_67OOUQ",
       },
     ],
@@ -285,7 +280,7 @@ export const filmEditingProjects: AnalogProject[] = [
   {
     number: "D.04.01",
     slug: "start-create-cultural-change",
-    title: "Promo video spots of candiadates START – Create Cultural Change",
+    title: "Candidate Promotional Videos for START – Create Cultural Change",
     year: "2019",
     gallery: "photo gallery",
     galleryReferences: [
@@ -293,13 +288,12 @@ export const filmEditingProjects: AnalogProject[] = [
       "START – Create Cultural Change",
     ],
     details: [
-      "by Ladies Fingers Directing Duo",
-      "Post production assistant",
-      "Video Editor assistant",
+      "Directed by Ladies Fingers Directing Duo.",
+      "Roles: post-production assistant and assistant video editor.",
     ],
     links: [
       {
-        label: "✦youtube.com/watch?v=vMRRnSe5Ko4",
+        label: "✦ Watch the START promotional videos on YouTube",
         href: "https://www.youtube.com/watch?v=vMRRnSe5Ko4",
       },
     ],
