@@ -8,7 +8,7 @@ const group = analogProjectGroups["3d-prints"];
 
 export const metadata: Metadata = createPageMetadata({
   title: group.title,
-  description: "3D print projects by Artemis Koltsida.",
+  description: "3D-printed works by Artemis Koltsida.",
   path: group.basePath,
 });
 

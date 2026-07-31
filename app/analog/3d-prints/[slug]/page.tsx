@@ -27,7 +27,7 @@ export async function generateMetadata({
 
   return createPageMetadata({
     title: `${project.title} (${project.year})`,
-    description: `${project.number} 3D Prints project by Artemis Koltsida.`,
+    description: `${project.number}, a 3D-printing project by Artemis Koltsida.`,
     path: `${group.basePath}/${project.slug}`,
   });
 }
