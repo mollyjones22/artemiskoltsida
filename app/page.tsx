@@ -21,7 +21,7 @@ const infoLines = [
   {
     text: "\u2729 Greek Bio Pdf",
     bold: true,
-    href: "/2606Artemis_Koltsida_CV.pdf",
+    href: "/2607Artemis_Koltsida_CV.pdf",
   },
   {
     text: "\u2729 Short Bio w/ Press Photo",
