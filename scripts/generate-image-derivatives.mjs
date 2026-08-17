@@ -63,7 +63,9 @@ const sources = await getImageFiles(publicDirectory);
 let generated = 0;
 
 const jobs = sources.flatMap((source) => [
-  [source, "gallery", 1800, 92],
+  ...(path.extname(source).toLowerCase() === ".gif"
+    ? []
+    : [[source, "gallery", 1800, 92]]),
   [source, "thumbnail", 320, 88],
 ]);
 const workers = Array.from({ length: Math.min(6, jobs.length) }, async () => {

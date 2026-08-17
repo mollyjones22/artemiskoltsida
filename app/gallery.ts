@@ -38,6 +38,9 @@ function getPublicFiles(directory: string, baseUrl = ""): string[] {
 
 function getDerivativeSrc(src: string, kind: "gallery" | "thumbnail") {
   const parsedPath = path.parse(src);
+  if (kind === "gallery" && parsedPath.ext.toLowerCase() === ".gif") {
+    return src;
+  }
   return `/optimized/${kind}${parsedPath.dir}/${parsedPath.name}.webp`;
 }
 
