@@ -62,6 +62,8 @@ export default function ProjectCarousel({
                     src={image.src}
                     alt={image.alt}
                     className="max-h-[70vh] w-full object-contain"
+                    decoding="async"
+                    loading="lazy"
                   />
                   <button
                     type="button"
@@ -112,9 +114,10 @@ export default function ProjectCarousel({
               {"\u00d7"}
             </button>
             <img
-              src={currentImage.src}
+              src={currentImage.fullSrc}
               alt={currentImage.alt}
               className="max-h-[92vh] max-w-[96vw] object-contain"
+              decoding="async"
             />
           </div>
         ) : null}
@@ -145,6 +148,8 @@ export default function ProjectCarousel({
             src={currentImage.src}
             alt={currentImage.alt}
             className="max-h-[70vh] w-full object-contain px-8"
+            decoding="async"
+            loading="lazy"
           />
           {hasMultipleImages ? (
             <button
@@ -178,9 +183,10 @@ export default function ProjectCarousel({
             {"\u00d7"}
           </button>
           <img
-            src={currentImage.src}
+            src={currentImage.fullSrc}
             alt={currentImage.alt}
             className="max-h-[92vh] max-w-[96vw] object-contain"
+            decoding="async"
           />
         </div>
       ) : null}

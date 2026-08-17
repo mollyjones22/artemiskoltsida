@@ -6,7 +6,11 @@ const photoExtensions = new Set([".avif", ".gif", ".jpeg", ".jpg", ".png", ".web
 export type ProjectPhoto = {
   alt: string;
   caption?: string;
+  fullSrc: string;
+  height?: number;
   src: string;
+  thumbnailSrc: string;
+  width?: number;
 };
 
 const nisosPhotoCaptions: Record<string, string> = {
@@ -22,11 +26,19 @@ function getPublicFiles(directory: string, baseUrl = ""): string[] {
     const entryUrl = `${baseUrl}/${entry.name}`;
 
     if (entry.isDirectory()) {
+      if (entryPath === path.join(process.cwd(), "public", "optimized")) {
+        return [];
+      }
       return getPublicFiles(entryPath, entryUrl);
     }
 
     return entry.isFile() ? [entryUrl] : [];
   });
+}
+
+function getDerivativeSrc(src: string, kind: "gallery" | "thumbnail") {
+  const parsedPath = path.parse(src);
+  return `/optimized/${kind}${parsedPath.dir}/${parsedPath.name}.webp`;
 }
 
 function getNisosPrefix(projectNumber: string) {
@@ -76,8 +88,10 @@ export function getProjectPhotos(projectNumber: string, projectTitle: string): P
       return {
         alt: `${projectTitle} photo ${Number(match[1])}`,
         ...(caption ? { caption } : {}),
+        fullSrc: src,
         order: Number(match[1]),
-        src,
+        src: getDerivativeSrc(src, "gallery"),
+        thumbnailSrc: getDerivativeSrc(src, "thumbnail"),
       };
     })
     .filter((photo): photo is ProjectPhoto & { order: number } => photo !== null)
@@ -91,5 +105,11 @@ export function getProjectPhotos(projectNumber: string, projectTitle: string): P
       (photo, index, photos) =>
         index === 0 || photo.order !== photos[index - 1].order,
     )
-    .map(({ alt, caption, src }) => ({ alt, caption, src }));
+    .map(({ alt, caption, fullSrc, src, thumbnailSrc }) => ({
+      alt,
+      caption,
+      fullSrc,
+      src,
+      thumbnailSrc,
+    }));
 }

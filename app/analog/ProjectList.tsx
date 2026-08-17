@@ -61,9 +61,11 @@ export default function ProjectList({
                   >
                     {firstPhoto ? (
                       <img
-                        src={firstPhoto.src}
+                        src={firstPhoto.thumbnailSrc}
                         alt=""
                         className="absolute inset-0 h-full w-full object-cover"
+                        decoding="async"
+                        loading="lazy"
                       />
                     ) : null}
                     <span className="relative z-10 bg-white/80 px-1 py-0.5">
