@@ -235,6 +235,16 @@ export const constructionInstallationProjects: AnalogProject[] = [
 
 export const drawingProjects: AnalogProject[] = [
   {
+    number: "A.04.11",
+    slug: "mothers-love",
+    title: "Mother's Love",
+    year: "2026",
+    gallery: "photo gallery",
+    details: [
+      "Oil pastels on Fabriano Rosaspina paper (60% cotton), 285 gsm, 100 × 70 cm.",
+    ],
+  },
+  {
     number: "A.04.10",
     slug: "dolce-vita-mesimeri",
     title: "Dolce Vita Mesimeri",
