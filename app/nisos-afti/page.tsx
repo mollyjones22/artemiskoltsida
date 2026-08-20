@@ -150,6 +150,7 @@ export default function NisosAftiPage() {
     <main className="min-h-screen bg-white px-4 py-5 text-[#202122] sm:px-6 lg:px-10">
       <div className="mx-auto grid max-w-[1180px] gap-5 lg:grid-cols-[11.5rem_minmax(0,1fr)]">
         <aside className="order-2 border-t border-[#a2a9b1] pt-4 text-sm lg:order-1 lg:border-r lg:border-t-0 lg:pr-4 lg:pt-16">
+          <p className="mb-2 text-[#0645ad] underline">PLAY!!</p>
           <Link href="/" className="mb-5 inline-block text-[#0645ad]">
             BACK
           </Link>
