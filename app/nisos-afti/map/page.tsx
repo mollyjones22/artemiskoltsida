@@ -10,6 +10,11 @@ const mapLinks = [
     className: "left-[4.5%] top-[15.5%] h-[4%] w-[29%]",
   },
   {
+    label: "\u03a0\u03a1\u039f\u03a6\u0397\u03a4\u0397\u03a3 \u0397\u039b\u0399\u0391\u03a3",
+    href: "/nisos-afti/eta",
+    className: "left-[35%] top-[26%] h-[4%] w-[34%]",
+  },
+  {
     label: "\u039b\u0399\u039c\u039d\u0397 \u039b\u0391\u0392\u03a5\u03a1\u0399\u039d\u0398\u039f\u03a3",
     href: "/nisos-afti/mu",
     className: "left-[51.5%] top-[41.5%] h-[4%] w-[37%]",
@@ -18,6 +23,16 @@ const mapLinks = [
     label: "\u03a0\u0391\u039b\u0399\u039f \u03a7\u03a9\u03a1\u0399\u039f",
     href: "/nisos-afti/pi",
     className: "left-[29%] top-[50.5%] h-[4%] w-[25%]",
+  },
+  {
+    label: "\u03a7\u03a9\u03a1\u0399\u039f",
+    href: "/nisos-afti/chi",
+    className: "left-[58%] top-[56.5%] h-[4%] w-[15%]",
+  },
+  {
+    label: "\u039a\u039f\u03a1\u03a5\u03a6\u0397 \u039b\u0395\u039d\u03a4\u0397\u03a3",
+    href: "/nisos-afti/kappa",
+    className: "left-[22%] top-[65.5%] h-[4%] w-[33%]",
   },
 ];
 
