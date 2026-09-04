@@ -94,6 +94,7 @@ const piProjects: AnalogProject[] = [
     title: "Π.",
     year: "11/9/2024",
     gallery: "photo gallery",
+    introDetailCount: 2,
     galleryReferences: ["Pillow-zine by kiko and molly"],
     details: [
       {

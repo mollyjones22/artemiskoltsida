@@ -103,6 +103,34 @@ export default function ProjectList({
                   <p className="text-sm leading-normal">{project.number}</p>
                 )}
                 <div className={isNisosLayout ? "sm:pt-1" : undefined}>
+                  {isNisosLayout && project.introDetailCount ? (
+                    <div className="mb-4 flex flex-col gap-1 text-sm leading-normal">
+                      {project.details
+                        .slice(0, project.introDetailCount)
+                        .map((detail, index) => (
+                          <p
+                            key={`${project.number}-intro-${index}`}
+                            className={
+                              typeof detail === "string"
+                                ? undefined
+                                : [
+                                    detail.bold ? "font-bold" : "",
+                                    detail.italic ? "italic" : "",
+                                    detail.spacerBefore ? "mt-4" : "",
+                                    detail.underline
+                                      ? "underline underline-offset-4"
+                                      : "",
+                                  ]
+                                    .filter(Boolean)
+                                    .join(" ") || undefined
+                            }
+                          >
+                            {typeof detail === "string" ? detail : detail.text}
+                          </p>
+                        ))}
+                    </div>
+                  ) : null}
+
                   <h2
                     className={`mb-3 font-normal leading-normal underline underline-offset-4 ${
                       isNisosLayout ? "text-sm" : "text-lg"
@@ -128,7 +156,11 @@ export default function ProjectList({
                       isNisosLayout ? "text-sm" : "text-base"
                     }`}
                   >
-                    {project.details.map((detail, index) => (
+                    {project.details
+                      .slice(
+                        isNisosLayout ? project.introDetailCount ?? 0 : 0,
+                      )
+                      .map((detail, index) => (
                       <p
                         key={`${project.number}-${index}`}
                         className={
