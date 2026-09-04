@@ -55,7 +55,7 @@ export default function NisosAftiMapPage() {
 
       <figure className="relative mx-auto aspect-[595/842] w-[min(calc(100vw-1rem),calc((100vh-1rem)*595/842))] sm:w-[min(calc(100vw-2rem),calc((100vh-2rem)*595/842))]">
         <img
-          src="/Nisos%20Afti/afti-island-map.png"
+          src="/Nisos%20Afti/AFTI-ISLAND%20UPSOMETRIKStars.svg"
           alt={`${islandTitle} island map`}
           className="block h-full w-full object-contain"
         />
