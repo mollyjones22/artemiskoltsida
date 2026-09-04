@@ -72,16 +72,17 @@ export default function SiteAudio() {
     }
   };
 
-  if (hasStopped) {
-    return null;
-  }
-
   return (
     <button
       type="button"
       onClick={toggleAudio}
-      className="fixed bottom-4 right-4 z-50 flex items-center gap-2 bg-transparent p-0 text-[#0000ee] underline-offset-4 hover:underline focus-visible:underline sm:gap-3"
-      aria-label={isPlaying ? "Pause audio" : "Resume audio"}
+      disabled={hasStopped}
+      className={`fixed bottom-4 right-4 z-50 flex items-center gap-2 bg-transparent p-0 text-[#0000ee] underline-offset-4 hover:underline focus-visible:underline disabled:cursor-default disabled:no-underline sm:gap-3 ${
+        hasStopped ? "opacity-45" : ""
+      }`}
+      aria-label={
+        hasStopped ? "Audio permanently stopped" : isPlaying ? "Pause audio" : "Start audio"
+      }
       aria-pressed={isPlaying}
     >
       <img
