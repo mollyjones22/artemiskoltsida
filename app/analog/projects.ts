@@ -306,7 +306,7 @@ export const drawingProjects: AnalogProject[] = [
     slug: "random-ikaria-dream",
     title: "Random Ikaria Dream",
     year: "2025",
-    gallery: "1/1",
+    gallery: "1/3",
     galleryReferences: ["Ikaria Dream", "Ikaria Dream"],
     details: [
       "Kaweco SKETCH UP 5.6 mm Satin Chrome pencil on premium cotton watercolour paper, 300 gsm, 35 × 50 cm.",
