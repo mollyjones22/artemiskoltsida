@@ -7,15 +7,18 @@ export default function SiteAudio() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    const audio = new Audio("/bbcmixkoltsida.mp3");
+    const audio = new Audio();
 
     audio.loop = true;
-    audio.preload = "auto";
+    audio.preload = "none";
     audio.volume = 0.55;
     audioRef.current = audio;
 
     const syncPlaying = () => setIsPlaying(!audio.paused);
     const playAudio = () => {
+      if (!audio.src) {
+        audio.src = "/bbcmixkoltsida.mp3";
+      }
       void audio.play().catch(() => {
         setIsPlaying(false);
       });
@@ -25,8 +28,6 @@ export default function SiteAudio() {
     audio.addEventListener("pause", syncPlaying);
     window.addEventListener("pointerdown", playAudio, { once: true });
     window.addEventListener("keydown", playAudio, { once: true });
-
-    playAudio();
 
     return () => {
       window.removeEventListener("pointerdown", playAudio);
@@ -43,6 +44,10 @@ export default function SiteAudio() {
 
     if (!audio) {
       return;
+    }
+
+    if (!audio.src) {
+      audio.src = "/bbcmixkoltsida.mp3";
     }
 
     if (audio.paused) {

@@ -287,9 +287,11 @@ export default function NisosAftiPage() {
                 <figure>
                   <div className="flex aspect-square items-center justify-center border border-[#a2a9b1] bg-white p-3">
                     <img
-                      src="/Nisos%20Afti/AFTI-ISLAND%20UPSOMETRIKStars.svg"
+                      src="/optimized/thumbnail/Nisos%20Afti/afti-island-map.webp"
                       alt="Nisos Afti island map"
                       className="h-full w-full object-contain"
+                      decoding="async"
+                      loading="lazy"
                     />
                   </div>
                   <figcaption className="mt-2 text-center text-xs leading-snug text-[#202122]">
