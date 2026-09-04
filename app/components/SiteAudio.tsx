@@ -2,23 +2,47 @@
 
 import { useEffect, useRef, useState } from "react";
 
+const audioStoppedKey = "artemis-site-audio-stopped";
+
 export default function SiteAudio() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [hasStopped, setHasStopped] = useState(false);
 
   useEffect(() => {
-    const audio = new Audio();
+    try {
+      if (window.localStorage.getItem(audioStoppedKey) === "true") {
+        setHasStopped(true);
+        return;
+      }
+    } catch {
+      // Continue without persistence when storage is unavailable.
+    }
+
+    const audio = new Audio("/bbcmixkoltsida.mp3");
 
     audio.loop = true;
-    audio.preload = "none";
+    audio.preload = "metadata";
     audio.volume = 0.55;
     audioRef.current = audio;
 
     const syncPlaying = () => setIsPlaying(!audio.paused);
+    const startAudio = () => {
+      void audio.play().catch(() => {
+        setIsPlaying(false);
+      });
+    };
+
     audio.addEventListener("play", syncPlaying);
     audio.addEventListener("pause", syncPlaying);
+    window.addEventListener("pointerdown", startAudio, { once: true });
+    window.addEventListener("keydown", startAudio, { once: true });
+
+    startAudio();
 
     return () => {
+      window.removeEventListener("pointerdown", startAudio);
+      window.removeEventListener("keydown", startAudio);
       audio.removeEventListener("play", syncPlaying);
       audio.removeEventListener("pause", syncPlaying);
       audio.pause();
@@ -33,18 +57,24 @@ export default function SiteAudio() {
       return;
     }
 
-    if (!audio.src) {
-      audio.src = "/bbcmixkoltsida.mp3";
-    }
-
     if (audio.paused) {
       void audio.play().catch(() => {
         setIsPlaying(false);
       });
     } else {
       audio.pause();
+      try {
+        window.localStorage.setItem(audioStoppedKey, "true");
+      } catch {
+        // The stop still applies for this session when storage is unavailable.
+      }
+      setHasStopped(true);
     }
   };
+
+  if (hasStopped) {
+    return null;
+  }
 
   return (
     <button
