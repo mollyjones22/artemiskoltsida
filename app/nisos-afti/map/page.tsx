@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 const islandTitle = "\u039d\u03ae\u03c3\u03bf\u03c2 \u0391\u03c5\u03c4\u03af";
+const mapPdf = "/Nisos%20Afti/AFTI-ISLAND%20UPSOMETRIKStars.pdf";
 
 export const metadata: Metadata = {
   title: `Map | ${islandTitle}`,
@@ -21,12 +22,21 @@ export default function NisosAftiMapPage() {
         </header>
 
         <figure className="border border-[#a2a9b1] bg-[#f8f9fa] p-3">
-          <div className="flex min-h-[70vh] items-center justify-center bg-white p-4">
-            <img
-              src="/afti island 1-1.svg"
-              alt={`${islandTitle} island map`}
-              className="max-h-[78vh] w-full object-contain"
-            />
+          <div className="min-h-[70vh] bg-white">
+            <object
+              data={mapPdf}
+              type="application/pdf"
+              className="h-[80vh] min-h-[36rem] w-full"
+              aria-label={`${islandTitle} island map PDF`}
+            >
+              <p className="p-6 text-center">
+                Your browser cannot display this PDF.{" "}
+                <a href={mapPdf} className="text-[#0645ad] underline">
+                  Open the island map PDF
+                </a>
+                .
+              </p>
+            </object>
           </div>
           <figcaption className="mt-2 text-center text-sm leading-snug">
             {islandTitle}
