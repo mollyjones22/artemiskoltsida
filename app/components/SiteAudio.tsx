@@ -15,23 +15,10 @@ export default function SiteAudio() {
     audioRef.current = audio;
 
     const syncPlaying = () => setIsPlaying(!audio.paused);
-    const playAudio = () => {
-      if (!audio.src) {
-        audio.src = "/bbcmixkoltsida.mp3";
-      }
-      void audio.play().catch(() => {
-        setIsPlaying(false);
-      });
-    };
-
     audio.addEventListener("play", syncPlaying);
     audio.addEventListener("pause", syncPlaying);
-    window.addEventListener("pointerdown", playAudio, { once: true });
-    window.addEventListener("keydown", playAudio, { once: true });
 
     return () => {
-      window.removeEventListener("pointerdown", playAudio);
-      window.removeEventListener("keydown", playAudio);
       audio.removeEventListener("play", syncPlaying);
       audio.removeEventListener("pause", syncPlaying);
       audio.pause();

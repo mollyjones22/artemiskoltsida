@@ -1,10 +1,21 @@
-import { mkdir, readdir, stat } from "node:fs/promises";
+import { mkdir, readFile, readdir, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
 
 const publicDirectory = path.join(process.cwd(), "public");
 const outputDirectory = path.join(publicDirectory, "optimized");
+const versionFile = path.join(outputDirectory, ".derivative-version");
+const derivativeVersion = "gallery-1200-q84-thumbnail-320-q88-v2";
 const imageExtensions = new Set([".avif", ".gif", ".jpeg", ".jpg", ".png", ".webp"]);
+
+let settingsAreCurrent = false;
+
+try {
+  settingsAreCurrent =
+    (await readFile(versionFile, "utf8")).trim() === derivativeVersion;
+} catch {
+  settingsAreCurrent = false;
+}
 
 async function getImageFiles(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -27,6 +38,8 @@ async function getImageFiles(directory) {
 }
 
 async function isCurrent(source, destination) {
+  if (!settingsAreCurrent) return false;
+
   try {
     const [sourceStats, destinationStats] = await Promise.all([
       stat(source),
@@ -65,7 +78,7 @@ let generated = 0;
 const jobs = sources.flatMap((source) => [
   ...(path.extname(source).toLowerCase() === ".gif"
     ? []
-    : [[source, "gallery", 1800, 92]]),
+    : [[source, "gallery", 1200, 84]]),
   [source, "thumbnail", 320, 88],
 ]);
 const workers = Array.from({ length: Math.min(6, jobs.length) }, async () => {
@@ -76,6 +89,8 @@ const workers = Array.from({ length: Math.min(6, jobs.length) }, async () => {
 });
 
 await Promise.all(workers);
+await mkdir(outputDirectory, { recursive: true });
+await writeFile(versionFile, `${derivativeVersion}\n`);
 
 console.log(
   generated === 0
