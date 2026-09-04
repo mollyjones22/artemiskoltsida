@@ -275,6 +275,8 @@ export default function NisosAftiPage() {
             <aside className="flex flex-col gap-6 text-sm">
               <Link
                 href="/nisos-afti/map"
+                target="_blank"
+                rel="noreferrer"
                 className="block h-fit border border-[#a2a9b1] bg-[#f8f9fa] p-3 text-[#202122] no-underline hover:text-[#0645ad] hover:no-underline"
               >
                 <h2 className="mb-3 bg-[#eaecf0] py-1 text-center text-base font-bold">
