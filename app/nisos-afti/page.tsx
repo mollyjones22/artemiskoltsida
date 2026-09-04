@@ -285,7 +285,7 @@ export default function NisosAftiPage() {
                 <figure>
                   <div className="flex aspect-square items-center justify-center border border-[#a2a9b1] bg-white p-3">
                     <img
-                      src="/afti island 1-1.svg"
+                      src="/Nisos%20Afti/afti-island-map.png"
                       alt="Nisos Afti island map"
                       className="h-full w-full object-contain"
                     />
