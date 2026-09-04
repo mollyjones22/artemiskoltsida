@@ -235,6 +235,14 @@ export const constructionInstallationProjects: AnalogProject[] = [
 
 export const drawingProjects: AnalogProject[] = [
   {
+    number: "A.04.12",
+    slug: "best-summer-night-ever",
+    title: "Best Summer Night Ever",
+    year: "2026",
+    gallery: "1/4",
+    details: ["Charcoal on cotton paper, 100 × 70 cm."],
+  },
+  {
     number: "A.04.11",
     slug: "mothers-love",
     title: "Mother's Love",
