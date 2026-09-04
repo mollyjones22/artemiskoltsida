@@ -394,11 +394,12 @@ export const silkscreenPrintProjects: AnalogProject[] = [
       "01_tipomata_aeroplanofront",
     ],
     details: [
-      "Hand-pulled screen printing in a DIY studio.",
+      "Hand-pulled screen printing in DIY studio.",
       "Affordable clothing featuring original artwork.",
       "Water-based inks.",
       {
         text: "Tipomata Diary",
+        spacerBefore: true,
         underline: true,
       },
       "2019: Dima, Pits, Tsolis, Maria Tolia",
@@ -411,6 +412,7 @@ export const silkscreenPrintProjects: AnalogProject[] = [
       "2026: Kiko, Giouli, Akonisma, featuring Orama Archive",
       {
         text: "Tipomata Bazaar Diary",
+        spacerBefore: true,
         underline: true,
       },
       "2021: 5–6 June: Tourlou Zine Fest",
