@@ -278,7 +278,9 @@ export default function NisosAftiPage() {
                 className="block h-fit border border-[#a2a9b1] bg-[#f8f9fa] p-3 text-[#202122] no-underline hover:text-[#0645ad] hover:no-underline"
               >
                 <h2 className="mb-3 bg-[#eaecf0] py-1 text-center text-base font-bold">
-                  Map submenu
+                  <span className="text-[#0645ad] underline underline-offset-2">
+                    Map submenu
+                  </span>
                 </h2>
                 <figure>
                   <div className="flex aspect-square items-center justify-center border border-[#a2a9b1] bg-white p-3">

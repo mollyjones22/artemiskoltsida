@@ -2,47 +2,61 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 const islandTitle = "\u039d\u03ae\u03c3\u03bf\u03c2 \u0391\u03c5\u03c4\u03af";
-const mapPdf = "/Nisos%20Afti/AFTI-ISLAND%20UPSOMETRIKStars.pdf";
+
+const mapLinks = [
+  {
+    label: "\u0394\u03a1\u0391\u039a\u039f\u039a\u0391\u0396\u0391",
+    href: "/nisos-afti/delta",
+    className: "left-[4.5%] top-[15.5%] h-[4%] w-[29%]",
+  },
+  {
+    label: "\u039b\u0399\u039c\u039d\u0397 \u039b\u0391\u0392\u03a5\u03a1\u0399\u039d\u0398\u039f\u03a3",
+    href: "/nisos-afti/lambda",
+    className: "left-[51.5%] top-[41.5%] h-[4%] w-[37%]",
+  },
+  {
+    label: "\u03a0\u0391\u039b\u0399\u039f \u03a7\u03a9\u03a1\u0399\u039f",
+    href: "/nisos-afti/pi",
+    className: "left-[29%] top-[50.5%] h-[4%] w-[25%]",
+  },
+];
 
 export const metadata: Metadata = {
   title: `Map | ${islandTitle}`,
-  description: "Island map for the Nisos Afti archive.",
+  description: "Interactive island map for the Nisos Afti archive.",
 };
 
 export default function NisosAftiMapPage() {
   return (
-    <main className="min-h-screen bg-white px-4 py-5 text-[#202122] sm:px-6 lg:px-10">
-      <article className="mx-auto max-w-6xl">
-        <Link href="/nisos-afti" className="mb-6 inline-block text-[#0645ad]">
-          Back to {islandTitle}
-        </Link>
+    <main className="min-h-screen bg-white p-2 text-[#202122] sm:p-4">
+      <h1 className="sr-only">Interactive map of {islandTitle}</h1>
 
-        <header className="mb-5 border-b border-[#a2a9b1] pb-2">
-          <h1 className="text-4xl font-normal leading-tight">Map</h1>
-        </header>
+      <Link
+        href="/nisos-afti"
+        className="fixed left-3 top-3 z-20 bg-white/90 px-2 py-1 text-sm text-[#0645ad] underline sm:left-4 sm:top-4"
+      >
+        Back to {islandTitle}
+      </Link>
 
-        <figure className="border border-[#a2a9b1] bg-[#f8f9fa] p-3">
-          <div className="min-h-[70vh] bg-white">
-            <object
-              data={mapPdf}
-              type="application/pdf"
-              className="h-[80vh] min-h-[36rem] w-full"
-              aria-label={`${islandTitle} island map PDF`}
-            >
-              <p className="p-6 text-center">
-                Your browser cannot display this PDF.{" "}
-                <a href={mapPdf} className="text-[#0645ad] underline">
-                  Open the island map PDF
-                </a>
-                .
-              </p>
-            </object>
-          </div>
-          <figcaption className="mt-2 text-center text-sm leading-snug">
-            {islandTitle}
-          </figcaption>
-        </figure>
-      </article>
+      <figure className="relative mx-auto w-fit max-w-full">
+        <img
+          src="/Nisos%20Afti/afti-island-map.png"
+          alt={`${islandTitle} island map`}
+          className="block h-auto max-h-[calc(100vh-1rem)] max-w-full object-contain sm:max-h-[calc(100vh-2rem)]"
+        />
+
+        {mapLinks.map((mapLink) => (
+          <Link
+            key={mapLink.href}
+            href={mapLink.href}
+            className={`absolute block cursor-pointer rounded-sm transition-colors hover:bg-[#0645ad]/10 focus-visible:bg-[#0645ad]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#0645ad] ${mapLink.className}`}
+            aria-label={`Open ${mapLink.label} project`}
+            title={mapLink.label}
+          >
+            <span className="sr-only">{mapLink.label}</span>
+          </Link>
+        ))}
+      </figure>
     </main>
   );
 }
