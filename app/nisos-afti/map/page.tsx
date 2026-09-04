@@ -11,7 +11,7 @@ const mapLinks = [
   },
   {
     label: "\u039b\u0399\u039c\u039d\u0397 \u039b\u0391\u0392\u03a5\u03a1\u0399\u039d\u0398\u039f\u03a3",
-    href: "/nisos-afti/lambda",
+    href: "/nisos-afti/mu",
     className: "left-[51.5%] top-[41.5%] h-[4%] w-[37%]",
   },
   {

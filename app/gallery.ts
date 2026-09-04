@@ -47,7 +47,7 @@ function getDerivativeSrc(src: string, kind: "gallery" | "thumbnail") {
 function getNisosPrefix(projectNumber: string) {
   const section = projectNumber.split(".")[0];
 
-  if (section === "\u039b") {
+  if (section === "\u039c") {
     return "n-01-";
   }
 

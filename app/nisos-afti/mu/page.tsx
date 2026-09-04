@@ -4,15 +4,15 @@ import ProjectList from "../../analog/ProjectList";
 import { createPageMetadata } from "../../seo";
 import { nisosAftiProjectGroups } from "../projects";
 
-const group = nisosAftiProjectGroups.lambda;
+const group = nisosAftiProjectGroups.mu;
 
 export const metadata: Metadata = createPageMetadata({
   title: `Νήσος Αυτί ${group.title}`,
-  description: "Project entries for the Lambda section of Nisos Afti.",
+  description: "Project entries for the Mu section of Nisos Afti.",
   path: group.basePath,
 });
 
-export default function LambdaPage() {
+export default function MuPage() {
   return (
     <>
       <Navigation />

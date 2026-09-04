@@ -7,7 +7,7 @@ import { nisosAftiProjectLinks } from "./project-index";
 const title = "Νήσος Αυτί";
 
 const projectLinkImages: Record<string, string> = {
-  "/nisos-afti/lambda": "n-01-01",
+  "/nisos-afti/mu": "n-01-01",
   "/nisos-afti/delta": "n-02-01",
   "/nisos-afti/pi": "n-03-01",
   "/nisos-afti/t": "n-04-01",
