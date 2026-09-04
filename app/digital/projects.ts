@@ -20,7 +20,7 @@ export const threeDVisualizationArchitecturalProjects: AnalogProject[] = [
 
 export const postgraduateResearchProjects: AnalogProject[] = [
   {
-    number: "D.02.01",
+    number: "D.02.02",
     slug: "reclaim-female-self-image-digital-storytelling",
     title:
       "Attempting to Reclaim the Female Self-Image: A Qualitative Study Using the Methodology of Digital Storytelling",
@@ -47,7 +47,7 @@ export const postgraduateResearchProjects: AnalogProject[] = [
     ],
   },
   {
-    number: "D.02.02",
+    number: "D.02.01",
     slug: "discussion-on-digital-storytelling",
     title: "A Discussion on Digital Storytelling",
     year: "2026",
@@ -72,7 +72,7 @@ export const postgraduateResearchProjects: AnalogProject[] = [
       },
     ],
   },
-];
+].reverse();
 
 export const webDesignProjects: AnalogProject[] = [
   {
