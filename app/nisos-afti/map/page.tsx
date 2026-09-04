@@ -7,32 +7,32 @@ const mapLinks = [
   {
     label: "\u0394\u03a1\u0391\u039a\u039f\u039a\u0391\u0396\u0391",
     href: "/nisos-afti/delta",
-    className: "left-[4.5%] top-[15.5%] h-[4%] w-[29%]",
+    className: "left-[6.5%] top-[16.1%] h-[2.6%] w-[25.5%]",
   },
   {
     label: "\u03a0\u03a1\u039f\u03a6\u0397\u03a4\u0397\u03a3 \u0397\u039b\u0399\u0391\u03a3",
     href: "/nisos-afti/eta",
-    className: "left-[35%] top-[26%] h-[4%] w-[34%]",
+    className: "left-[36.5%] top-[26.6%] h-[2.4%] w-[29%]",
   },
   {
     label: "\u039b\u0399\u039c\u039d\u0397 \u039b\u0391\u0392\u03a5\u03a1\u0399\u039d\u0398\u039f\u03a3",
     href: "/nisos-afti/mu",
-    className: "left-[51.5%] top-[41.5%] h-[4%] w-[37%]",
+    className: "left-[54.5%] top-[42.2%] h-[2.4%] w-[31.5%]",
   },
   {
     label: "\u03a0\u0391\u039b\u0399\u039f \u03a7\u03a9\u03a1\u0399\u039f",
     href: "/nisos-afti/pi",
-    className: "left-[29%] top-[50.5%] h-[4%] w-[25%]",
+    className: "left-[32.5%] top-[51%] h-[2.5%] w-[20.5%]",
   },
   {
     label: "\u03a7\u03a9\u03a1\u0399\u039f",
     href: "/nisos-afti/chi",
-    className: "left-[58%] top-[56.5%] h-[4%] w-[15%]",
+    className: "left-[61%] top-[56.8%] h-[2.5%] w-[11%]",
   },
   {
     label: "\u039a\u039f\u03a1\u03a5\u03a6\u0397 \u039b\u0395\u039d\u03a4\u0397\u03a3",
     href: "/nisos-afti/kappa",
-    className: "left-[22%] top-[65.5%] h-[4%] w-[33%]",
+    className: "left-[27%] top-[66.1%] h-[2.5%] w-[26%]",
   },
 ];
 
@@ -64,11 +64,15 @@ export default function NisosAftiMapPage() {
           <Link
             key={mapLink.href}
             href={mapLink.href}
-            className={`absolute block cursor-pointer rounded-sm transition-colors hover:bg-[#0645ad]/10 focus-visible:bg-[#0645ad]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#0645ad] ${mapLink.className}`}
+            className={`group absolute block cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0645ad] ${mapLink.className}`}
             aria-label={`Open ${mapLink.label} project`}
             title={mapLink.label}
           >
             <span className="sr-only">{mapLink.label}</span>
+            <span
+              aria-hidden="true"
+              className="absolute inset-x-0 bottom-0 border-b border-[#0645ad] opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100 group-active:opacity-100"
+            />
           </Link>
         ))}
       </figure>
