@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { ProjectPhoto } from "../gallery";
 
 type ProjectCarouselProps = {
+  allowFullscreen?: boolean;
   id?: string;
   images: ProjectPhoto[];
   mediaLinks?: {
@@ -16,6 +17,7 @@ type ProjectCarouselProps = {
 };
 
 export default function ProjectCarousel({
+  allowFullscreen = false,
   id,
   images,
   mediaLinks = [],
@@ -151,6 +153,16 @@ export default function ProjectCarousel({
             decoding="async"
             loading="lazy"
           />
+          {allowFullscreen ? (
+            <button
+              type="button"
+              onClick={() => setFullscreenOpen(true)}
+              className="absolute right-1 top-1 z-20 flex h-8 w-8 items-center justify-center border border-black bg-white text-xl leading-none text-black hover:border-[#0000ee] hover:text-[#0000ee] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0000ee]"
+              aria-label="Open image fullscreen"
+            >
+              {"\u26f6"}
+            </button>
+          ) : null}
           {hasMultipleImages ? (
             <button
               type="button"

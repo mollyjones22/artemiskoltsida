@@ -219,6 +219,7 @@ export const filmEditingProjects: AnalogProject[] = [
     title: "How to Be Curious",
     year: "2022–present",
     gallery: "1/1",
+    allowFullscreen: true,
     galleryReferences: ["Ep03: How to make a spot", "Ep03: How to make a spot"],
     details: [
       "How to Be Curious is a video series created by Molly, offering an exploratory view of the world through a neverending archive of details, lists, and instructions.",

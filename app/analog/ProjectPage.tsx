@@ -61,6 +61,7 @@ export default function ProjectPage({
           </div>
 
           <ProjectGallery
+            allowFullscreen={project.allowFullscreen}
             id="photo-gallery"
             gallery={project.gallery}
             references={project.galleryReferences}

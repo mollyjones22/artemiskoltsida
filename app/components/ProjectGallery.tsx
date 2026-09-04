@@ -2,6 +2,7 @@ import { getProjectPhotos } from "../gallery";
 import ProjectCarousel from "./ProjectCarousel";
 
 type ProjectGalleryProps = {
+  allowFullscreen?: boolean;
   gallery: string;
   mediaLinks?: {
     afterPhoto?: number;
@@ -16,6 +17,7 @@ type ProjectGalleryProps = {
 };
 
 export default function ProjectGallery({
+  allowFullscreen,
   gallery,
   mediaLinks,
   references,
@@ -29,6 +31,7 @@ export default function ProjectGallery({
   if (photos.length > 0) {
     return (
       <ProjectCarousel
+        allowFullscreen={allowFullscreen}
         id={id}
         images={photos}
         mediaLinks={mediaLinks}

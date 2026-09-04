@@ -166,6 +166,7 @@ export default function ProjectList({
 
                   {!isNisosLayout ? (
                     <ProjectGallery
+                      allowFullscreen={project.allowFullscreen}
                       gallery={project.gallery}
                       references={project.galleryReferences}
                       title={project.title}

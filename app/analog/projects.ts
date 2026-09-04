@@ -4,6 +4,7 @@ export type AnalogProject = {
   title: string;
   year: string;
   gallery: string;
+  allowFullscreen?: boolean;
   galleryReferences?: string[];
   details: (
     | string
