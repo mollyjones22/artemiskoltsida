@@ -156,6 +156,28 @@ export const analogPhotographyProjects: AnalogProject[] = [
 
 export const constructionInstallationProjects: AnalogProject[] = [
   {
+    number: "A.03.06",
+    slug: "matter-in-the-park-2026",
+    title: "Matter in the Park",
+    year: "2026",
+    gallery: "photo gallery",
+    details: [
+      "Pedion tou Areos, Athens, Greece.",
+      "Collaborative design and construction of a temporary bar, entrance gateways, and a stage installation titled Butterfly Totem, using reclaimed paper, metal, and the Clouds system developed by LUDD Studio.",
+      "Scenographic design and decorative treatment of the stage and entrance gateways, in collaboration with Manou, Palmer Andreas, and Pits.",
+    ],
+    links: [
+      {
+        label: "\u269b",
+        href: "https://www.youtube.com/watch?v=yqC_iUOFo8c",
+      },
+      {
+        label: "https://ra.co/events/2536937",
+        href: "https://ra.co/events/2536937",
+      },
+    ],
+  },
+  {
     number: "A.03.05",
     slug: "matter-in-the-park",
     title: "Matter in the Park",
