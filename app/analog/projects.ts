@@ -259,6 +259,16 @@ export const constructionInstallationProjects: AnalogProject[] = [
 
 export const drawingProjects: AnalogProject[] = [
   {
+    number: "A.04.13",
+    slug: "akoute-kosmos",
+    title: "Akoute kosmos",
+    year: "2026",
+    gallery: "1/4",
+    details: [
+      "Oil pastels on Fabriano Rosaspina paper (60% cotton), 285 gsm, 100 × 70 cm.",
+    ],
+  },
+  {
     number: "A.04.12",
     slug: "best-summer-night-ever",
     title: "Best Summer Night Ever",
