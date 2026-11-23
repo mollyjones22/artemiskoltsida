@@ -398,19 +398,12 @@ export const drawingProjects: AnalogProject[] = [
   },
   {
     number: "A.04.01",
-    slug: "dragon-legend",
-    title: "Dragon Legend",
-    year: "2019",
+    slug: "pegasus-skirt",
+    title: "Pegasus Skirt",
+    year: "2023",
     gallery: "1/20",
     galleryReferences: ["01 INTRO NOTE", "01 INTRO NOTE"],
-    details: [
-      "Outdoor painting walk in Amfikleia, Greece.",
-      "Team: Dima, Jim, LeToulo, Molly, and Thanos.",
-      "Media: spray paint, oil-based acrylics, and Posca markers.",
-      "Photographed with a phone camera.",
-      "Story by LeToulo.",
-      "Created using Photoshop CC.",
-    ],
+    details: ["Airbrush session with Jinxy, acrylic colors on vintage skirt."],
   },
 ];
 
